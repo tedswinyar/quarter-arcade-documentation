@@ -1,0 +1,3433 @@
+/.gitkeep
+/bin/
+/bin/ash
+/bin/bash
+/bin/busybox
+/bin/cat
+/bin/chattr
+/bin/chgrp
+/bin/chmod
+/bin/chown
+/bin/cp
+/bin/cpio
+/bin/date
+/bin/dd
+/bin/df
+/bin/dmesg
+/bin/dnsdomainname
+/bin/dumpkmap
+/bin/echo
+/bin/egrep
+/bin/false
+/bin/fdflush
+/bin/fgrep
+/bin/getopt
+/bin/grep
+/bin/gunzip
+/bin/gzip
+/bin/hostname
+/bin/kill
+/bin/link
+/bin/linux32
+/bin/linux64
+/bin/ln
+/bin/login
+/bin/ls
+/bin/lsattr
+/bin/mkdir
+/bin/mknod
+/bin/mktemp
+/bin/more
+/bin/mount
+/bin/mountpoint
+/bin/mt
+/bin/mv
+/bin/netstat
+/bin/nice
+/bin/pidof
+/bin/ping
+/bin/pipe_progress
+/bin/printenv
+/bin/ps
+/bin/pwd
+/bin/rm
+/bin/rmdir
+/bin/run-parts
+/bin/sed
+/bin/setarch
+/bin/setpriv
+/bin/setserial
+/bin/sh
+/bin/sleep
+/bin/stty
+/bin/su
+/bin/sync
+/bin/tar
+/bin/touch
+/bin/true
+/bin/umount
+/bin/uname
+/bin/usleep
+/bin/vi
+/bin/watch
+/bin/zcat
+/busybox.config
+/data
+/dev/
+/dev/console
+/dev/log
+/dev/pts/
+/dev/shm/
+/etc/
+/etc/UPower/
+/etc/UPower/UPower.conf
+/etc/asound.conf
+/etc/dbus-1/
+/etc/dbus-1/system.d/
+/etc/dbus-1/system.d/org.freedesktop.UPower.conf
+/etc/dhcpcd.conf
+/etc/drirc
+/etc/fstab
+/etc/group
+/etc/hostname
+/etc/hosts
+/etc/init.d/
+/etc/init.d/.usb_config
+/etc/init.d/S01logging
+/etc/init.d/S10udev
+/etc/init.d/S20urandom
+/etc/init.d/S21mountall.sh
+/etc/init.d/S22startup.sh
+/etc/init.d/S40network
+/etc/init.d/S41dhcpcd
+/etc/init.d/S50sshd
+/etc/init.d/S50usbdevice
+/etc/init.d/S80dnsmasq
+/etc/init.d/S99_auto_reboot
+/etc/init.d/rcK
+/etc/init.d/rcS
+/etc/inittab
+/etc/input-event-daemon.conf
+/etc/inputrc
+/etc/issue
+/etc/ld.so.cache
+/etc/mke2fs.conf
+/etc/mtab
+/etc/network/
+/etc/network/if-down.d/
+/etc/network/if-post-down.d/
+/etc/network/if-pre-up.d/
+/etc/network/if-pre-up.d/wait_iface
+/etc/network/if-up.d/
+/etc/network/interfaces
+/etc/nsswitch.conf
+/etc/os-release
+/etc/passwd
+/etc/pm/
+/etc/pm/config.d/
+/etc/pm/power.d/
+/etc/pm/sleep.d/
+/etc/power-key.sh
+/etc/profile
+/etc/profile.d/
+/etc/profile.d/umask.sh
+/etc/protocols
+/etc/resolv.conf
+/etc/retroarch.cfg
+/etc/services
+/etc/shadow
+/etc/shells
+/etc/ssh/
+/etc/ssh/moduli
+/etc/ssh/ssh_config
+/etc/ssh/ssh_host_dsa_key
+/etc/ssh/ssh_host_dsa_key.pub
+/etc/ssh/ssh_host_ecdsa_key
+/etc/ssh/ssh_host_ecdsa_key.pub
+/etc/ssh/ssh_host_ed25519_key
+/etc/ssh/ssh_host_ed25519_key.pub
+/etc/ssh/ssh_host_rsa_key
+/etc/ssh/ssh_host_rsa_key.pub
+/etc/ssh/sshd_config
+/etc/ssl/
+/etc/ssl/certs/
+/etc/ssl/man/
+/etc/ssl/man/man1/
+/etc/ssl/man/man3/
+/etc/ssl/man/man5/
+/etc/ssl/man/man7/
+/etc/ssl/misc/
+/etc/ssl/openssl.cnf
+/etc/ssl/private/
+/etc/udev/
+/etc/udev/hwdb.d/
+/etc/udev/hwdb.d/20-OUI.hwdb
+/etc/udev/hwdb.d/20-acpi-vendor.hwdb
+/etc/udev/hwdb.d/20-bluetooth-vendor-product.hwdb
+/etc/udev/hwdb.d/20-net-ifname.hwdb
+/etc/udev/hwdb.d/20-pci-classes.hwdb
+/etc/udev/hwdb.d/20-pci-vendor-model.hwdb
+/etc/udev/hwdb.d/20-sdio-classes.hwdb
+/etc/udev/hwdb.d/20-sdio-vendor-model.hwdb
+/etc/udev/hwdb.d/20-usb-classes.hwdb
+/etc/udev/hwdb.d/20-usb-vendor-model.hwdb
+/etc/udev/hwdb.d/20-vmbus-class.hwdb
+/etc/udev/hwdb.d/60-evdev.hwdb
+/etc/udev/hwdb.d/60-keyboard.hwdb
+/etc/udev/hwdb.d/60-sensor.hwdb
+/etc/udev/hwdb.d/70-mouse.hwdb
+/etc/udev/hwdb.d/70-pointingstick.hwdb
+/etc/udev/hwdb.d/70-touchpad.hwdb
+/etc/udev/rules.d/
+/etc/udev/udev.conf
+/etc/usbmount/
+/etc/usbmount/mount.d/
+/etc/usbmount/mount.d/00_create_model_symlink
+/etc/usbmount/umount.d/
+/etc/usbmount/umount.d/00_remove_model_symlink
+/etc/usbmount/usbmount.conf
+/etc/version
+/etc/xdg/
+/etc/xdg/weston/
+/etc/xdg/weston/weston.ini
+/lib/
+/lib/bash/
+/lib/bash/Makefile.inc
+/lib/bash/basename
+/lib/bash/dirname
+/lib/bash/finfo
+/lib/bash/head
+/lib/bash/id
+/lib/bash/ln
+/lib/bash/logname
+/lib/bash/mkdir
+/lib/bash/mypid
+/lib/bash/pathchk
+/lib/bash/print
+/lib/bash/printenv
+/lib/bash/push
+/lib/bash/realpath
+/lib/bash/rmdir
+/lib/bash/setpgid
+/lib/bash/sleep
+/lib/bash/strftime
+/lib/bash/sync
+/lib/bash/tee
+/lib/bash/truefalse
+/lib/bash/tty
+/lib/bash/uname
+/lib/bash/unlink
+/lib/bash/whoami
+/lib/dhcpcd/
+/lib/dhcpcd/dev/
+/lib/dhcpcd/dev/udev.so
+/lib/dhcpcd/dhcpcd-hooks/
+/lib/dhcpcd/dhcpcd-hooks/01-test
+/lib/dhcpcd/dhcpcd-hooks/02-dump
+/lib/dhcpcd/dhcpcd-hooks/20-resolv.conf
+/lib/dhcpcd/dhcpcd-hooks/30-hostname
+/lib/dhcpcd/dhcpcd-hooks/50-ntp.conf
+/lib/dhcpcd/dhcpcd-run-hooks
+/lib/ld-2.29.so
+/lib/ld-linux-armhf.so.3
+/lib/libanl-2.29.so
+/lib/libanl.so.1
+/lib/libatomic.so
+/lib/libatomic.so.1
+/lib/libatomic.so.1.2.0
+/lib/libblkid.so.1
+/lib/libblkid.so.1.1.0
+/lib/libc-2.29.so
+/lib/libc.so.6
+/lib/libcrypt-2.29.so
+/lib/libcrypt.so.1
+/lib/libdl-2.29.so
+/lib/libdl.so.2
+/lib/libgcc_s.so
+/lib/libgcc_s.so.1
+/lib/libm-2.29.so
+/lib/libm.so.6
+/lib/libmount.so.1
+/lib/libmount.so.1.1.0
+/lib/libnss_dns-2.29.so
+/lib/libnss_dns.so.2
+/lib/libnss_files-2.29.so
+/lib/libnss_files.so.2
+/lib/libpthread-2.29.so
+/lib/libpthread.so.0
+/lib/libresolv-2.29.so
+/lib/libresolv.so.2
+/lib/librt-2.29.so
+/lib/librt.so.1
+/lib/libthread_db-1.0.so
+/lib/libthread_db.so.1
+/lib/libudev.so.1
+/lib/libudev.so.1.6.3
+/lib/libutil-2.29.so
+/lib/libutil.so.1
+/lib/libuuid.so.1
+/lib/libuuid.so.1.3.0
+/lib/pkgconfig/
+/lib/pkgconfig/bash.pc
+/lib/udev/
+/lib/udev/ata_id
+/lib/udev/cdrom_id
+/lib/udev/collect
+/lib/udev/js-set-enum-leds
+/lib/udev/mtd_probe
+/lib/udev/rules.d/
+/lib/udev/rules.d/50-udev-default.rules
+/lib/udev/rules.d/60-block.rules
+/lib/udev/rules.d/60-cdrom_id.rules
+/lib/udev/rules.d/60-drm.rules
+/lib/udev/rules.d/60-evdev.rules
+/lib/udev/rules.d/60-input-id.rules
+/lib/udev/rules.d/60-persistent-alsa.rules
+/lib/udev/rules.d/60-persistent-input.rules
+/lib/udev/rules.d/60-persistent-storage-tape.rules
+/lib/udev/rules.d/60-persistent-storage.rules
+/lib/udev/rules.d/60-persistent-v4l.rules
+/lib/udev/rules.d/60-sensor.rules
+/lib/udev/rules.d/60-serial.rules
+/lib/udev/rules.d/61-partition-init.rules
+/lib/udev/rules.d/61-sd-cards-auto-mount.rules
+/lib/udev/rules.d/61-usbdevice.rules
+/lib/udev/rules.d/64-btrfs.rules
+/lib/udev/rules.d/70-joystick.rules
+/lib/udev/rules.d/70-mouse.rules
+/lib/udev/rules.d/70-touchpad.rules
+/lib/udev/rules.d/75-net-description.rules
+/lib/udev/rules.d/75-probe_mtd.rules
+/lib/udev/rules.d/78-sound-card.rules
+/lib/udev/rules.d/80-drivers.rules
+/lib/udev/rules.d/80-headset.rules
+/lib/udev/rules.d/80-net-name-slot.rules
+/lib/udev/rules.d/80-stelladaptor-joystick.rules
+/lib/udev/rules.d/95-upower-csr.rules
+/lib/udev/rules.d/95-upower-hid.rules
+/lib/udev/rules.d/95-upower-wup.rules
+/lib/udev/rules.d/usbmount.rules
+/lib/udev/scsi_id
+/lib/udev/v4l_id
+/lib32
+/linuxrc
+/media/
+/media/usb0/
+/media/usb1/
+/media/usb2/
+/media/usb3/
+/media/usb4/
+/media/usb5/
+/media/usb6/
+/media/usb7/
+/misc
+/mnt/
+/mnt/sdcard/
+/oem/
+/opt/
+/opt/uiconfig/
+/opt/uiconfig/CascadiaMono-Regular.ttf
+/opt/uiconfig/cheat.dat
+/opt/uiconfig/cheat.py
+/opt/uiconfig/main.py
+/opt/uiconfig/menu.py
+/proc/
+/rockchip_test/
+/rockchip_test/NOTICE
+/rockchip_test/audio/
+/rockchip_test/audio/acodec_test/
+/rockchip_test/audio/acodec_test/loop_playback.sh
+/rockchip_test/audio/acodec_test/set_adc_alc_volume.sh
+/rockchip_test/audio/acodec_test/set_adc_mic_volume.sh
+/rockchip_test/audio/acodec_test/set_hpmix_volume.sh
+/rockchip_test/audio/acodec_test/set_hpout_volume.sh
+/rockchip_test/audio/acodec_test/set_lineout_volume.sh
+/rockchip_test/audio/acodec_test/stop_tinycap.sh
+/rockchip_test/audio/acodec_test/stop_tinyplay.sh
+/rockchip_test/audio/acodec_test/switch_inoutput.sh
+/rockchip_test/audio/acodec_test/test_err_agc_gain.sh
+/rockchip_test/audio/audio_functions_test.sh
+/rockchip_test/audio/check_wavs.sh
+/rockchip_test/audio/test_loopback.sh
+/rockchip_test/auto_reboot/
+/rockchip_test/auto_reboot/S99_auto_reboot
+/rockchip_test/auto_reboot/auto_reboot.sh
+/rockchip_test/bluetooth/
+/rockchip_test/bluetooth/bt_onoff.sh
+/rockchip_test/camera/
+/rockchip_test/camera/camera_rkisp_test.sh
+/rockchip_test/camera/camera_stresstest.sh
+/rockchip_test/camera/camera_test.sh
+/rockchip_test/camera/camera_usb_test.sh
+/rockchip_test/chromium/
+/rockchip_test/chromium/chromium_test.sh
+/rockchip_test/chromium/test_chromium_with_video.sh
+/rockchip_test/cpu/
+/rockchip_test/cpu/auto_cpu_freq_test.sh
+/rockchip_test/cpu/cpu_freq_stress_test.sh
+/rockchip_test/cpu/cpufreq_test.sh
+/rockchip_test/ddr/
+/rockchip_test/ddr/ddr_freq_scaling.sh
+/rockchip_test/ddr/ddr_test.sh
+/rockchip_test/ddr/memtester_test.sh
+/rockchip_test/ddr/stressapptest_test.sh
+/rockchip_test/flash_test/
+/rockchip_test/flash_test/flash_stress_test.sh
+/rockchip_test/gpu/
+/rockchip_test/gpu/gpu_test.sh
+/rockchip_test/gpu/test_glmark2_fullscreen.sh
+/rockchip_test/gpu/test_glmark2_offscreen.sh
+/rockchip_test/recovery_test/
+/rockchip_test/recovery_test/auto_reboot.sh
+/rockchip_test/rockchip_test.sh
+/rockchip_test/suspend_resume/
+/rockchip_test/suspend_resume/suspend_resume.sh
+/rockchip_test/video/
+/rockchip_test/video/test_app_demo_multivideo.sh
+/rockchip_test/video/test_gst_multivideo.sh
+/rockchip_test/video/test_gst_video.sh
+/rockchip_test/video/video_test.sh
+/rockchip_test/video/videowidget
+/rockchip_test/wifi/
+/rockchip_test/wifi/wifi_onoff_apsta.sh
+/rockchip_test/wifi/wifi_sta_connect.sh
+/rockchip_test/wifi/wifi_sta_reboot.sh
+/rockchip_test/wifi/wifi_test.sh
+/root/
+/run/
+/sbin/
+/sbin/arp
+/sbin/audio_volume.py
+/sbin/badblocks
+/sbin/blkid
+/sbin/devmem
+/sbin/dhcpcd
+/sbin/dumpe2fs
+/sbin/e2freefrag
+/sbin/e2fsck
+/sbin/e2label
+/sbin/e2undo
+/sbin/e4crypt
+/sbin/fdisk
+/sbin/filefrag
+/sbin/freeramdisk
+/sbin/fsck
+/sbin/fsck.ext2
+/sbin/fsck.ext3
+/sbin/fsck.ext4
+/sbin/fstrim
+/sbin/getty
+/sbin/halt
+/sbin/hdparm
+/sbin/hwclock
+/sbin/ifconfig
+/sbin/ifdown
+/sbin/ifup
+/sbin/init
+/sbin/insmod
+/sbin/ip
+/sbin/ipaddr
+/sbin/iplink
+/sbin/ipneigh
+/sbin/iproute
+/sbin/iprule
+/sbin/iptunnel
+/sbin/klogd
+/sbin/loadkmap
+/sbin/logsave
+/sbin/losetup
+/sbin/lsmod
+/sbin/makedevs
+/sbin/mdev
+/sbin/mkdosfs
+/sbin/mke2fs
+/sbin/mkfs.ext2
+/sbin/mkfs.ext3
+/sbin/mkfs.ext4
+/sbin/mkfs.fat
+/sbin/mkfs.msdos
+/sbin/mkfs.vfat
+/sbin/mklost+found
+/sbin/mkswap
+/sbin/modprobe
+/sbin/mount.exfat
+/sbin/mount.exfat-fuse
+/sbin/mount.lowntfs-3g
+/sbin/mount.ntfs
+/sbin/mount.ntfs-3g
+/sbin/nameif
+/sbin/pivot_root
+/sbin/poweroff
+/sbin/reboot
+/sbin/resize2fs
+/sbin/rmmod
+/sbin/route
+/sbin/runlevel
+/sbin/setconsole
+/sbin/start-stop-daemon
+/sbin/sulogin
+/sbin/swapoff
+/sbin/swapon
+/sbin/switch_root
+/sbin/sysctl
+/sbin/syslogd
+/sbin/tune2fs
+/sbin/udevadm
+/sbin/udevd
+/sbin/udhcpc
+/sbin/uevent
+/sbin/vconfig
+/sbin/watchdog
+/sdcard
+/sys/
+/timestamp
+/tmp/
+/tmp/run
+/udisk
+/userdata/
+/usr/
+/usr/bin/
+/usr/bin/[
+/usr/bin/[[
+/usr/bin/adbd
+/usr/bin/alsamixer
+/usr/bin/amixer
+/usr/bin/aplay
+/usr/bin/ar
+/usr/bin/arecord
+/usr/bin/aserver
+/usr/bin/awk
+/usr/bin/basename
+/usr/bin/bsa_server.sh
+/usr/bin/bunzip2
+/usr/bin/bzcat
+/usr/bin/chrt
+/usr/bin/chvt
+/usr/bin/cksum
+/usr/bin/clear
+/usr/bin/cmp
+/usr/bin/crontab
+/usr/bin/cut
+/usr/bin/cyclictest
+/usr/bin/dc
+/usr/bin/deallocvt
+/usr/bin/dhrystone
+/usr/bin/diff
+/usr/bin/dirname
+/usr/bin/dos2unix
+/usr/bin/du
+/usr/bin/eject
+/usr/bin/env
+/usr/bin/evdev-joystick
+/usr/bin/evtest
+/usr/bin/expr
+/usr/bin/factor
+/usr/bin/fallocate
+/usr/bin/ffmpeg
+/usr/bin/ffplay
+/usr/bin/find
+/usr/bin/flock
+/usr/bin/fold
+/usr/bin/free
+/usr/bin/fuser
+/usr/bin/fusermount
+/usr/bin/gapplication
+/usr/bin/gdbserver
+/usr/bin/gdbus
+/usr/bin/gio
+/usr/bin/gio-querymodules
+/usr/bin/glmarktest.sh
+/usr/bin/gresource
+/usr/bin/gsettings
+/usr/bin/gstaudiotest.sh
+/usr/bin/gstmp3play.sh
+/usr/bin/gstmp4play.sh
+/usr/bin/gstvideoplay.sh
+/usr/bin/gstvideotest.sh
+/usr/bin/gstwavplay.sh
+/usr/bin/hackbench
+/usr/bin/head
+/usr/bin/headset-hotplug.sh
+/usr/bin/hexdump
+/usr/bin/hostid
+/usr/bin/htop
+/usr/bin/id
+/usr/bin/inputattach
+/usr/bin/install
+/usr/bin/ipcrm
+/usr/bin/ipcs
+/usr/bin/iperf
+/usr/bin/jscal
+/usr/bin/jscal-restore
+/usr/bin/jscal-store
+/usr/bin/jstest
+/usr/bin/jsudev
+/usr/bin/killall
+/usr/bin/kms-steal-crtc
+/usr/bin/kms-universal-planes
+/usr/bin/kmstest
+/usr/bin/last
+/usr/bin/less
+/usr/bin/lockfile-check
+/usr/bin/lockfile-create
+/usr/bin/lockfile-remove
+/usr/bin/lockfile-touch
+/usr/bin/logger
+/usr/bin/logname
+/usr/bin/lowntfs-3g
+/usr/bin/lsof
+/usr/bin/lspci
+/usr/bin/lsscsi
+/usr/bin/lsusb
+/usr/bin/lzcat
+/usr/bin/lzma
+/usr/bin/mail-lock
+/usr/bin/mail-touchlock
+/usr/bin/mail-unlock
+/usr/bin/md5sum
+/usr/bin/memtester
+/usr/bin/mesg
+/usr/bin/microcom
+/usr/bin/minimad
+/usr/bin/mkfifo
+/usr/bin/modeprint
+/usr/bin/modetest
+/usr/bin/mp3play.sh
+/usr/bin/nl
+/usr/bin/nohup
+/usr/bin/nproc
+/usr/bin/nslookup
+/usr/bin/ntfs-3g
+/usr/bin/ntfs-3g.probe
+/usr/bin/od
+/usr/bin/on_ac_power
+/usr/bin/openvt
+/usr/bin/passwd
+/usr/bin/paste
+/usr/bin/patch
+/usr/bin/pcregrep
+/usr/bin/pcretest
+/usr/bin/pi_stress
+/usr/bin/pip_stress
+/usr/bin/play
+/usr/bin/pm-is-supported
+/usr/bin/pmqtest
+/usr/bin/printf
+/usr/bin/proptest
+/usr/bin/ptsematest
+/usr/bin/python
+/usr/bin/python3
+/usr/bin/python3.7
+/usr/bin/python3.7m
+/usr/bin/pyvenv
+/usr/bin/readlink
+/usr/bin/realpath
+/usr/bin/rec
+/usr/bin/renice
+/usr/bin/reset
+/usr/bin/resize
+/usr/bin/resize-helper
+/usr/bin/retroarch
+/usr/bin/retroarch-cg2glsl
+/usr/bin/rt-migrate-test
+/usr/bin/scp
+/usr/bin/sendme
+/usr/bin/seq
+/usr/bin/setkeycodes
+/usr/bin/setsid
+/usr/bin/sftp
+/usr/bin/sha1sum
+/usr/bin/sha256sum
+/usr/bin/sha3sum
+/usr/bin/sha512sum
+/usr/bin/shred
+/usr/bin/signaltest
+/usr/bin/sigwaittest
+/usr/bin/smtpd.py.7
+/usr/bin/sort
+/usr/bin/sox
+/usr/bin/soxi
+/usr/bin/ssh
+/usr/bin/ssh-add
+/usr/bin/ssh-agent
+/usr/bin/ssh-keygen
+/usr/bin/ssh-keyscan
+/usr/bin/ssl_client
+/usr/bin/strace
+/usr/bin/strace-log-merge
+/usr/bin/stress
+/usr/bin/stressapptest
+/usr/bin/strings
+/usr/bin/svc
+/usr/bin/svsematest
+/usr/bin/tail
+/usr/bin/taskset
+/usr/bin/tee
+/usr/bin/telnet
+/usr/bin/test
+/usr/bin/tftp
+/usr/bin/time
+/usr/bin/top
+/usr/bin/tr
+/usr/bin/trace-cmd
+/usr/bin/traceroute
+/usr/bin/truncate
+/usr/bin/tty
+/usr/bin/udevadm
+/usr/bin/uniq
+/usr/bin/unix2dos
+/usr/bin/unlink
+/usr/bin/unlzma
+/usr/bin/unxz
+/usr/bin/unzip
+/usr/bin/update
+/usr/bin/upower
+/usr/bin/uptime
+/usr/bin/usbdevice
+/usr/bin/uudecode
+/usr/bin/uuencode
+/usr/bin/vbltest
+/usr/bin/vendor_storage
+/usr/bin/w
+/usr/bin/waylandtest.sh
+/usr/bin/wc
+/usr/bin/wget
+/usr/bin/which
+/usr/bin/who
+/usr/bin/whoami
+/usr/bin/xargs
+/usr/bin/xmlwf
+/usr/bin/xxd
+/usr/bin/xz
+/usr/bin/xzcat
+/usr/bin/yes
+/usr/lib/
+/usr/lib/alsa-lib/
+/usr/lib/alsa-lib/libasound_module_ctl_arcam_av.so
+/usr/lib/alsa-lib/libasound_module_ctl_oss.so
+/usr/lib/alsa-lib/libasound_module_pcm_a52.so
+/usr/lib/alsa-lib/libasound_module_pcm_oss.so
+/usr/lib/alsa-lib/libasound_module_pcm_upmix.so
+/usr/lib/alsa-lib/libasound_module_pcm_usb_stream.so
+/usr/lib/alsa-lib/libasound_module_pcm_vdownmix.so
+/usr/lib/alsa-lib/libasound_module_rate_lavcrate.so
+/usr/lib/alsa-lib/libasound_module_rate_lavcrate_fast.so
+/usr/lib/alsa-lib/libasound_module_rate_lavcrate_faster.so
+/usr/lib/alsa-lib/libasound_module_rate_lavcrate_high.so
+/usr/lib/alsa-lib/libasound_module_rate_lavcrate_higher.so
+/usr/lib/alsa-lib/libasound_module_rate_speexrate.so
+/usr/lib/alsa-lib/libasound_module_rate_speexrate_best.so
+/usr/lib/alsa-lib/libasound_module_rate_speexrate_medium.so
+/usr/lib/dri/
+/usr/lib/dri/kms_swrast_dri.so
+/usr/lib/dri/swrast_dri.so
+/usr/lib/gio/
+/usr/lib/gio/modules/
+/usr/lib/libEGL.so
+/usr/lib/libEGL.so.1
+/usr/lib/libGLESv1_CM.so
+/usr/lib/libGLESv1_CM.so.1
+/usr/lib/libGLESv2.so
+/usr/lib/libGLESv2.so.2
+/usr/lib/libMali.so
+/usr/lib/libMali.so.1
+/usr/lib/libSDL2-2.0.so.0
+/usr/lib/libSDL2-2.0.so.0.7.0
+/usr/lib/libSDL2.so
+/usr/lib/libSDL2_image-2.0.so.0
+/usr/lib/libSDL2_image-2.0.so.0.0.1
+/usr/lib/libSDL2_image.so
+/usr/lib/libSDL2_ttf-2.0.so.0
+/usr/lib/libSDL2_ttf-2.0.so.0.14.0
+/usr/lib/libSDL2_ttf.so
+/usr/lib/libasound.so
+/usr/lib/libasound.so.2
+/usr/lib/libasound.so.2.0.0
+/usr/lib/libavcodec.so
+/usr/lib/libavcodec.so.58
+/usr/lib/libavcodec.so.58.35.100
+/usr/lib/libavdevice.so
+/usr/lib/libavdevice.so.58
+/usr/lib/libavdevice.so.58.5.100
+/usr/lib/libavfilter.so
+/usr/lib/libavfilter.so.7
+/usr/lib/libavfilter.so.7.40.101
+/usr/lib/libavformat.so
+/usr/lib/libavformat.so.58
+/usr/lib/libavformat.so.58.20.100
+/usr/lib/libavutil.so
+/usr/lib/libavutil.so.56
+/usr/lib/libavutil.so.56.22.100
+/usr/lib/libblkid.so
+/usr/lib/libcom_err.so
+/usr/lib/libcom_err.so.2
+/usr/lib/libcom_err.so.2.1
+/usr/lib/libcrypto.so
+/usr/lib/libcrypto.so.1.0.0
+/usr/lib/libcurses.so
+/usr/lib/libdrm.so
+/usr/lib/libdrm.so.2
+/usr/lib/libdrm.so.2.4.0
+/usr/lib/libdrm_rockchip.so
+/usr/lib/libdrm_rockchip.so.1
+/usr/lib/libdrm_rockchip.so.1.0.0
+/usr/lib/libe2p.so
+/usr/lib/libe2p.so.2
+/usr/lib/libe2p.so.2.3
+/usr/lib/libexpat.so
+/usr/lib/libexpat.so.1
+/usr/lib/libexpat.so.1.6.7
+/usr/lib/libext2fs.so
+/usr/lib/libext2fs.so.2
+/usr/lib/libext2fs.so.2.4
+/usr/lib/libffi.so
+/usr/lib/libffi.so.6
+/usr/lib/libffi.so.6.0.4
+/usr/lib/libform.so
+/usr/lib/libform.so.6
+/usr/lib/libform.so.6.0
+/usr/lib/libfreetype.so
+/usr/lib/libfreetype.so.6
+/usr/lib/libfreetype.so.6.15.0
+/usr/lib/libfuse.so
+/usr/lib/libfuse.so.2
+/usr/lib/libfuse.so.2.9.7
+/usr/lib/libgbm.so
+/usr/lib/libgbm.so.1
+/usr/lib/libgio-2.0.so
+/usr/lib/libgio-2.0.so.0
+/usr/lib/libgio-2.0.so.0.5400.2
+/usr/lib/libglapi.so
+/usr/lib/libglapi.so.0
+/usr/lib/libglapi.so.0.0.0
+/usr/lib/libglib-2.0.so
+/usr/lib/libglib-2.0.so.0
+/usr/lib/libglib-2.0.so.0.5400.2
+/usr/lib/libgmodule-2.0.so
+/usr/lib/libgmodule-2.0.so.0
+/usr/lib/libgmodule-2.0.so.0.5400.2
+/usr/lib/libgobject-2.0.so
+/usr/lib/libgobject-2.0.so.0
+/usr/lib/libgobject-2.0.so.0.5400.2
+/usr/lib/libgthread-2.0.so
+/usr/lib/libgthread-2.0.so.0
+/usr/lib/libgthread-2.0.so.0.5400.2
+/usr/lib/libgudev-1.0.so
+/usr/lib/libgudev-1.0.so.0
+/usr/lib/libgudev-1.0.so.0.2.0
+/usr/lib/libhistory.so
+/usr/lib/libhistory.so.7
+/usr/lib/libhistory.so.7.0
+/usr/lib/libkmod.so
+/usr/lib/libkmod.so.2
+/usr/lib/libkmod.so.2.3.2
+/usr/lib/libkms.so
+/usr/lib/libkms.so.1
+/usr/lib/libkms.so.1.0.0
+/usr/lib/liblockfile.so
+/usr/lib/liblockfile.so.1
+/usr/lib/liblockfile.so.1.0
+/usr/lib/libmad.so
+/usr/lib/libmad.so.0
+/usr/lib/libmad.so.0.2.1
+/usr/lib/libmali-utgard-400-r7p0-r1p1-gbm.so
+/usr/lib/libmali.so
+/usr/lib/libmali.so.1
+/usr/lib/libmenu.so
+/usr/lib/libmenu.so.6
+/usr/lib/libmenu.so.6.0
+/usr/lib/libmount.so
+/usr/lib/libncurses.so
+/usr/lib/libncurses.so.6
+/usr/lib/libncurses.so.6.0
+/usr/lib/libntfs-3g.so
+/usr/lib/libntfs-3g.so.88
+/usr/lib/libntfs-3g.so.88.0.0
+/usr/lib/libpanel.so
+/usr/lib/libpanel.so.6
+/usr/lib/libpanel.so.6.0
+/usr/lib/libpcre.so
+/usr/lib/libpcre.so.1
+/usr/lib/libpcre.so.1.2.9
+/usr/lib/libpcrecpp.so
+/usr/lib/libpcrecpp.so.0
+/usr/lib/libpcrecpp.so.0.0.1
+/usr/lib/libpcreposix.so
+/usr/lib/libpcreposix.so.0
+/usr/lib/libpcreposix.so.0.0.5
+/usr/lib/libpng.so
+/usr/lib/libpng16.so
+/usr/lib/libpng16.so.16
+/usr/lib/libpng16.so.16.34.0
+/usr/lib/libpython3.7m.so
+/usr/lib/libpython3.7m.so.1.0
+/usr/lib/libpython3.so
+/usr/lib/libreadline.so
+/usr/lib/libreadline.so.7
+/usr/lib/libreadline.so.7.0
+/usr/lib/libretro/
+/usr/lib/libretro/mame2003_libretro.so
+/usr/lib/libretro/mame2003plus_libretro.so
+/usr/lib/libsox.so
+/usr/lib/libsox.so.3
+/usr/lib/libsox.so.3.0.0
+/usr/lib/libss.so
+/usr/lib/libss.so.2
+/usr/lib/libss.so.2.0
+/usr/lib/libssl.so
+/usr/lib/libssl.so.1.0.0
+/usr/lib/libstdc++.so
+/usr/lib/libstdc++.so.6
+/usr/lib/libstdc++.so.6.0.22
+/usr/lib/libstdc++.so.6.0.22-gdb.py
+/usr/lib/libswresample.so
+/usr/lib/libswresample.so.3
+/usr/lib/libswresample.so.3.3.100
+/usr/lib/libswscale.so
+/usr/lib/libswscale.so.5
+/usr/lib/libswscale.so.5.3.100
+/usr/lib/libudev.so
+/usr/lib/libupower-glib.so
+/usr/lib/libupower-glib.so.3
+/usr/lib/libupower-glib.so.3.0.1
+/usr/lib/libusb-1.0.so
+/usr/lib/libusb-1.0.so.0
+/usr/lib/libusb-1.0.so.0.1.0
+/usr/lib/libuuid.so
+/usr/lib/libx265.so
+/usr/lib/libx265.so.130
+/usr/lib/libz.so
+/usr/lib/libz.so.1
+/usr/lib/libz.so.1.2.11
+/usr/lib/ntfs-3g/
+/usr/lib/os-release
+/usr/lib/pm-utils/
+/usr/lib/pm-utils/bin/
+/usr/lib/pm-utils/bin/pm-action
+/usr/lib/pm-utils/bin/pm-pmu
+/usr/lib/pm-utils/bin/pm-reset-swap
+/usr/lib/pm-utils/bin/service
+/usr/lib/pm-utils/defaults
+/usr/lib/pm-utils/functions
+/usr/lib/pm-utils/module.d/
+/usr/lib/pm-utils/module.d/kernel
+/usr/lib/pm-utils/module.d/tuxonice
+/usr/lib/pm-utils/module.d/uswsusp
+/usr/lib/pm-utils/pm-functions
+/usr/lib/pm-utils/power.d/
+/usr/lib/pm-utils/power.d/disable_wol
+/usr/lib/pm-utils/power.d/hal-cd-polling
+/usr/lib/pm-utils/power.d/harddrive
+/usr/lib/pm-utils/power.d/intel-audio-powersave
+/usr/lib/pm-utils/power.d/journal-commit
+/usr/lib/pm-utils/power.d/laptop-mode
+/usr/lib/pm-utils/power.d/pcie_aspm
+/usr/lib/pm-utils/power.d/readahead
+/usr/lib/pm-utils/power.d/sata_alpm
+/usr/lib/pm-utils/power.d/sched-powersave
+/usr/lib/pm-utils/power.d/wireless
+/usr/lib/pm-utils/power.d/xfs_buffer
+/usr/lib/pm-utils/sleep.d/
+/usr/lib/pm-utils/sleep.d/00logging
+/usr/lib/python3.7/
+/usr/lib/python3.7/LICENSE.txt
+/usr/lib/python3.7/__future__.pyc
+/usr/lib/python3.7/__phello__.foo.pyc
+/usr/lib/python3.7/_bootlocale.pyc
+/usr/lib/python3.7/_collections_abc.pyc
+/usr/lib/python3.7/_compat_pickle.pyc
+/usr/lib/python3.7/_compression.pyc
+/usr/lib/python3.7/_dummy_thread.pyc
+/usr/lib/python3.7/_markupbase.pyc
+/usr/lib/python3.7/_osx_support.pyc
+/usr/lib/python3.7/_py_abc.pyc
+/usr/lib/python3.7/_pydecimal.pyc
+/usr/lib/python3.7/_pyio.pyc
+/usr/lib/python3.7/_sitebuiltins.pyc
+/usr/lib/python3.7/_strptime.pyc
+/usr/lib/python3.7/_sysconfigdata_m_linux_arm-linux-gnueabihf.pyc
+/usr/lib/python3.7/_threading_local.pyc
+/usr/lib/python3.7/_weakrefset.pyc
+/usr/lib/python3.7/abc.pyc
+/usr/lib/python3.7/aifc.pyc
+/usr/lib/python3.7/antigravity.pyc
+/usr/lib/python3.7/argparse.pyc
+/usr/lib/python3.7/ast.pyc
+/usr/lib/python3.7/asynchat.pyc
+/usr/lib/python3.7/asyncio/
+/usr/lib/python3.7/asyncio/__init__.pyc
+/usr/lib/python3.7/asyncio/base_events.pyc
+/usr/lib/python3.7/asyncio/base_futures.pyc
+/usr/lib/python3.7/asyncio/base_subprocess.pyc
+/usr/lib/python3.7/asyncio/base_tasks.pyc
+/usr/lib/python3.7/asyncio/constants.pyc
+/usr/lib/python3.7/asyncio/coroutines.pyc
+/usr/lib/python3.7/asyncio/events.pyc
+/usr/lib/python3.7/asyncio/format_helpers.pyc
+/usr/lib/python3.7/asyncio/futures.pyc
+/usr/lib/python3.7/asyncio/locks.pyc
+/usr/lib/python3.7/asyncio/log.pyc
+/usr/lib/python3.7/asyncio/proactor_events.pyc
+/usr/lib/python3.7/asyncio/protocols.pyc
+/usr/lib/python3.7/asyncio/queues.pyc
+/usr/lib/python3.7/asyncio/runners.pyc
+/usr/lib/python3.7/asyncio/selector_events.pyc
+/usr/lib/python3.7/asyncio/sslproto.pyc
+/usr/lib/python3.7/asyncio/streams.pyc
+/usr/lib/python3.7/asyncio/subprocess.pyc
+/usr/lib/python3.7/asyncio/tasks.pyc
+/usr/lib/python3.7/asyncio/transports.pyc
+/usr/lib/python3.7/asyncio/unix_events.pyc
+/usr/lib/python3.7/asyncio/windows_events.pyc
+/usr/lib/python3.7/asyncio/windows_utils.pyc
+/usr/lib/python3.7/asyncore.pyc
+/usr/lib/python3.7/base64.pyc
+/usr/lib/python3.7/bdb.pyc
+/usr/lib/python3.7/binhex.pyc
+/usr/lib/python3.7/bisect.pyc
+/usr/lib/python3.7/bz2.pyc
+/usr/lib/python3.7/cProfile.pyc
+/usr/lib/python3.7/calendar.pyc
+/usr/lib/python3.7/cgi.pyc
+/usr/lib/python3.7/cgitb.pyc
+/usr/lib/python3.7/chunk.pyc
+/usr/lib/python3.7/cmd.pyc
+/usr/lib/python3.7/code.pyc
+/usr/lib/python3.7/codecs.pyc
+/usr/lib/python3.7/codeop.pyc
+/usr/lib/python3.7/collections/
+/usr/lib/python3.7/collections/__init__.pyc
+/usr/lib/python3.7/collections/abc.pyc
+/usr/lib/python3.7/colorsys.pyc
+/usr/lib/python3.7/compileall.pyc
+/usr/lib/python3.7/concurrent/
+/usr/lib/python3.7/concurrent/__init__.pyc
+/usr/lib/python3.7/concurrent/futures/
+/usr/lib/python3.7/concurrent/futures/__init__.pyc
+/usr/lib/python3.7/concurrent/futures/_base.pyc
+/usr/lib/python3.7/concurrent/futures/process.pyc
+/usr/lib/python3.7/concurrent/futures/thread.pyc
+/usr/lib/python3.7/config-3.7m-arm-linux-gnueabihf/
+/usr/lib/python3.7/config-3.7m-arm-linux-gnueabihf/Makefile
+/usr/lib/python3.7/configparser.pyc
+/usr/lib/python3.7/contextlib.pyc
+/usr/lib/python3.7/contextvars.pyc
+/usr/lib/python3.7/copy.pyc
+/usr/lib/python3.7/copyreg.pyc
+/usr/lib/python3.7/crypt.pyc
+/usr/lib/python3.7/csv.pyc
+/usr/lib/python3.7/ctypes/
+/usr/lib/python3.7/ctypes/__init__.pyc
+/usr/lib/python3.7/ctypes/_aix.pyc
+/usr/lib/python3.7/ctypes/_endian.pyc
+/usr/lib/python3.7/ctypes/macholib/
+/usr/lib/python3.7/ctypes/macholib/README.ctypes
+/usr/lib/python3.7/ctypes/macholib/__init__.pyc
+/usr/lib/python3.7/ctypes/macholib/dyld.pyc
+/usr/lib/python3.7/ctypes/macholib/dylib.pyc
+/usr/lib/python3.7/ctypes/macholib/fetch_macholib
+/usr/lib/python3.7/ctypes/macholib/fetch_macholib.bat
+/usr/lib/python3.7/ctypes/macholib/framework.pyc
+/usr/lib/python3.7/ctypes/util.pyc
+/usr/lib/python3.7/ctypes/wintypes.pyc
+/usr/lib/python3.7/curses/
+/usr/lib/python3.7/curses/__init__.pyc
+/usr/lib/python3.7/curses/ascii.pyc
+/usr/lib/python3.7/curses/has_key.pyc
+/usr/lib/python3.7/curses/panel.pyc
+/usr/lib/python3.7/curses/textpad.pyc
+/usr/lib/python3.7/dataclasses.pyc
+/usr/lib/python3.7/datetime.pyc
+/usr/lib/python3.7/dbm/
+/usr/lib/python3.7/dbm/__init__.pyc
+/usr/lib/python3.7/dbm/dumb.pyc
+/usr/lib/python3.7/dbm/gnu.pyc
+/usr/lib/python3.7/dbm/ndbm.pyc
+/usr/lib/python3.7/decimal.pyc
+/usr/lib/python3.7/difflib.pyc
+/usr/lib/python3.7/dis.pyc
+/usr/lib/python3.7/distutils/
+/usr/lib/python3.7/distutils/README
+/usr/lib/python3.7/distutils/__init__.pyc
+/usr/lib/python3.7/distutils/_msvccompiler.pyc
+/usr/lib/python3.7/distutils/archive_util.pyc
+/usr/lib/python3.7/distutils/bcppcompiler.pyc
+/usr/lib/python3.7/distutils/ccompiler.pyc
+/usr/lib/python3.7/distutils/cmd.pyc
+/usr/lib/python3.7/distutils/command/
+/usr/lib/python3.7/distutils/command/__init__.pyc
+/usr/lib/python3.7/distutils/command/bdist.pyc
+/usr/lib/python3.7/distutils/command/bdist_dumb.pyc
+/usr/lib/python3.7/distutils/command/bdist_msi.pyc
+/usr/lib/python3.7/distutils/command/bdist_rpm.pyc
+/usr/lib/python3.7/distutils/command/bdist_wininst.pyc
+/usr/lib/python3.7/distutils/command/build.pyc
+/usr/lib/python3.7/distutils/command/build_clib.pyc
+/usr/lib/python3.7/distutils/command/build_ext.pyc
+/usr/lib/python3.7/distutils/command/build_py.pyc
+/usr/lib/python3.7/distutils/command/build_scripts.pyc
+/usr/lib/python3.7/distutils/command/check.pyc
+/usr/lib/python3.7/distutils/command/clean.pyc
+/usr/lib/python3.7/distutils/command/command_template
+/usr/lib/python3.7/distutils/command/config.pyc
+/usr/lib/python3.7/distutils/command/install.pyc
+/usr/lib/python3.7/distutils/command/install_data.pyc
+/usr/lib/python3.7/distutils/command/install_egg_info.pyc
+/usr/lib/python3.7/distutils/command/install_headers.pyc
+/usr/lib/python3.7/distutils/command/install_lib.pyc
+/usr/lib/python3.7/distutils/command/install_scripts.pyc
+/usr/lib/python3.7/distutils/command/register.pyc
+/usr/lib/python3.7/distutils/command/sdist.pyc
+/usr/lib/python3.7/distutils/command/upload.pyc
+/usr/lib/python3.7/distutils/command/wininst-10.0-amd64.exe
+/usr/lib/python3.7/distutils/command/wininst-10.0.exe
+/usr/lib/python3.7/distutils/command/wininst-14.0-amd64.exe
+/usr/lib/python3.7/distutils/command/wininst-14.0.exe
+/usr/lib/python3.7/distutils/command/wininst-6.0.exe
+/usr/lib/python3.7/distutils/command/wininst-7.1.exe
+/usr/lib/python3.7/distutils/command/wininst-8.0.exe
+/usr/lib/python3.7/distutils/command/wininst-9.0-amd64.exe
+/usr/lib/python3.7/distutils/command/wininst-9.0.exe
+/usr/lib/python3.7/distutils/config.pyc
+/usr/lib/python3.7/distutils/core.pyc
+/usr/lib/python3.7/distutils/cygwinccompiler.pyc
+/usr/lib/python3.7/distutils/debug.pyc
+/usr/lib/python3.7/distutils/dep_util.pyc
+/usr/lib/python3.7/distutils/dir_util.pyc
+/usr/lib/python3.7/distutils/dist.pyc
+/usr/lib/python3.7/distutils/errors.pyc
+/usr/lib/python3.7/distutils/extension.pyc
+/usr/lib/python3.7/distutils/fancy_getopt.pyc
+/usr/lib/python3.7/distutils/file_util.pyc
+/usr/lib/python3.7/distutils/filelist.pyc
+/usr/lib/python3.7/distutils/log.pyc
+/usr/lib/python3.7/distutils/msvc9compiler.pyc
+/usr/lib/python3.7/distutils/msvccompiler.pyc
+/usr/lib/python3.7/distutils/spawn.pyc
+/usr/lib/python3.7/distutils/sysconfig.pyc
+/usr/lib/python3.7/distutils/text_file.pyc
+/usr/lib/python3.7/distutils/unixccompiler.pyc
+/usr/lib/python3.7/distutils/util.pyc
+/usr/lib/python3.7/distutils/version.pyc
+/usr/lib/python3.7/distutils/versionpredicate.pyc
+/usr/lib/python3.7/doctest.pyc
+/usr/lib/python3.7/dummy_threading.pyc
+/usr/lib/python3.7/email/
+/usr/lib/python3.7/email/__init__.pyc
+/usr/lib/python3.7/email/_encoded_words.pyc
+/usr/lib/python3.7/email/_header_value_parser.pyc
+/usr/lib/python3.7/email/_parseaddr.pyc
+/usr/lib/python3.7/email/_policybase.pyc
+/usr/lib/python3.7/email/architecture.rst
+/usr/lib/python3.7/email/base64mime.pyc
+/usr/lib/python3.7/email/charset.pyc
+/usr/lib/python3.7/email/contentmanager.pyc
+/usr/lib/python3.7/email/encoders.pyc
+/usr/lib/python3.7/email/errors.pyc
+/usr/lib/python3.7/email/feedparser.pyc
+/usr/lib/python3.7/email/generator.pyc
+/usr/lib/python3.7/email/header.pyc
+/usr/lib/python3.7/email/headerregistry.pyc
+/usr/lib/python3.7/email/iterators.pyc
+/usr/lib/python3.7/email/message.pyc
+/usr/lib/python3.7/email/mime/
+/usr/lib/python3.7/email/mime/__init__.pyc
+/usr/lib/python3.7/email/mime/application.pyc
+/usr/lib/python3.7/email/mime/audio.pyc
+/usr/lib/python3.7/email/mime/base.pyc
+/usr/lib/python3.7/email/mime/image.pyc
+/usr/lib/python3.7/email/mime/message.pyc
+/usr/lib/python3.7/email/mime/multipart.pyc
+/usr/lib/python3.7/email/mime/nonmultipart.pyc
+/usr/lib/python3.7/email/mime/text.pyc
+/usr/lib/python3.7/email/parser.pyc
+/usr/lib/python3.7/email/policy.pyc
+/usr/lib/python3.7/email/quoprimime.pyc
+/usr/lib/python3.7/email/utils.pyc
+/usr/lib/python3.7/encodings/
+/usr/lib/python3.7/encodings/__init__.pyc
+/usr/lib/python3.7/encodings/aliases.pyc
+/usr/lib/python3.7/encodings/ascii.pyc
+/usr/lib/python3.7/encodings/base64_codec.pyc
+/usr/lib/python3.7/encodings/big5.pyc
+/usr/lib/python3.7/encodings/big5hkscs.pyc
+/usr/lib/python3.7/encodings/bz2_codec.pyc
+/usr/lib/python3.7/encodings/charmap.pyc
+/usr/lib/python3.7/encodings/cp037.pyc
+/usr/lib/python3.7/encodings/cp1006.pyc
+/usr/lib/python3.7/encodings/cp1026.pyc
+/usr/lib/python3.7/encodings/cp1125.pyc
+/usr/lib/python3.7/encodings/cp1140.pyc
+/usr/lib/python3.7/encodings/cp1250.pyc
+/usr/lib/python3.7/encodings/cp1251.pyc
+/usr/lib/python3.7/encodings/cp1252.pyc
+/usr/lib/python3.7/encodings/cp1253.pyc
+/usr/lib/python3.7/encodings/cp1254.pyc
+/usr/lib/python3.7/encodings/cp1255.pyc
+/usr/lib/python3.7/encodings/cp1256.pyc
+/usr/lib/python3.7/encodings/cp1257.pyc
+/usr/lib/python3.7/encodings/cp1258.pyc
+/usr/lib/python3.7/encodings/cp273.pyc
+/usr/lib/python3.7/encodings/cp424.pyc
+/usr/lib/python3.7/encodings/cp437.pyc
+/usr/lib/python3.7/encodings/cp500.pyc
+/usr/lib/python3.7/encodings/cp65001.pyc
+/usr/lib/python3.7/encodings/cp720.pyc
+/usr/lib/python3.7/encodings/cp737.pyc
+/usr/lib/python3.7/encodings/cp775.pyc
+/usr/lib/python3.7/encodings/cp850.pyc
+/usr/lib/python3.7/encodings/cp852.pyc
+/usr/lib/python3.7/encodings/cp855.pyc
+/usr/lib/python3.7/encodings/cp856.pyc
+/usr/lib/python3.7/encodings/cp857.pyc
+/usr/lib/python3.7/encodings/cp858.pyc
+/usr/lib/python3.7/encodings/cp860.pyc
+/usr/lib/python3.7/encodings/cp861.pyc
+/usr/lib/python3.7/encodings/cp862.pyc
+/usr/lib/python3.7/encodings/cp863.pyc
+/usr/lib/python3.7/encodings/cp864.pyc
+/usr/lib/python3.7/encodings/cp865.pyc
+/usr/lib/python3.7/encodings/cp866.pyc
+/usr/lib/python3.7/encodings/cp869.pyc
+/usr/lib/python3.7/encodings/cp874.pyc
+/usr/lib/python3.7/encodings/cp875.pyc
+/usr/lib/python3.7/encodings/cp932.pyc
+/usr/lib/python3.7/encodings/cp949.pyc
+/usr/lib/python3.7/encodings/cp950.pyc
+/usr/lib/python3.7/encodings/euc_jis_2004.pyc
+/usr/lib/python3.7/encodings/euc_jisx0213.pyc
+/usr/lib/python3.7/encodings/euc_jp.pyc
+/usr/lib/python3.7/encodings/euc_kr.pyc
+/usr/lib/python3.7/encodings/gb18030.pyc
+/usr/lib/python3.7/encodings/gb2312.pyc
+/usr/lib/python3.7/encodings/gbk.pyc
+/usr/lib/python3.7/encodings/hex_codec.pyc
+/usr/lib/python3.7/encodings/hp_roman8.pyc
+/usr/lib/python3.7/encodings/hz.pyc
+/usr/lib/python3.7/encodings/idna.pyc
+/usr/lib/python3.7/encodings/iso2022_jp.pyc
+/usr/lib/python3.7/encodings/iso2022_jp_1.pyc
+/usr/lib/python3.7/encodings/iso2022_jp_2.pyc
+/usr/lib/python3.7/encodings/iso2022_jp_2004.pyc
+/usr/lib/python3.7/encodings/iso2022_jp_3.pyc
+/usr/lib/python3.7/encodings/iso2022_jp_ext.pyc
+/usr/lib/python3.7/encodings/iso2022_kr.pyc
+/usr/lib/python3.7/encodings/iso8859_1.pyc
+/usr/lib/python3.7/encodings/iso8859_10.pyc
+/usr/lib/python3.7/encodings/iso8859_11.pyc
+/usr/lib/python3.7/encodings/iso8859_13.pyc
+/usr/lib/python3.7/encodings/iso8859_14.pyc
+/usr/lib/python3.7/encodings/iso8859_15.pyc
+/usr/lib/python3.7/encodings/iso8859_16.pyc
+/usr/lib/python3.7/encodings/iso8859_2.pyc
+/usr/lib/python3.7/encodings/iso8859_3.pyc
+/usr/lib/python3.7/encodings/iso8859_4.pyc
+/usr/lib/python3.7/encodings/iso8859_5.pyc
+/usr/lib/python3.7/encodings/iso8859_6.pyc
+/usr/lib/python3.7/encodings/iso8859_7.pyc
+/usr/lib/python3.7/encodings/iso8859_8.pyc
+/usr/lib/python3.7/encodings/iso8859_9.pyc
+/usr/lib/python3.7/encodings/johab.pyc
+/usr/lib/python3.7/encodings/koi8_r.pyc
+/usr/lib/python3.7/encodings/koi8_t.pyc
+/usr/lib/python3.7/encodings/koi8_u.pyc
+/usr/lib/python3.7/encodings/kz1048.pyc
+/usr/lib/python3.7/encodings/latin_1.pyc
+/usr/lib/python3.7/encodings/mac_arabic.pyc
+/usr/lib/python3.7/encodings/mac_centeuro.pyc
+/usr/lib/python3.7/encodings/mac_croatian.pyc
+/usr/lib/python3.7/encodings/mac_cyrillic.pyc
+/usr/lib/python3.7/encodings/mac_farsi.pyc
+/usr/lib/python3.7/encodings/mac_greek.pyc
+/usr/lib/python3.7/encodings/mac_iceland.pyc
+/usr/lib/python3.7/encodings/mac_latin2.pyc
+/usr/lib/python3.7/encodings/mac_roman.pyc
+/usr/lib/python3.7/encodings/mac_romanian.pyc
+/usr/lib/python3.7/encodings/mac_turkish.pyc
+/usr/lib/python3.7/encodings/mbcs.pyc
+/usr/lib/python3.7/encodings/oem.pyc
+/usr/lib/python3.7/encodings/palmos.pyc
+/usr/lib/python3.7/encodings/ptcp154.pyc
+/usr/lib/python3.7/encodings/punycode.pyc
+/usr/lib/python3.7/encodings/quopri_codec.pyc
+/usr/lib/python3.7/encodings/raw_unicode_escape.pyc
+/usr/lib/python3.7/encodings/rot_13.pyc
+/usr/lib/python3.7/encodings/shift_jis.pyc
+/usr/lib/python3.7/encodings/shift_jis_2004.pyc
+/usr/lib/python3.7/encodings/shift_jisx0213.pyc
+/usr/lib/python3.7/encodings/tis_620.pyc
+/usr/lib/python3.7/encodings/undefined.pyc
+/usr/lib/python3.7/encodings/unicode_escape.pyc
+/usr/lib/python3.7/encodings/unicode_internal.pyc
+/usr/lib/python3.7/encodings/utf_16.pyc
+/usr/lib/python3.7/encodings/utf_16_be.pyc
+/usr/lib/python3.7/encodings/utf_16_le.pyc
+/usr/lib/python3.7/encodings/utf_32.pyc
+/usr/lib/python3.7/encodings/utf_32_be.pyc
+/usr/lib/python3.7/encodings/utf_32_le.pyc
+/usr/lib/python3.7/encodings/utf_7.pyc
+/usr/lib/python3.7/encodings/utf_8.pyc
+/usr/lib/python3.7/encodings/utf_8_sig.pyc
+/usr/lib/python3.7/encodings/uu_codec.pyc
+/usr/lib/python3.7/encodings/zlib_codec.pyc
+/usr/lib/python3.7/ensurepip/
+/usr/lib/python3.7/ensurepip/__init__.pyc
+/usr/lib/python3.7/ensurepip/__main__.pyc
+/usr/lib/python3.7/ensurepip/_bundled/
+/usr/lib/python3.7/ensurepip/_bundled/pip-19.0.3-py2.py3-none-any.whl
+/usr/lib/python3.7/ensurepip/_bundled/setuptools-40.8.0-py2.py3-none-any.whl
+/usr/lib/python3.7/ensurepip/_uninstall.pyc
+/usr/lib/python3.7/enum.pyc
+/usr/lib/python3.7/filecmp.pyc
+/usr/lib/python3.7/fileinput.pyc
+/usr/lib/python3.7/fnmatch.pyc
+/usr/lib/python3.7/formatter.pyc
+/usr/lib/python3.7/fractions.pyc
+/usr/lib/python3.7/ftplib.pyc
+/usr/lib/python3.7/functools.pyc
+/usr/lib/python3.7/genericpath.pyc
+/usr/lib/python3.7/getopt.pyc
+/usr/lib/python3.7/getpass.pyc
+/usr/lib/python3.7/gettext.pyc
+/usr/lib/python3.7/glob.pyc
+/usr/lib/python3.7/gzip.pyc
+/usr/lib/python3.7/hashlib.pyc
+/usr/lib/python3.7/heapq.pyc
+/usr/lib/python3.7/hmac.pyc
+/usr/lib/python3.7/html/
+/usr/lib/python3.7/html/__init__.pyc
+/usr/lib/python3.7/html/entities.pyc
+/usr/lib/python3.7/html/parser.pyc
+/usr/lib/python3.7/http/
+/usr/lib/python3.7/http/__init__.pyc
+/usr/lib/python3.7/http/client.pyc
+/usr/lib/python3.7/http/cookiejar.pyc
+/usr/lib/python3.7/http/cookies.pyc
+/usr/lib/python3.7/http/server.pyc
+/usr/lib/python3.7/imaplib.pyc
+/usr/lib/python3.7/imghdr.pyc
+/usr/lib/python3.7/imp.pyc
+/usr/lib/python3.7/importlib/
+/usr/lib/python3.7/importlib/__init__.pyc
+/usr/lib/python3.7/importlib/_bootstrap.pyc
+/usr/lib/python3.7/importlib/_bootstrap_external.pyc
+/usr/lib/python3.7/importlib/abc.pyc
+/usr/lib/python3.7/importlib/machinery.pyc
+/usr/lib/python3.7/importlib/resources.pyc
+/usr/lib/python3.7/importlib/util.pyc
+/usr/lib/python3.7/inspect.pyc
+/usr/lib/python3.7/io.pyc
+/usr/lib/python3.7/ipaddress.pyc
+/usr/lib/python3.7/json/
+/usr/lib/python3.7/json/__init__.pyc
+/usr/lib/python3.7/json/decoder.pyc
+/usr/lib/python3.7/json/encoder.pyc
+/usr/lib/python3.7/json/scanner.pyc
+/usr/lib/python3.7/json/tool.pyc
+/usr/lib/python3.7/keyword.pyc
+/usr/lib/python3.7/lib-dynload/
+/usr/lib/python3.7/lib-dynload/_asyncio.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_bisect.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_blake2.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_contextvars.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_crypt.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_csv.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_ctypes.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_ctypes_test.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_curses.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_curses_panel.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_datetime.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_elementtree.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_heapq.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_json.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_lsprof.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_md5.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_multibytecodec.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_multiprocessing.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_opcode.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_pickle.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_posixsubprocess.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_queue.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_random.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_sha1.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_sha256.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_sha3.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_sha512.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_socket.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_struct.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_sysconfigdata_m_linux_arm-linux-gnueabihf.pyc
+/usr/lib/python3.7/lib-dynload/_testbuffer.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_testcapi.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_testimportmultiple.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_testmultiphase.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/_xxtestfuzz.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/array.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/audioop.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/binascii.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/cmath.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/fcntl.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/grp.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/math.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/mmap.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/parser.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/resource.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/select.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/spwd.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/syslog.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/termios.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/unicodedata.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/lib-dynload/xxlimited.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/linecache.pyc
+/usr/lib/python3.7/locale.pyc
+/usr/lib/python3.7/logging/
+/usr/lib/python3.7/logging/__init__.pyc
+/usr/lib/python3.7/logging/config.pyc
+/usr/lib/python3.7/logging/handlers.pyc
+/usr/lib/python3.7/lzma.pyc
+/usr/lib/python3.7/macpath.pyc
+/usr/lib/python3.7/mailbox.pyc
+/usr/lib/python3.7/mailcap.pyc
+/usr/lib/python3.7/mimetypes.pyc
+/usr/lib/python3.7/modulefinder.pyc
+/usr/lib/python3.7/multiprocessing/
+/usr/lib/python3.7/multiprocessing/__init__.pyc
+/usr/lib/python3.7/multiprocessing/connection.pyc
+/usr/lib/python3.7/multiprocessing/context.pyc
+/usr/lib/python3.7/multiprocessing/dummy/
+/usr/lib/python3.7/multiprocessing/dummy/__init__.pyc
+/usr/lib/python3.7/multiprocessing/dummy/connection.pyc
+/usr/lib/python3.7/multiprocessing/forkserver.pyc
+/usr/lib/python3.7/multiprocessing/heap.pyc
+/usr/lib/python3.7/multiprocessing/managers.pyc
+/usr/lib/python3.7/multiprocessing/pool.pyc
+/usr/lib/python3.7/multiprocessing/popen_fork.pyc
+/usr/lib/python3.7/multiprocessing/popen_forkserver.pyc
+/usr/lib/python3.7/multiprocessing/popen_spawn_posix.pyc
+/usr/lib/python3.7/multiprocessing/popen_spawn_win32.pyc
+/usr/lib/python3.7/multiprocessing/process.pyc
+/usr/lib/python3.7/multiprocessing/queues.pyc
+/usr/lib/python3.7/multiprocessing/reduction.pyc
+/usr/lib/python3.7/multiprocessing/resource_sharer.pyc
+/usr/lib/python3.7/multiprocessing/semaphore_tracker.pyc
+/usr/lib/python3.7/multiprocessing/sharedctypes.pyc
+/usr/lib/python3.7/multiprocessing/spawn.pyc
+/usr/lib/python3.7/multiprocessing/synchronize.pyc
+/usr/lib/python3.7/multiprocessing/util.pyc
+/usr/lib/python3.7/netrc.pyc
+/usr/lib/python3.7/nntplib.pyc
+/usr/lib/python3.7/ntpath.pyc
+/usr/lib/python3.7/nturl2path.pyc
+/usr/lib/python3.7/numbers.pyc
+/usr/lib/python3.7/opcode.pyc
+/usr/lib/python3.7/operator.pyc
+/usr/lib/python3.7/optparse.pyc
+/usr/lib/python3.7/os.pyc
+/usr/lib/python3.7/pathlib.pyc
+/usr/lib/python3.7/pdb.pyc
+/usr/lib/python3.7/pickle.pyc
+/usr/lib/python3.7/pickletools.pyc
+/usr/lib/python3.7/pipes.pyc
+/usr/lib/python3.7/pkgutil.pyc
+/usr/lib/python3.7/platform.pyc
+/usr/lib/python3.7/plistlib.pyc
+/usr/lib/python3.7/poplib.pyc
+/usr/lib/python3.7/posixpath.pyc
+/usr/lib/python3.7/pprint.pyc
+/usr/lib/python3.7/profile.pyc
+/usr/lib/python3.7/pstats.pyc
+/usr/lib/python3.7/pty.pyc
+/usr/lib/python3.7/py_compile.pyc
+/usr/lib/python3.7/pyclbr.pyc
+/usr/lib/python3.7/pydoc.pyc
+/usr/lib/python3.7/queue.pyc
+/usr/lib/python3.7/quopri.pyc
+/usr/lib/python3.7/random.pyc
+/usr/lib/python3.7/re.pyc
+/usr/lib/python3.7/reprlib.pyc
+/usr/lib/python3.7/rlcompleter.pyc
+/usr/lib/python3.7/runpy.pyc
+/usr/lib/python3.7/sched.pyc
+/usr/lib/python3.7/secrets.pyc
+/usr/lib/python3.7/selectors.pyc
+/usr/lib/python3.7/shelve.pyc
+/usr/lib/python3.7/shlex.pyc
+/usr/lib/python3.7/shutil.pyc
+/usr/lib/python3.7/signal.pyc
+/usr/lib/python3.7/site-packages/
+/usr/lib/python3.7/site-packages/PySDL2-0.9.7-py3.7.egg-info/
+/usr/lib/python3.7/site-packages/PySDL2-0.9.7-py3.7.egg-info/PKG-INFO
+/usr/lib/python3.7/site-packages/PySDL2-0.9.7-py3.7.egg-info/SOURCES.txt
+/usr/lib/python3.7/site-packages/PySDL2-0.9.7-py3.7.egg-info/dependency_links.txt
+/usr/lib/python3.7/site-packages/PySDL2-0.9.7-py3.7.egg-info/top_level.txt
+/usr/lib/python3.7/site-packages/README.txt
+/usr/lib/python3.7/site-packages/alsaaudio.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/site-packages/evdev/
+/usr/lib/python3.7/site-packages/evdev-1.4.0-py3.7.egg-info/
+/usr/lib/python3.7/site-packages/evdev-1.4.0-py3.7.egg-info/PKG-INFO
+/usr/lib/python3.7/site-packages/evdev-1.4.0-py3.7.egg-info/SOURCES.txt
+/usr/lib/python3.7/site-packages/evdev-1.4.0-py3.7.egg-info/dependency_links.txt
+/usr/lib/python3.7/site-packages/evdev-1.4.0-py3.7.egg-info/top_level.txt
+/usr/lib/python3.7/site-packages/evdev-1.4.0-py3.7.egg-info/zip-safe
+/usr/lib/python3.7/site-packages/evdev/__init__.pyc
+/usr/lib/python3.7/site-packages/evdev/_ecodes.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/site-packages/evdev/_input.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/site-packages/evdev/_uinput.cpython-37m-arm-linux-gnueabihf.so
+/usr/lib/python3.7/site-packages/evdev/device.pyc
+/usr/lib/python3.7/site-packages/evdev/ecodes.pyc
+/usr/lib/python3.7/site-packages/evdev/eventio.pyc
+/usr/lib/python3.7/site-packages/evdev/eventio_async.pyc
+/usr/lib/python3.7/site-packages/evdev/events.pyc
+/usr/lib/python3.7/site-packages/evdev/evtest.pyc
+/usr/lib/python3.7/site-packages/evdev/ff.pyc
+/usr/lib/python3.7/site-packages/evdev/genecodes.pyc
+/usr/lib/python3.7/site-packages/evdev/uinput.pyc
+/usr/lib/python3.7/site-packages/evdev/util.pyc
+/usr/lib/python3.7/site-packages/libmount/
+/usr/lib/python3.7/site-packages/libmount/__init__.pyc
+/usr/lib/python3.7/site-packages/libmount/pylibmount.so
+/usr/lib/python3.7/site-packages/pyalsaaudio-0.9.0-py3.7.egg-info/
+/usr/lib/python3.7/site-packages/pyalsaaudio-0.9.0-py3.7.egg-info/PKG-INFO
+/usr/lib/python3.7/site-packages/pyalsaaudio-0.9.0-py3.7.egg-info/SOURCES.txt
+/usr/lib/python3.7/site-packages/pyalsaaudio-0.9.0-py3.7.egg-info/dependency_links.txt
+/usr/lib/python3.7/site-packages/pyalsaaudio-0.9.0-py3.7.egg-info/top_level.txt
+/usr/lib/python3.7/site-packages/sdl2/
+/usr/lib/python3.7/site-packages/sdl2/__init__.pyc
+/usr/lib/python3.7/site-packages/sdl2/audio.pyc
+/usr/lib/python3.7/site-packages/sdl2/blendmode.pyc
+/usr/lib/python3.7/site-packages/sdl2/clipboard.pyc
+/usr/lib/python3.7/site-packages/sdl2/cpuinfo.pyc
+/usr/lib/python3.7/site-packages/sdl2/dll.pyc
+/usr/lib/python3.7/site-packages/sdl2/endian.pyc
+/usr/lib/python3.7/site-packages/sdl2/error.pyc
+/usr/lib/python3.7/site-packages/sdl2/events.pyc
+/usr/lib/python3.7/site-packages/sdl2/examples/
+/usr/lib/python3.7/site-packages/sdl2/examples/__init__.pyc
+/usr/lib/python3.7/site-packages/sdl2/examples/colorpalettes.pyc
+/usr/lib/python3.7/site-packages/sdl2/examples/draw.pyc
+/usr/lib/python3.7/site-packages/sdl2/examples/gfxdrawing.pyc
+/usr/lib/python3.7/site-packages/sdl2/examples/gui.pyc
+/usr/lib/python3.7/site-packages/sdl2/examples/helloworld.pyc
+/usr/lib/python3.7/site-packages/sdl2/examples/opengl.pyc
+/usr/lib/python3.7/site-packages/sdl2/examples/particles.pyc
+/usr/lib/python3.7/site-packages/sdl2/examples/pixelaccess.pyc
+/usr/lib/python3.7/site-packages/sdl2/examples/pong.pyc
+/usr/lib/python3.7/site-packages/sdl2/examples/resources/
+/usr/lib/python3.7/site-packages/sdl2/examples/resources/button.bmp
+/usr/lib/python3.7/site-packages/sdl2/examples/resources/circle.png
+/usr/lib/python3.7/site-packages/sdl2/examples/resources/font.bmp
+/usr/lib/python3.7/site-packages/sdl2/examples/resources/hello.bmp
+/usr/lib/python3.7/site-packages/sdl2/examples/resources/square.png
+/usr/lib/python3.7/site-packages/sdl2/examples/resources/star.png
+/usr/lib/python3.7/site-packages/sdl2/examples/resources/testimage.svg
+/usr/lib/python3.7/site-packages/sdl2/examples/resources/textentry.bmp
+/usr/lib/python3.7/site-packages/sdl2/examples/resources/tuffy.ttf
+/usr/lib/python3.7/site-packages/sdl2/examples/sdl2hello.pyc
+/usr/lib/python3.7/site-packages/sdl2/examples/transfomations.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/
+/usr/lib/python3.7/site-packages/sdl2/ext/__init__.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/algorithms.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/array.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/color.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/colorpalettes.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/common.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/compat.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/draw.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/ebs.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/events.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/font.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/gui.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/image.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/particles.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/pixelaccess.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/resources.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/sprite.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/surface.pyc
+/usr/lib/python3.7/site-packages/sdl2/ext/window.pyc
+/usr/lib/python3.7/site-packages/sdl2/filesystem.pyc
+/usr/lib/python3.7/site-packages/sdl2/gamecontroller.pyc
+/usr/lib/python3.7/site-packages/sdl2/gesture.pyc
+/usr/lib/python3.7/site-packages/sdl2/haptic.pyc
+/usr/lib/python3.7/site-packages/sdl2/hints.pyc
+/usr/lib/python3.7/site-packages/sdl2/joystick.pyc
+/usr/lib/python3.7/site-packages/sdl2/keyboard.pyc
+/usr/lib/python3.7/site-packages/sdl2/keycode.pyc
+/usr/lib/python3.7/site-packages/sdl2/loadso.pyc
+/usr/lib/python3.7/site-packages/sdl2/log.pyc
+/usr/lib/python3.7/site-packages/sdl2/messagebox.pyc
+/usr/lib/python3.7/site-packages/sdl2/mouse.pyc
+/usr/lib/python3.7/site-packages/sdl2/pixels.pyc
+/usr/lib/python3.7/site-packages/sdl2/platform.pyc
+/usr/lib/python3.7/site-packages/sdl2/power.pyc
+/usr/lib/python3.7/site-packages/sdl2/rect.pyc
+/usr/lib/python3.7/site-packages/sdl2/render.pyc
+/usr/lib/python3.7/site-packages/sdl2/rwops.pyc
+/usr/lib/python3.7/site-packages/sdl2/scancode.pyc
+/usr/lib/python3.7/site-packages/sdl2/sdlgfx.pyc
+/usr/lib/python3.7/site-packages/sdl2/sdlimage.pyc
+/usr/lib/python3.7/site-packages/sdl2/sdlmixer.pyc
+/usr/lib/python3.7/site-packages/sdl2/sdlttf.pyc
+/usr/lib/python3.7/site-packages/sdl2/shape.pyc
+/usr/lib/python3.7/site-packages/sdl2/stdinc.pyc
+/usr/lib/python3.7/site-packages/sdl2/surface.pyc
+/usr/lib/python3.7/site-packages/sdl2/syswm.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/
+/usr/lib/python3.7/site-packages/sdl2/test/__init__.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/audio_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/blendmode_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/clipboard_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/cpuinfo_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/endian_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/error_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/events_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/filesystem_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/gamecontroller_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/hints_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/joystick_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/keyboard_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/log_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/mouse_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/pixels_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/platform_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/power_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/rect_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/render_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/resources/
+/usr/lib/python3.7/site-packages/sdl2/test/resources/font.bmp
+/usr/lib/python3.7/site-packages/sdl2/test/resources/resources.tar.gz
+/usr/lib/python3.7/site-packages/sdl2/test/resources/resources.zip
+/usr/lib/python3.7/site-packages/sdl2/test/resources/rwopstest.txt
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.bmp
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.cur
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.gif
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.ico
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.jpg
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.lbm
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.pbm
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.pcx
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.pgm
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.png
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.pnm
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.ppm
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.svg
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.tga
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.tif
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.webp
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.xcf
+/usr/lib/python3.7/site-packages/sdl2/test/resources/surfacetest.xpm
+/usr/lib/python3.7/site-packages/sdl2/test/resources/tuffy.copy.ttf
+/usr/lib/python3.7/site-packages/sdl2/test/resources/tuffy.ttf
+/usr/lib/python3.7/site-packages/sdl2/test/rwops_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdl2ext_algorithms_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdl2ext_array_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdl2ext_color_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdl2ext_draw_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdl2ext_ebs_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdl2ext_events_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdl2ext_font_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdl2ext_gui_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdl2ext_image_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdl2ext_particles_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdl2ext_pixelaccess_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdl2ext_resources_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdl2ext_sprite_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdl2ext_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdl2ext_window_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdl_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdlgfx_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdlimage_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdlmixer_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/sdlttf_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/shape_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/surface_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/syswm_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/timer_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/touch_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/version_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/video_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/test/vulkan_test.pyc
+/usr/lib/python3.7/site-packages/sdl2/timer.pyc
+/usr/lib/python3.7/site-packages/sdl2/touch.pyc
+/usr/lib/python3.7/site-packages/sdl2/version.pyc
+/usr/lib/python3.7/site-packages/sdl2/video.pyc
+/usr/lib/python3.7/site-packages/sdl2/vulkan.pyc
+/usr/lib/python3.7/site.pyc
+/usr/lib/python3.7/smtpd.pyc
+/usr/lib/python3.7/smtplib.pyc
+/usr/lib/python3.7/sndhdr.pyc
+/usr/lib/python3.7/socket.pyc
+/usr/lib/python3.7/socketserver.pyc
+/usr/lib/python3.7/sre_compile.pyc
+/usr/lib/python3.7/sre_constants.pyc
+/usr/lib/python3.7/sre_parse.pyc
+/usr/lib/python3.7/ssl.pyc
+/usr/lib/python3.7/stat.pyc
+/usr/lib/python3.7/statistics.pyc
+/usr/lib/python3.7/string.pyc
+/usr/lib/python3.7/stringprep.pyc
+/usr/lib/python3.7/struct.pyc
+/usr/lib/python3.7/subprocess.pyc
+/usr/lib/python3.7/sunau.pyc
+/usr/lib/python3.7/symbol.pyc
+/usr/lib/python3.7/symtable.pyc
+/usr/lib/python3.7/sysconfig.pyc
+/usr/lib/python3.7/tabnanny.pyc
+/usr/lib/python3.7/tarfile.pyc
+/usr/lib/python3.7/telnetlib.pyc
+/usr/lib/python3.7/tempfile.pyc
+/usr/lib/python3.7/textwrap.pyc
+/usr/lib/python3.7/this.pyc
+/usr/lib/python3.7/threading.pyc
+/usr/lib/python3.7/timeit.pyc
+/usr/lib/python3.7/token.pyc
+/usr/lib/python3.7/tokenize.pyc
+/usr/lib/python3.7/trace.pyc
+/usr/lib/python3.7/traceback.pyc
+/usr/lib/python3.7/tracemalloc.pyc
+/usr/lib/python3.7/tty.pyc
+/usr/lib/python3.7/turtle.pyc
+/usr/lib/python3.7/turtledemo/
+/usr/lib/python3.7/turtledemo/__init__.pyc
+/usr/lib/python3.7/turtledemo/__main__.pyc
+/usr/lib/python3.7/turtledemo/bytedesign.pyc
+/usr/lib/python3.7/turtledemo/chaos.pyc
+/usr/lib/python3.7/turtledemo/clock.pyc
+/usr/lib/python3.7/turtledemo/colormixer.pyc
+/usr/lib/python3.7/turtledemo/forest.pyc
+/usr/lib/python3.7/turtledemo/fractalcurves.pyc
+/usr/lib/python3.7/turtledemo/lindenmayer.pyc
+/usr/lib/python3.7/turtledemo/minimal_hanoi.pyc
+/usr/lib/python3.7/turtledemo/nim.pyc
+/usr/lib/python3.7/turtledemo/paint.pyc
+/usr/lib/python3.7/turtledemo/peace.pyc
+/usr/lib/python3.7/turtledemo/penrose.pyc
+/usr/lib/python3.7/turtledemo/planet_and_moon.pyc
+/usr/lib/python3.7/turtledemo/rosette.pyc
+/usr/lib/python3.7/turtledemo/round_dance.pyc
+/usr/lib/python3.7/turtledemo/sorting_animate.pyc
+/usr/lib/python3.7/turtledemo/tree.pyc
+/usr/lib/python3.7/turtledemo/turtle.cfg
+/usr/lib/python3.7/turtledemo/two_canvases.pyc
+/usr/lib/python3.7/turtledemo/yinyang.pyc
+/usr/lib/python3.7/types.pyc
+/usr/lib/python3.7/typing.pyc
+/usr/lib/python3.7/unittest/
+/usr/lib/python3.7/unittest/__init__.pyc
+/usr/lib/python3.7/unittest/__main__.pyc
+/usr/lib/python3.7/unittest/case.pyc
+/usr/lib/python3.7/unittest/loader.pyc
+/usr/lib/python3.7/unittest/main.pyc
+/usr/lib/python3.7/unittest/mock.pyc
+/usr/lib/python3.7/unittest/result.pyc
+/usr/lib/python3.7/unittest/runner.pyc
+/usr/lib/python3.7/unittest/signals.pyc
+/usr/lib/python3.7/unittest/suite.pyc
+/usr/lib/python3.7/unittest/util.pyc
+/usr/lib/python3.7/urllib/
+/usr/lib/python3.7/urllib/__init__.pyc
+/usr/lib/python3.7/urllib/error.pyc
+/usr/lib/python3.7/urllib/parse.pyc
+/usr/lib/python3.7/urllib/request.pyc
+/usr/lib/python3.7/urllib/response.pyc
+/usr/lib/python3.7/urllib/robotparser.pyc
+/usr/lib/python3.7/uu.pyc
+/usr/lib/python3.7/uuid.pyc
+/usr/lib/python3.7/venv/
+/usr/lib/python3.7/venv/__init__.pyc
+/usr/lib/python3.7/venv/__main__.pyc
+/usr/lib/python3.7/venv/scripts/
+/usr/lib/python3.7/venv/scripts/common/
+/usr/lib/python3.7/venv/scripts/common/activate
+/usr/lib/python3.7/venv/scripts/posix/
+/usr/lib/python3.7/venv/scripts/posix/activate.csh
+/usr/lib/python3.7/venv/scripts/posix/activate.fish
+/usr/lib/python3.7/warnings.pyc
+/usr/lib/python3.7/wave.pyc
+/usr/lib/python3.7/weakref.pyc
+/usr/lib/python3.7/webbrowser.pyc
+/usr/lib/python3.7/wsgiref/
+/usr/lib/python3.7/wsgiref/__init__.pyc
+/usr/lib/python3.7/wsgiref/handlers.pyc
+/usr/lib/python3.7/wsgiref/headers.pyc
+/usr/lib/python3.7/wsgiref/simple_server.pyc
+/usr/lib/python3.7/wsgiref/util.pyc
+/usr/lib/python3.7/wsgiref/validate.pyc
+/usr/lib/python3.7/xdrlib.pyc
+/usr/lib/python3.7/xmlrpc/
+/usr/lib/python3.7/xmlrpc/__init__.pyc
+/usr/lib/python3.7/xmlrpc/client.pyc
+/usr/lib/python3.7/xmlrpc/server.pyc
+/usr/lib/python3.7/zipapp.pyc
+/usr/lib/python3.7/zipfile.pyc
+/usr/lib/terminfo
+/usr/lib/trace-cmd/
+/usr/lib/trace-cmd/plugins/
+/usr/lib/trace-cmd/plugins/plugin_blk.so
+/usr/lib/trace-cmd/plugins/plugin_cfg80211.so
+/usr/lib/trace-cmd/plugins/plugin_function.so
+/usr/lib/trace-cmd/plugins/plugin_hrtimer.so
+/usr/lib/trace-cmd/plugins/plugin_jbd2.so
+/usr/lib/trace-cmd/plugins/plugin_kmem.so
+/usr/lib/trace-cmd/plugins/plugin_kvm.so
+/usr/lib/trace-cmd/plugins/plugin_mac80211.so
+/usr/lib/trace-cmd/plugins/plugin_sched_switch.so
+/usr/lib/trace-cmd/plugins/plugin_scsi.so
+/usr/lib/trace-cmd/plugins/plugin_tlb.so
+/usr/lib/trace-cmd/plugins/plugin_xen.so
+/usr/lib32
+/usr/libexec/
+/usr/libexec/sftp-server
+/usr/libexec/ssh-keysign
+/usr/libexec/ssh-pkcs11-helper
+/usr/libexec/upowerd
+/usr/local/
+/usr/local/bin/
+/usr/local/bin/retroarch
+/usr/local/bin/retroarch-cg2glsl
+/usr/local/share/
+/usr/local/share/applications/
+/usr/local/share/applications/retroarch.desktop
+/usr/local/share/doc/
+/usr/local/share/doc/retroarch/
+/usr/local/share/doc/retroarch/COPYING
+/usr/local/share/doc/retroarch/README.md
+/usr/local/share/man/
+/usr/local/share/man/man6/
+/usr/local/share/man/man6/retroarch-cg2glsl.6
+/usr/local/share/man/man6/retroarch.6
+/usr/local/share/metainfo/
+/usr/local/share/metainfo/com.libretro.RetroArch.appdata.xml
+/usr/local/share/pixmaps/
+/usr/local/share/pixmaps/retroarch.svg
+/usr/sbin/
+/usr/sbin/alsaconf
+/usr/sbin/alsactl
+/usr/sbin/arping
+/usr/sbin/chroot
+/usr/sbin/crond
+/usr/sbin/dnsd
+/usr/sbin/dnsmasq
+/usr/sbin/dumpexfat
+/usr/sbin/ether-wake
+/usr/sbin/exfatfsck
+/usr/sbin/exfatlabel
+/usr/sbin/fbset
+/usr/sbin/fdformat
+/usr/sbin/fsck.exfat
+/usr/sbin/fsfreeze
+/usr/sbin/i2cdetect
+/usr/sbin/i2cdump
+/usr/sbin/i2cget
+/usr/sbin/i2cset
+/usr/sbin/inetd
+/usr/sbin/killall5
+/usr/sbin/loadfont
+/usr/sbin/mkexfatfs
+/usr/sbin/mkfs.exfat
+/usr/sbin/partprobe
+/usr/sbin/pm-hibernate
+/usr/sbin/pm-powersave
+/usr/sbin/pm-suspend
+/usr/sbin/pm-suspend-hybrid
+/usr/sbin/rdate
+/usr/sbin/readprofile
+/usr/sbin/setlogcons
+/usr/sbin/sshd
+/usr/sbin/ubirename
+/usr/share/
+/usr/share/alsa/
+/usr/share/alsa/alsa.conf
+/usr/share/alsa/alsa.conf.d/
+/usr/share/alsa/alsa.conf.d/README
+/usr/share/alsa/cards/
+/usr/share/alsa/cards/AACI.conf
+/usr/share/alsa/cards/ATIIXP-MODEM.conf
+/usr/share/alsa/cards/ATIIXP-SPDMA.conf
+/usr/share/alsa/cards/ATIIXP.conf
+/usr/share/alsa/cards/AU8810.conf
+/usr/share/alsa/cards/AU8820.conf
+/usr/share/alsa/cards/AU8830.conf
+/usr/share/alsa/cards/Audigy.conf
+/usr/share/alsa/cards/Audigy2.conf
+/usr/share/alsa/cards/Aureon51.conf
+/usr/share/alsa/cards/Aureon71.conf
+/usr/share/alsa/cards/CA0106.conf
+/usr/share/alsa/cards/CMI8338-SWIEC.conf
+/usr/share/alsa/cards/CMI8338.conf
+/usr/share/alsa/cards/CMI8738-MC6.conf
+/usr/share/alsa/cards/CMI8738-MC8.conf
+/usr/share/alsa/cards/CMI8788.conf
+/usr/share/alsa/cards/CS46xx.conf
+/usr/share/alsa/cards/EMU10K1.conf
+/usr/share/alsa/cards/EMU10K1X.conf
+/usr/share/alsa/cards/ENS1370.conf
+/usr/share/alsa/cards/ENS1371.conf
+/usr/share/alsa/cards/ES1968.conf
+/usr/share/alsa/cards/Echo_Echo3G.conf
+/usr/share/alsa/cards/FM801.conf
+/usr/share/alsa/cards/FWSpeakers.conf
+/usr/share/alsa/cards/FireWave.conf
+/usr/share/alsa/cards/GUS.conf
+/usr/share/alsa/cards/HDA-Intel.conf
+/usr/share/alsa/cards/HdmiLpeAudio.conf
+/usr/share/alsa/cards/ICE1712.conf
+/usr/share/alsa/cards/ICE1724.conf
+/usr/share/alsa/cards/ICH-MODEM.conf
+/usr/share/alsa/cards/ICH.conf
+/usr/share/alsa/cards/ICH4.conf
+/usr/share/alsa/cards/Loopback.conf
+/usr/share/alsa/cards/Maestro3.conf
+/usr/share/alsa/cards/NFORCE.conf
+/usr/share/alsa/cards/PC-Speaker.conf
+/usr/share/alsa/cards/PMac.conf
+/usr/share/alsa/cards/PMacToonie.conf
+/usr/share/alsa/cards/PS3.conf
+/usr/share/alsa/cards/RME9636.conf
+/usr/share/alsa/cards/RME9652.conf
+/usr/share/alsa/cards/SB-XFi.conf
+/usr/share/alsa/cards/SI7018/
+/usr/share/alsa/cards/SI7018.conf
+/usr/share/alsa/cards/SI7018/sndoc-mixer.alisp
+/usr/share/alsa/cards/SI7018/sndop-mixer.alisp
+/usr/share/alsa/cards/TRID4DWAVENX.conf
+/usr/share/alsa/cards/USB-Audio.conf
+/usr/share/alsa/cards/VIA686A.conf
+/usr/share/alsa/cards/VIA8233.conf
+/usr/share/alsa/cards/VIA8233A.conf
+/usr/share/alsa/cards/VIA8237.conf
+/usr/share/alsa/cards/VX222.conf
+/usr/share/alsa/cards/VXPocket.conf
+/usr/share/alsa/cards/VXPocket440.conf
+/usr/share/alsa/cards/YMF744.conf
+/usr/share/alsa/cards/aliases.alisp
+/usr/share/alsa/cards/aliases.conf
+/usr/share/alsa/cards/pistachio-card.conf
+/usr/share/alsa/cards/realtek_rt5651-.conf
+/usr/share/alsa/cards/rockchip_rk312x.conf
+/usr/share/alsa/cards/rockchip_rk809-.conf
+/usr/share/alsa/cards/rockchip_rk817-.conf
+/usr/share/alsa/cards/rockchip_rt5640.conf
+/usr/share/alsa/cards/vc4-hdmi.conf
+/usr/share/alsa/init/
+/usr/share/alsa/init/00main
+/usr/share/alsa/init/ca0106
+/usr/share/alsa/init/default
+/usr/share/alsa/init/hda
+/usr/share/alsa/init/help
+/usr/share/alsa/init/info
+/usr/share/alsa/init/test
+/usr/share/alsa/pcm/
+/usr/share/alsa/pcm/center_lfe.conf
+/usr/share/alsa/pcm/default.conf
+/usr/share/alsa/pcm/dmix.conf
+/usr/share/alsa/pcm/dpl.conf
+/usr/share/alsa/pcm/dsnoop.conf
+/usr/share/alsa/pcm/front.conf
+/usr/share/alsa/pcm/hdmi.conf
+/usr/share/alsa/pcm/iec958.conf
+/usr/share/alsa/pcm/modem.conf
+/usr/share/alsa/pcm/rear.conf
+/usr/share/alsa/pcm/side.conf
+/usr/share/alsa/pcm/surround21.conf
+/usr/share/alsa/pcm/surround40.conf
+/usr/share/alsa/pcm/surround41.conf
+/usr/share/alsa/pcm/surround50.conf
+/usr/share/alsa/pcm/surround51.conf
+/usr/share/alsa/pcm/surround71.conf
+/usr/share/alsa/sndo-mixer.alisp
+/usr/share/alsa/speaker-test/
+/usr/share/alsa/speaker-test/sample_map.csv
+/usr/share/alsa/topology/
+/usr/share/alsa/topology/broadwell/
+/usr/share/alsa/topology/broadwell/broadwell.conf
+/usr/share/alsa/topology/bxtrt298/
+/usr/share/alsa/topology/bxtrt298/bxt_i2s.conf
+/usr/share/alsa/topology/sklrt286/
+/usr/share/alsa/topology/sklrt286/skl_i2s.conf
+/usr/share/alsa/ucm/
+/usr/share/alsa/ucm/DAISY-I2S/
+/usr/share/alsa/ucm/DAISY-I2S/DAISY-I2S.conf
+/usr/share/alsa/ucm/DAISY-I2S/HiFi.conf
+/usr/share/alsa/ucm/DB410c/
+/usr/share/alsa/ucm/DB410c/DB410c.conf
+/usr/share/alsa/ucm/DB410c/HDMI
+/usr/share/alsa/ucm/DB410c/HiFi
+/usr/share/alsa/ucm/GoogleNyan/
+/usr/share/alsa/ucm/GoogleNyan/GoogleNyan.conf
+/usr/share/alsa/ucm/GoogleNyan/HiFi.conf
+/usr/share/alsa/ucm/PAZ00/
+/usr/share/alsa/ucm/PAZ00/HiFi.conf
+/usr/share/alsa/ucm/PAZ00/PAZ00.conf
+/usr/share/alsa/ucm/PAZ00/Record.conf
+/usr/share/alsa/ucm/PandaBoard/
+/usr/share/alsa/ucm/PandaBoard/FMAnalog
+/usr/share/alsa/ucm/PandaBoard/PandaBoard.conf
+/usr/share/alsa/ucm/PandaBoard/hifi
+/usr/share/alsa/ucm/PandaBoard/hifiLP
+/usr/share/alsa/ucm/PandaBoard/record
+/usr/share/alsa/ucm/PandaBoard/voice
+/usr/share/alsa/ucm/PandaBoard/voiceCall
+/usr/share/alsa/ucm/PandaBoardES/
+/usr/share/alsa/ucm/PandaBoardES/FMAnalog
+/usr/share/alsa/ucm/PandaBoardES/PandaBoardES.conf
+/usr/share/alsa/ucm/PandaBoardES/hifi
+/usr/share/alsa/ucm/PandaBoardES/hifiLP
+/usr/share/alsa/ucm/PandaBoardES/record
+/usr/share/alsa/ucm/PandaBoardES/voice
+/usr/share/alsa/ucm/PandaBoardES/voiceCall
+/usr/share/alsa/ucm/SDP4430/
+/usr/share/alsa/ucm/SDP4430/FMAnalog
+/usr/share/alsa/ucm/SDP4430/SDP4430.conf
+/usr/share/alsa/ucm/SDP4430/hifi
+/usr/share/alsa/ucm/SDP4430/hifiLP
+/usr/share/alsa/ucm/SDP4430/record
+/usr/share/alsa/ucm/SDP4430/voice
+/usr/share/alsa/ucm/SDP4430/voiceCall
+/usr/share/alsa/ucm/VEYRON-I2S/
+/usr/share/alsa/ucm/VEYRON-I2S/HiFi.conf
+/usr/share/alsa/ucm/VEYRON-I2S/VEYRON-I2S.conf
+/usr/share/alsa/ucm/broadwell-rt286/
+/usr/share/alsa/ucm/broadwell-rt286/HiFi
+/usr/share/alsa/ucm/broadwell-rt286/broadwell-rt286.conf
+/usr/share/alsa/ucm/broxton-rt298/
+/usr/share/alsa/ucm/broxton-rt298/Hdmi1
+/usr/share/alsa/ucm/broxton-rt298/Hdmi2
+/usr/share/alsa/ucm/broxton-rt298/HiFi
+/usr/share/alsa/ucm/broxton-rt298/broxton-rt298.conf
+/usr/share/alsa/ucm/bytcr-rt5651/
+/usr/share/alsa/ucm/bytcr-rt5651/HiFi.conf
+/usr/share/alsa/ucm/bytcr-rt5651/bytcr-rt5651.conf
+/usr/share/alsa/ucm/chtrt5645/
+/usr/share/alsa/ucm/chtrt5645/HiFi.conf
+/usr/share/alsa/ucm/chtrt5645/chtrt5645.conf
+/usr/share/alsa/ucm/skylake-rt286/
+/usr/share/alsa/ucm/skylake-rt286/Hdmi1
+/usr/share/alsa/ucm/skylake-rt286/Hdmi2
+/usr/share/alsa/ucm/skylake-rt286/HiFi
+/usr/share/alsa/ucm/skylake-rt286/skylake-rt286.conf
+/usr/share/alsa/ucm/tegraalc5632/
+/usr/share/alsa/ucm/tegraalc5632/tegraalc5632.conf
+/usr/share/applications/
+/usr/share/applications/htop.desktop
+/usr/share/applications/retroarch.desktop
+/usr/share/bash-completion/
+/usr/share/bash-completion/completions/
+/usr/share/bash-completion/completions/gapplication
+/usr/share/bash-completion/completions/gdbus
+/usr/share/bash-completion/completions/gresource
+/usr/share/bash-completion/completions/gsettings
+/usr/share/bash-completion/completions/kmod
+/usr/share/bash-completion/completions/uuidgen
+/usr/share/dbus-1/
+/usr/share/dbus-1/interfaces/
+/usr/share/dbus-1/interfaces/org.freedesktop.UPower.Device.xml
+/usr/share/dbus-1/interfaces/org.freedesktop.UPower.KbdBacklight.xml
+/usr/share/dbus-1/interfaces/org.freedesktop.UPower.Wakeups.xml
+/usr/share/dbus-1/interfaces/org.freedesktop.UPower.xml
+/usr/share/dbus-1/system-services/
+/usr/share/dbus-1/system-services/org.freedesktop.UPower.service
+/usr/share/dhcpcd/
+/usr/share/dhcpcd/hooks/
+/usr/share/dhcpcd/hooks/10-wpa_supplicant
+/usr/share/dhcpcd/hooks/15-timezone
+/usr/share/dhcpcd/hooks/29-lookup-hostname
+/usr/share/ffmpeg/
+/usr/share/ffmpeg/ffprobe.xsd
+/usr/share/ffmpeg/libvpx-1080p.ffpreset
+/usr/share/ffmpeg/libvpx-1080p50_60.ffpreset
+/usr/share/ffmpeg/libvpx-360p.ffpreset
+/usr/share/ffmpeg/libvpx-720p.ffpreset
+/usr/share/ffmpeg/libvpx-720p50_60.ffpreset
+/usr/share/gdb/
+/usr/share/gdb/auto-load/
+/usr/share/gdb/auto-load/usr/
+/usr/share/gdb/auto-load/usr/lib/
+/usr/share/gdb/auto-load/usr/lib/libglib-2.0.so.0.5400.2-gdb.py
+/usr/share/gdb/auto-load/usr/lib/libgobject-2.0.so.0.5400.2-gdb.py
+/usr/share/gettext/
+/usr/share/gettext/its/
+/usr/share/gettext/its/gschema.its
+/usr/share/gettext/its/gschema.loc
+/usr/share/glib-2.0/
+/usr/share/glib-2.0/gdb/
+/usr/share/glib-2.0/gdb/glib_gdb.py
+/usr/share/glib-2.0/gdb/gobject_gdb.py
+/usr/share/glib-2.0/schemas/
+/usr/share/glib-2.0/valgrind/
+/usr/share/glib-2.0/valgrind/glib.supp
+/usr/share/joystick/
+/usr/share/joystick/extract
+/usr/share/joystick/filter
+/usr/share/joystick/ident
+/usr/share/libdrm/
+/usr/share/libdrm/amdgpu.ids
+/usr/share/libretro/
+/usr/share/libretro/assets/
+/usr/share/libretro/assets/README.md
+/usr/share/libretro/assets/bold.ttf
+/usr/share/libretro/assets/png/
+/usr/share/libretro/assets/png/boysenberry/
+/usr/share/libretro/assets/png/boysenberry/check.png
+/usr/share/libretro/assets/png/boysenberry/cursor_noborder.png
+/usr/share/libretro/assets/png/boysenberry/cursor_static.png
+/usr/share/libretro/assets/png/boysenberry/switch.png
+/usr/share/libretro/assets/png/cursor_border.png
+/usr/share/libretro/assets/png/dark/
+/usr/share/libretro/assets/png/dark/check.png
+/usr/share/libretro/assets/png/dark/cursor_noborder.png
+/usr/share/libretro/assets/png/dark/cursor_static.png
+/usr/share/libretro/assets/png/dark/switch.png
+/usr/share/libretro/assets/png/dracula/
+/usr/share/libretro/assets/png/dracula/check.png
+/usr/share/libretro/assets/png/dracula/cursor_noborder.png
+/usr/share/libretro/assets/png/dracula/cursor_static.png
+/usr/share/libretro/assets/png/dracula/switch.png
+/usr/share/libretro/assets/png/gruvbox_dark/
+/usr/share/libretro/assets/png/gruvbox_dark/check.png
+/usr/share/libretro/assets/png/gruvbox_dark/cursor_noborder.png
+/usr/share/libretro/assets/png/gruvbox_dark/cursor_static.png
+/usr/share/libretro/assets/png/gruvbox_dark/switch.png
+/usr/share/libretro/assets/png/hacking_the_kernel/
+/usr/share/libretro/assets/png/hacking_the_kernel/check.png
+/usr/share/libretro/assets/png/hacking_the_kernel/cursor_noborder.png
+/usr/share/libretro/assets/png/hacking_the_kernel/cursor_static.png
+/usr/share/libretro/assets/png/hacking_the_kernel/switch.png
+/usr/share/libretro/assets/png/icons/
+/usr/share/libretro/assets/png/icons/2048-content.png
+/usr/share/libretro/assets/png/icons/2048.png
+/usr/share/libretro/assets/png/icons/Amstrad - CPC-content.png
+/usr/share/libretro/assets/png/icons/Amstrad - CPC.png
+/usr/share/libretro/assets/png/icons/Atari - 2600-content.png
+/usr/share/libretro/assets/png/icons/Atari - 2600.png
+/usr/share/libretro/assets/png/icons/Atari - 5200-content.png
+/usr/share/libretro/assets/png/icons/Atari - 5200.png
+/usr/share/libretro/assets/png/icons/Atari - 7800-content.png
+/usr/share/libretro/assets/png/icons/Atari - 7800.png
+/usr/share/libretro/assets/png/icons/Atari - Jaguar CD-content.png
+/usr/share/libretro/assets/png/icons/Atari - Jaguar CD.png
+/usr/share/libretro/assets/png/icons/Atari - Jaguar-content.png
+/usr/share/libretro/assets/png/icons/Atari - Jaguar.png
+/usr/share/libretro/assets/png/icons/Atari - Lynx-content.png
+/usr/share/libretro/assets/png/icons/Atari - Lynx.png
+/usr/share/libretro/assets/png/icons/Atari - ST-content.png
+/usr/share/libretro/assets/png/icons/Atari - ST.png
+/usr/share/libretro/assets/png/icons/Atari - XEGS-content.png
+/usr/share/libretro/assets/png/icons/Atari - XEGS.png
+/usr/share/libretro/assets/png/icons/Bally - Astrocade-content.png
+/usr/share/libretro/assets/png/icons/Bally - Astrocade.png
+/usr/share/libretro/assets/png/icons/Bandai - Pippin-content.png
+/usr/share/libretro/assets/png/icons/Bandai - Pippin.png
+/usr/share/libretro/assets/png/icons/Bandai - Super Vision 8000-content.png
+/usr/share/libretro/assets/png/icons/Bandai - Super Vision 8000.png
+/usr/share/libretro/assets/png/icons/Bandai - WonderSwan Color-content.png
+/usr/share/libretro/assets/png/icons/Bandai - WonderSwan Color.png
+/usr/share/libretro/assets/png/icons/Bandai - WonderSwan-content.png
+/usr/share/libretro/assets/png/icons/Bandai - WonderSwan.png
+/usr/share/libretro/assets/png/icons/Benesse - Pocket Challenge V2-content.png
+/usr/share/libretro/assets/png/icons/Benesse - Pocket Challenge V2.png
+/usr/share/libretro/assets/png/icons/CHIP-8-content.png
+/usr/share/libretro/assets/png/icons/CHIP-8.png
+/usr/share/libretro/assets/png/icons/Cannonball-content.png
+/usr/share/libretro/assets/png/icons/Cannonball.png
+/usr/share/libretro/assets/png/icons/Capcom - CP System I-content.png
+/usr/share/libretro/assets/png/icons/Capcom - CP System I.png
+/usr/share/libretro/assets/png/icons/Capcom - CP System II-content.png
+/usr/share/libretro/assets/png/icons/Capcom - CP System II.png
+/usr/share/libretro/assets/png/icons/Capcom - CP System III-content.png
+/usr/share/libretro/assets/png/icons/Capcom - CP System III.png
+/usr/share/libretro/assets/png/icons/Casio - Loopy-content.png
+/usr/share/libretro/assets/png/icons/Casio - Loopy.png
+/usr/share/libretro/assets/png/icons/Casio - PV-1000-content.png
+/usr/share/libretro/assets/png/icons/Casio - PV-1000.png
+/usr/share/libretro/assets/png/icons/Cave Story-content.png
+/usr/share/libretro/assets/png/icons/Cave Story.png
+/usr/share/libretro/assets/png/icons/ChaiLove-content.png
+/usr/share/libretro/assets/png/icons/ChaiLove.png
+/usr/share/libretro/assets/png/icons/Coleco - ColecoVision ADAM-content.png
+/usr/share/libretro/assets/png/icons/Coleco - ColecoVision ADAM.png
+/usr/share/libretro/assets/png/icons/Coleco - ColecoVision-content.png
+/usr/share/libretro/assets/png/icons/Coleco - ColecoVision.png
+/usr/share/libretro/assets/png/icons/Commodore - 64-content.png
+/usr/share/libretro/assets/png/icons/Commodore - 64.png
+/usr/share/libretro/assets/png/icons/Commodore - Amiga-content.png
+/usr/share/libretro/assets/png/icons/Commodore - Amiga.png
+/usr/share/libretro/assets/png/icons/Commodore - CD32-content.png
+/usr/share/libretro/assets/png/icons/Commodore - CD32.png
+/usr/share/libretro/assets/png/icons/Commodore - Plus-4-content.png
+/usr/share/libretro/assets/png/icons/Commodore - Plus-4.png
+/usr/share/libretro/assets/png/icons/Commodore - VIC-20-content.png
+/usr/share/libretro/assets/png/icons/Commodore - VIC-20.png
+/usr/share/libretro/assets/png/icons/DOOM-content.png
+/usr/share/libretro/assets/png/icons/DOOM.png
+/usr/share/libretro/assets/png/icons/DOS-content.png
+/usr/share/libretro/assets/png/icons/DOS.png
+/usr/share/libretro/assets/png/icons/Dinothawr-content.png
+/usr/share/libretro/assets/png/icons/Dinothawr.png
+/usr/share/libretro/assets/png/icons/Dungeon Crawl Stone Soup-content.png
+/usr/share/libretro/assets/png/icons/Dungeon Crawl Stone Soup.png
+/usr/share/libretro/assets/png/icons/Emerson - Arcadia 2001-content.png
+/usr/share/libretro/assets/png/icons/Emerson - Arcadia 2001.png
+/usr/share/libretro/assets/png/icons/Entex - Adventure Vision-content.png
+/usr/share/libretro/assets/png/icons/Entex - Adventure Vision.png
+/usr/share/libretro/assets/png/icons/Epoch - Super Cassette Vision-content.png
+/usr/share/libretro/assets/png/icons/Epoch - Super Cassette Vision.png
+/usr/share/libretro/assets/png/icons/FBNeo - Arcade Games-content.png
+/usr/share/libretro/assets/png/icons/FBNeo - Arcade Games.png
+/usr/share/libretro/assets/png/icons/FFmpeg-content.png
+/usr/share/libretro/assets/png/icons/FFmpeg.png
+/usr/share/libretro/assets/png/icons/Fairchild - Channel F-content.png
+/usr/share/libretro/assets/png/icons/Fairchild - Channel F.png
+/usr/share/libretro/assets/png/icons/Flashback-content.png
+/usr/share/libretro/assets/png/icons/Flashback.png
+/usr/share/libretro/assets/png/icons/Funtech - Super Acan-content.png
+/usr/share/libretro/assets/png/icons/Funtech - Super Acan.png
+/usr/share/libretro/assets/png/icons/GCE - Vectrex-content.png
+/usr/share/libretro/assets/png/icons/GCE - Vectrex.png
+/usr/share/libretro/assets/png/icons/Game Park - GP32-content.png
+/usr/share/libretro/assets/png/icons/Game Park - GP32.png
+/usr/share/libretro/assets/png/icons/Handheld Electronic Game-content.png
+/usr/share/libretro/assets/png/icons/Handheld Electronic Game.png
+/usr/share/libretro/assets/png/icons/Hartung - Game Master-content.png
+/usr/share/libretro/assets/png/icons/Hartung - Game Master.png
+/usr/share/libretro/assets/png/icons/LeapFrog - Leapster Learning Game System-content.png
+/usr/share/libretro/assets/png/icons/LeapFrog - Leapster Learning Game System.png
+/usr/share/libretro/assets/png/icons/Libretro - Pad.png
+/usr/share/libretro/assets/png/icons/Lutro-content.png
+/usr/share/libretro/assets/png/icons/Lutro.png
+/usr/share/libretro/assets/png/icons/MAME 2000-content.png
+/usr/share/libretro/assets/png/icons/MAME 2000.png
+/usr/share/libretro/assets/png/icons/MAME 2003-Plus-content.png
+/usr/share/libretro/assets/png/icons/MAME 2003-Plus.png
+/usr/share/libretro/assets/png/icons/MAME 2003-content.png
+/usr/share/libretro/assets/png/icons/MAME 2003.png
+/usr/share/libretro/assets/png/icons/MAME 2010-content.png
+/usr/share/libretro/assets/png/icons/MAME 2010.png
+/usr/share/libretro/assets/png/icons/MAME 2015-content.png
+/usr/share/libretro/assets/png/icons/MAME 2015.png
+/usr/share/libretro/assets/png/icons/MAME 2016-content.png
+/usr/share/libretro/assets/png/icons/MAME 2016.png
+/usr/share/libretro/assets/png/icons/MAME-content.png
+/usr/share/libretro/assets/png/icons/MAME.png
+/usr/share/libretro/assets/png/icons/Magnavox - Odyssey-content.png
+/usr/share/libretro/assets/png/icons/Magnavox - Odyssey.png
+/usr/share/libretro/assets/png/icons/Magnavox - Odyssey2-content.png
+/usr/share/libretro/assets/png/icons/Magnavox - Odyssey2.png
+/usr/share/libretro/assets/png/icons/Mattel - Intellivision-content.png
+/usr/share/libretro/assets/png/icons/Mattel - Intellivision.png
+/usr/share/libretro/assets/png/icons/Microsoft - MSX-content.png
+/usr/share/libretro/assets/png/icons/Microsoft - MSX.png
+/usr/share/libretro/assets/png/icons/Microsoft - MSX2-content.png
+/usr/share/libretro/assets/png/icons/Microsoft - MSX2.png
+/usr/share/libretro/assets/png/icons/Microsoft - Xbox 360-content.png
+/usr/share/libretro/assets/png/icons/Microsoft - Xbox 360.png
+/usr/share/libretro/assets/png/icons/Microsoft - Xbox One-content.png
+/usr/share/libretro/assets/png/icons/Microsoft - Xbox One.png
+/usr/share/libretro/assets/png/icons/Microsoft - Xbox-content.png
+/usr/share/libretro/assets/png/icons/Microsoft - Xbox.png
+/usr/share/libretro/assets/png/icons/Minecraft-content.png
+/usr/share/libretro/assets/png/icons/Minecraft.png
+/usr/share/libretro/assets/png/icons/MrBoom-content.png
+/usr/share/libretro/assets/png/icons/MrBoom.png
+/usr/share/libretro/assets/png/icons/NEC - PC Engine - TurboGrafx 16-content.png
+/usr/share/libretro/assets/png/icons/NEC - PC Engine - TurboGrafx 16.png
+/usr/share/libretro/assets/png/icons/NEC - PC Engine CD - TurboGrafx-CD-content.png
+/usr/share/libretro/assets/png/icons/NEC - PC Engine CD - TurboGrafx-CD.png
+/usr/share/libretro/assets/png/icons/NEC - PC Engine SuperGrafx-content.png
+/usr/share/libretro/assets/png/icons/NEC - PC Engine SuperGrafx.png
+/usr/share/libretro/assets/png/icons/NEC - PC-98-content.png
+/usr/share/libretro/assets/png/icons/NEC - PC-98.png
+/usr/share/libretro/assets/png/icons/NEC - PC-FX-content.png
+/usr/share/libretro/assets/png/icons/NEC - PC-FX.png
+/usr/share/libretro/assets/png/icons/Neo Geo-content.png
+/usr/share/libretro/assets/png/icons/Neo Geo.png
+/usr/share/libretro/assets/png/icons/Nintendo - Family Computer Disk System-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Family Computer Disk System.png
+/usr/share/libretro/assets/png/icons/Nintendo - Game Boy Advance (e-Cards)-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Game Boy Advance (e-Cards).png
+/usr/share/libretro/assets/png/icons/Nintendo - Game Boy Advance-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Game Boy Advance.png
+/usr/share/libretro/assets/png/icons/Nintendo - Game Boy Color-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Game Boy Color.png
+/usr/share/libretro/assets/png/icons/Nintendo - Game Boy-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Game Boy.png
+/usr/share/libretro/assets/png/icons/Nintendo - GameCube-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - GameCube.png
+/usr/share/libretro/assets/png/icons/Nintendo - New Nintendo 3DS-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - New Nintendo 3DS.png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo 3DS (DLC)-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo 3DS (DLC).png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo 3DS (Digital)-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo 3DS (Digital).png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo 3DS-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo 3DS.png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo 64-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo 64.png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo 64DD-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo 64DD.png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo DS (Download Play)-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo DS (Download Play).png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo DS-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo DS.png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo DSi (DLC)-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo DSi (DLC).png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo DSi-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo DSi.png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo Entertainment System-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Nintendo Entertainment System.png
+/usr/share/libretro/assets/png/icons/Nintendo - Pokemon Mini-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Pokemon Mini.png
+/usr/share/libretro/assets/png/icons/Nintendo - Satellaview-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Satellaview.png
+/usr/share/libretro/assets/png/icons/Nintendo - Sufami Turbo-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Sufami Turbo.png
+/usr/share/libretro/assets/png/icons/Nintendo - Super Nintendo Entertainment System-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Super Nintendo Entertainment System.png
+/usr/share/libretro/assets/png/icons/Nintendo - Switch-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Switch.png
+/usr/share/libretro/assets/png/icons/Nintendo - Virtual Boy-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Virtual Boy.png
+/usr/share/libretro/assets/png/icons/Nintendo - Wii U-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Wii U.png
+/usr/share/libretro/assets/png/icons/Nintendo - Wii-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - Wii.png
+/usr/share/libretro/assets/png/icons/Nintendo - e-Reader-content.png
+/usr/share/libretro/assets/png/icons/Nintendo - e-Reader.png
+/usr/share/libretro/assets/png/icons/Philips - Videopac+-content.png
+/usr/share/libretro/assets/png/icons/Philips - Videopac+.png
+/usr/share/libretro/assets/png/icons/Quake II-content.png
+/usr/share/libretro/assets/png/icons/Quake II.png
+/usr/share/libretro/assets/png/icons/Quake III-content.png
+/usr/share/libretro/assets/png/icons/Quake III.png
+/usr/share/libretro/assets/png/icons/Quake-content.png
+/usr/share/libretro/assets/png/icons/Quake.png
+/usr/share/libretro/assets/png/icons/RCA - Studio II-content.png
+/usr/share/libretro/assets/png/icons/RCA - Studio II.png
+/usr/share/libretro/assets/png/icons/RPG Maker-content.png
+/usr/share/libretro/assets/png/icons/RPG Maker.png
+/usr/share/libretro/assets/png/icons/Rick Dangerous-content.png
+/usr/share/libretro/assets/png/icons/Rick Dangerous.png
+/usr/share/libretro/assets/png/icons/SNK - Neo Geo CD-content.png
+/usr/share/libretro/assets/png/icons/SNK - Neo Geo CD.png
+/usr/share/libretro/assets/png/icons/SNK - Neo Geo Pocket Color-content.png
+/usr/share/libretro/assets/png/icons/SNK - Neo Geo Pocket Color.png
+/usr/share/libretro/assets/png/icons/SNK - Neo Geo Pocket-content.png
+/usr/share/libretro/assets/png/icons/SNK - Neo Geo Pocket.png
+/usr/share/libretro/assets/png/icons/SNK - Neo Geo-content.png
+/usr/share/libretro/assets/png/icons/SNK - Neo Geo.png
+/usr/share/libretro/assets/png/icons/ScummVM-content.png
+/usr/share/libretro/assets/png/icons/ScummVM.png
+/usr/share/libretro/assets/png/icons/Sega - 32X-content.png
+/usr/share/libretro/assets/png/icons/Sega - 32X.png
+/usr/share/libretro/assets/png/icons/Sega - Dreamcast-content.png
+/usr/share/libretro/assets/png/icons/Sega - Dreamcast.png
+/usr/share/libretro/assets/png/icons/Sega - Game Gear-content.png
+/usr/share/libretro/assets/png/icons/Sega - Game Gear.png
+/usr/share/libretro/assets/png/icons/Sega - Master System - Mark III-content.png
+/usr/share/libretro/assets/png/icons/Sega - Master System - Mark III.png
+/usr/share/libretro/assets/png/icons/Sega - Mega Drive - Genesis-content.png
+/usr/share/libretro/assets/png/icons/Sega - Mega Drive - Genesis.png
+/usr/share/libretro/assets/png/icons/Sega - Mega-CD - Sega CD-content.png
+/usr/share/libretro/assets/png/icons/Sega - Mega-CD - Sega CD.png
+/usr/share/libretro/assets/png/icons/Sega - PICO-content.png
+/usr/share/libretro/assets/png/icons/Sega - PICO.png
+/usr/share/libretro/assets/png/icons/Sega - SG-1000-content.png
+/usr/share/libretro/assets/png/icons/Sega - SG-1000.png
+/usr/share/libretro/assets/png/icons/Sega - Saturn-content.png
+/usr/share/libretro/assets/png/icons/Sega - Saturn.png
+/usr/share/libretro/assets/png/icons/Sharp - X68000-content.png
+/usr/share/libretro/assets/png/icons/Sharp - X68000.png
+/usr/share/libretro/assets/png/icons/Sinclair - ZX 81-content.png
+/usr/share/libretro/assets/png/icons/Sinclair - ZX 81.png
+/usr/share/libretro/assets/png/icons/Sinclair - ZX Spectrum +3-content.png
+/usr/share/libretro/assets/png/icons/Sinclair - ZX Spectrum +3.png
+/usr/share/libretro/assets/png/icons/Sinclair - ZX Spectrum-content.png
+/usr/share/libretro/assets/png/icons/Sinclair - ZX Spectrum.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation 2-content.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation 2.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation 3 (DLC)-content.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation 3 (DLC).png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation 3-content.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation 3.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation 4-content.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation 4.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation Portable (DLC)-content.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation Portable (DLC).png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation Portable (PSN)-content.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation Portable (PSN).png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation Portable (PSX2PSP)-content.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation Portable (PSX2PSP).png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation Portable (UMD Music)-content.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation Portable (UMD Music).png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation Portable (UMD Video)-content.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation Portable (UMD Video).png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation Portable-content.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation Portable.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation Vita-content.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation Vita.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation-content.png
+/usr/share/libretro/assets/png/icons/Sony - PlayStation.png
+/usr/share/libretro/assets/png/icons/Spectravideo - SV-content.png
+/usr/share/libretro/assets/png/icons/Spectravideo - SV.png
+/usr/share/libretro/assets/png/icons/TIC-80-content.png
+/usr/share/libretro/assets/png/icons/TIC-80.png
+/usr/share/libretro/assets/png/icons/The 3DO Company - 3DO-content.png
+/usr/share/libretro/assets/png/icons/The 3DO Company - 3DO.png
+/usr/share/libretro/assets/png/icons/Thomson - MOTO-content.png
+/usr/share/libretro/assets/png/icons/Thomson - MOTO.png
+/usr/share/libretro/assets/png/icons/Tiger - Game.com-content.png
+/usr/share/libretro/assets/png/icons/Tiger - Game.com.png
+/usr/share/libretro/assets/png/icons/Tomb Raider-content.png
+/usr/share/libretro/assets/png/icons/Tomb Raider.png
+/usr/share/libretro/assets/png/icons/Uzebox-content.png
+/usr/share/libretro/assets/png/icons/Uzebox.png
+/usr/share/libretro/assets/png/icons/VTech - CreatiVision-content.png
+/usr/share/libretro/assets/png/icons/VTech - CreatiVision.png
+/usr/share/libretro/assets/png/icons/VTech - V.Smile-content.png
+/usr/share/libretro/assets/png/icons/VTech - V.Smile.png
+/usr/share/libretro/assets/png/icons/Watara - Supervision-content.png
+/usr/share/libretro/assets/png/icons/Watara - Supervision.png
+/usr/share/libretro/assets/png/icons/achievement-list.png
+/usr/share/libretro/assets/png/icons/add-favorite.png
+/usr/share/libretro/assets/png/icons/add.png
+/usr/share/libretro/assets/png/icons/arrow.png
+/usr/share/libretro/assets/png/icons/battery-20.png
+/usr/share/libretro/assets/png/icons/battery-40.png
+/usr/share/libretro/assets/png/icons/battery-60.png
+/usr/share/libretro/assets/png/icons/battery-80.png
+/usr/share/libretro/assets/png/icons/battery-charging.png
+/usr/share/libretro/assets/png/icons/battery-full.png
+/usr/share/libretro/assets/png/icons/bg.png
+/usr/share/libretro/assets/png/icons/bluetooth.png
+/usr/share/libretro/assets/png/icons/clock.png
+/usr/share/libretro/assets/png/icons/close.png
+/usr/share/libretro/assets/png/icons/core-cheat-options.png
+/usr/share/libretro/assets/png/icons/core-disk-options.png
+/usr/share/libretro/assets/png/icons/core-infos.png
+/usr/share/libretro/assets/png/icons/core-input-remapping-options.png
+/usr/share/libretro/assets/png/icons/core-options.png
+/usr/share/libretro/assets/png/icons/core-shader-options.png
+/usr/share/libretro/assets/png/icons/core.png
+/usr/share/libretro/assets/png/icons/cursor.png
+/usr/share/libretro/assets/png/icons/database.png
+/usr/share/libretro/assets/png/icons/default-content.png
+/usr/share/libretro/assets/png/icons/default.png
+/usr/share/libretro/assets/png/icons/dialog-slice.png
+/usr/share/libretro/assets/png/icons/disc.png
+/usr/share/libretro/assets/png/icons/favorites-content.png
+/usr/share/libretro/assets/png/icons/favorites.png
+/usr/share/libretro/assets/png/icons/file.png
+/usr/share/libretro/assets/png/icons/folder.png
+/usr/share/libretro/assets/png/icons/history.png
+/usr/share/libretro/assets/png/icons/image.png
+/usr/share/libretro/assets/png/icons/images.png
+/usr/share/libretro/assets/png/icons/input_ADC.png
+/usr/share/libretro/assets/png/icons/input_BIND_ALL.png
+/usr/share/libretro/assets/png/icons/input_BTN-D.png
+/usr/share/libretro/assets/png/icons/input_BTN-L.png
+/usr/share/libretro/assets/png/icons/input_BTN-R.png
+/usr/share/libretro/assets/png/icons/input_BTN-U.png
+/usr/share/libretro/assets/png/icons/input_DPAD-D.png
+/usr/share/libretro/assets/png/icons/input_DPAD-L.png
+/usr/share/libretro/assets/png/icons/input_DPAD-R.png
+/usr/share/libretro/assets/png/icons/input_DPAD-U.png
+/usr/share/libretro/assets/png/icons/input_LB.png
+/usr/share/libretro/assets/png/icons/input_LGUN.png
+/usr/share/libretro/assets/png/icons/input_LT.png
+/usr/share/libretro/assets/png/icons/input_MOUSE.png
+/usr/share/libretro/assets/png/icons/input_RB.png
+/usr/share/libretro/assets/png/icons/input_RT.png
+/usr/share/libretro/assets/png/icons/input_SELECT.png
+/usr/share/libretro/assets/png/icons/input_START.png
+/usr/share/libretro/assets/png/icons/input_STCK-D.png
+/usr/share/libretro/assets/png/icons/input_STCK-L.png
+/usr/share/libretro/assets/png/icons/input_STCK-P.png
+/usr/share/libretro/assets/png/icons/input_STCK-R.png
+/usr/share/libretro/assets/png/icons/input_STCK-U.png
+/usr/share/libretro/assets/png/icons/input_TURBO.png
+/usr/share/libretro/assets/png/icons/key-hover.png
+/usr/share/libretro/assets/png/icons/key.png
+/usr/share/libretro/assets/png/icons/lakka.png
+/usr/share/libretro/assets/png/icons/loadstate.png
+/usr/share/libretro/assets/png/icons/menu_achievements.png
+/usr/share/libretro/assets/png/icons/menu_add.png
+/usr/share/libretro/assets/png/icons/menu_apply_cog.png
+/usr/share/libretro/assets/png/icons/menu_apply_toggle.png
+/usr/share/libretro/assets/png/icons/menu_audio.png
+/usr/share/libretro/assets/png/icons/menu_brightness.png
+/usr/share/libretro/assets/png/icons/menu_check.png
+/usr/share/libretro/assets/png/icons/menu_drivers.png
+/usr/share/libretro/assets/png/icons/menu_exit.png
+/usr/share/libretro/assets/png/icons/menu_frameskip.png
+/usr/share/libretro/assets/png/icons/menu_help.png
+/usr/share/libretro/assets/png/icons/menu_hourglass.png
+/usr/share/libretro/assets/png/icons/menu_info.png
+/usr/share/libretro/assets/png/icons/menu_latency.png
+/usr/share/libretro/assets/png/icons/menu_log.png
+/usr/share/libretro/assets/png/icons/menu_mixer.png
+/usr/share/libretro/assets/png/icons/menu_network.png
+/usr/share/libretro/assets/png/icons/menu_notifications.png
+/usr/share/libretro/assets/png/icons/menu_osd.png
+/usr/share/libretro/assets/png/icons/menu_overlay.png
+/usr/share/libretro/assets/png/icons/menu_override.png
+/usr/share/libretro/assets/png/icons/menu_pause.png
+/usr/share/libretro/assets/png/icons/menu_playlist.png
+/usr/share/libretro/assets/png/icons/menu_power.png
+/usr/share/libretro/assets/png/icons/menu_privacy.png
+/usr/share/libretro/assets/png/icons/menu_quickmenu.png
+/usr/share/libretro/assets/png/icons/menu_record.png
+/usr/share/libretro/assets/png/icons/menu_rewind.png
+/usr/share/libretro/assets/png/icons/menu_room.png
+/usr/share/libretro/assets/png/icons/menu_room_lan.png
+/usr/share/libretro/assets/png/icons/menu_room_relay.png
+/usr/share/libretro/assets/png/icons/menu_saving.png
+/usr/share/libretro/assets/png/icons/menu_shutdown.png
+/usr/share/libretro/assets/png/icons/menu_stream.png
+/usr/share/libretro/assets/png/icons/menu_ui.png
+/usr/share/libretro/assets/png/icons/menu_updater.png
+/usr/share/libretro/assets/png/icons/menu_user.png
+/usr/share/libretro/assets/png/icons/menu_video.png
+/usr/share/libretro/assets/png/icons/menu_volume_max.png
+/usr/share/libretro/assets/png/icons/menu_volume_med.png
+/usr/share/libretro/assets/png/icons/menu_volume_min.png
+/usr/share/libretro/assets/png/icons/menu_volume_mute.png
+/usr/share/libretro/assets/png/icons/movie.png
+/usr/share/libretro/assets/png/icons/movies.png
+/usr/share/libretro/assets/png/icons/music.png
+/usr/share/libretro/assets/png/icons/musics.png
+/usr/share/libretro/assets/png/icons/netplay - LAN Room-locked.png
+/usr/share/libretro/assets/png/icons/netplay - LAN Room.png
+/usr/share/libretro/assets/png/icons/netplay - iRoom-locked.png
+/usr/share/libretro/assets/png/icons/netplay - iRoom.png
+/usr/share/libretro/assets/png/icons/netplay - rooms-locked.png
+/usr/share/libretro/assets/png/icons/netplay - rooms.png
+/usr/share/libretro/assets/png/icons/netplay.png
+/usr/share/libretro/assets/png/icons/off.png
+/usr/share/libretro/assets/png/icons/on.png
+/usr/share/libretro/assets/png/icons/on_alt.png
+/usr/share/libretro/assets/png/icons/pointer.png
+/usr/share/libretro/assets/png/icons/reload.png
+/usr/share/libretro/assets/png/icons/rename.png
+/usr/share/libretro/assets/png/icons/resume.png
+/usr/share/libretro/assets/png/icons/retroarch.png
+/usr/share/libretro/assets/png/icons/run.png
+/usr/share/libretro/assets/png/icons/savestate.png
+/usr/share/libretro/assets/png/icons/screenshot.png
+/usr/share/libretro/assets/png/icons/setting.png
+/usr/share/libretro/assets/png/icons/settings.png
+/usr/share/libretro/assets/png/icons/subsetting.png
+/usr/share/libretro/assets/png/icons/undo.png
+/usr/share/libretro/assets/png/icons/wifi.png
+/usr/share/libretro/assets/png/icons/zip.png
+/usr/share/libretro/assets/png/light/
+/usr/share/libretro/assets/png/light/check.png
+/usr/share/libretro/assets/png/light/cursor_noborder.png
+/usr/share/libretro/assets/png/light/cursor_static.png
+/usr/share/libretro/assets/png/light/switch.png
+/usr/share/libretro/assets/png/nord/
+/usr/share/libretro/assets/png/nord/check.png
+/usr/share/libretro/assets/png/nord/cursor_noborder.png
+/usr/share/libretro/assets/png/nord/cursor_static.png
+/usr/share/libretro/assets/png/nord/switch.png
+/usr/share/libretro/assets/png/retroarch.png
+/usr/share/libretro/assets/png/sidebar/
+/usr/share/libretro/assets/png/sidebar/add.png
+/usr/share/libretro/assets/png/sidebar/favorites.png
+/usr/share/libretro/assets/png/sidebar/history.png
+/usr/share/libretro/assets/png/sidebar/image.png
+/usr/share/libretro/assets/png/sidebar/music.png
+/usr/share/libretro/assets/png/sidebar/netplay.png
+/usr/share/libretro/assets/png/sidebar/retroarch.png
+/usr/share/libretro/assets/png/sidebar/settings.png
+/usr/share/libretro/assets/png/sidebar/video.png
+/usr/share/libretro/assets/png/twilight_zone/
+/usr/share/libretro/assets/png/twilight_zone/check.png
+/usr/share/libretro/assets/png/twilight_zone/cursor_noborder.png
+/usr/share/libretro/assets/png/twilight_zone/cursor_static.png
+/usr/share/libretro/assets/png/twilight_zone/switch.png
+/usr/share/libretro/assets/regular.ttf
+/usr/share/libretro/autoconfig/
+/usr/share/libretro/autoconfig/android/
+/usr/share/libretro/autoconfig/android/8BitDo_Pro2_N30_BT.cfg
+/usr/share/libretro/autoconfig/android/8BitDo_Pro2_N30_USB.cfg
+/usr/share/libretro/autoconfig/android/8BitDo_SN30_Pro+_BT.cfg
+/usr/share/libretro/autoconfig/android/8BitDo_SN30_Pro+_USB.cfg
+/usr/share/libretro/autoconfig/android/8BitDo_Zero2_gamepad_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_24G_SF30_USB.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_24G_SN30_USB.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_Arcade_F30_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_Arcade_F30_USB.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_Arcade_N30_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_Arcade_N30_USB.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_F30_P1_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_F30_P2_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_F30_USB.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_M30_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_M30_Modkit_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_M30_Modkit_USB.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_N30_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_N30_Modkit_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_N30_USB.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_Pro_F30_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_Pro_F30_USB.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_Pro_N30_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_Pro_N30_USB.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_Pro_SF30_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_Pro_SF30_USB.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_Pro_SN30_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_Pro_SN30_USB.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_SF30_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_SF30_USB.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_SN30_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_SN30_GP_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_SN30_GP_USB.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_SN30_Modkit_BT.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_SN30_USB.cfg
+/usr/share/libretro/autoconfig/android/8Bitdo_Zero_BT.cfg
+/usr/share/libretro/autoconfig/android/ADC_Joystick.cfg
+/usr/share/libretro/autoconfig/android/Amazon Fire Game Controller.cfg
+/usr/share/libretro/autoconfig/android/Amazon Fire TV Remote.cfg
+/usr/share/libretro/autoconfig/android/Android TV Remote Control.cfg
+/usr/share/libretro/autoconfig/android/Archos_Gamepad.cfg
+/usr/share/libretro/autoconfig/android/BBC_GAME.cfg
+/usr/share/libretro/autoconfig/android/Boeder _Actionpad.cfg
+/usr/share/libretro/autoconfig/android/Buffalo_BGC_FC801.cfg
+/usr/share/libretro/autoconfig/android/ChromeOS_Gamepad.cfg
+/usr/share/libretro/autoconfig/android/Defender_Game_Racer_Classic.cfg
+/usr/share/libretro/autoconfig/android/DragonRise.cfg
+/usr/share/libretro/autoconfig/android/Drone.cfg
+/usr/share/libretro/autoconfig/android/DualShock2_Generic.cfg
+/usr/share/libretro/autoconfig/android/DualShock2_JCPS102.cfg
+/usr/share/libretro/autoconfig/android/DualShock2_WiseGroup.cfg
+/usr/share/libretro/autoconfig/android/DualShock3.cfg
+/usr/share/libretro/autoconfig/android/DualShock3_Gamepad0.cfg
+/usr/share/libretro/autoconfig/android/DualShock3_Gamepad1.cfg
+/usr/share/libretro/autoconfig/android/DualShock3_Gamepad2.cfg
+/usr/share/libretro/autoconfig/android/DualShock3_Gamepad3.cfg
+/usr/share/libretro/autoconfig/android/DualShock3_Gamepad4.cfg
+/usr/share/libretro/autoconfig/android/DualShock3_Gamepad5.cfg
+/usr/share/libretro/autoconfig/android/Elecom_JC-U912F.cfg
+/usr/share/libretro/autoconfig/android/GPD_G58_skeltonrom.cfg
+/usr/share/libretro/autoconfig/android/GPD_G5A.cfg
+/usr/share/libretro/autoconfig/android/GPD_Q9.cfg
+/usr/share/libretro/autoconfig/android/GPD_XD.cfg
+/usr/share/libretro/autoconfig/android/GS_controller.cfg
+/usr/share/libretro/autoconfig/android/GS_gamepad.cfg
+/usr/share/libretro/autoconfig/android/GameMID.cfg
+/usr/share/libretro/autoconfig/android/GameMID_Alt.cfg
+/usr/share/libretro/autoconfig/android/Gasia_PlayStation3.cfg
+/usr/share/libretro/autoconfig/android/Genius_Maxfire_G08XU.cfg
+/usr/share/libretro/autoconfig/android/Google_Nexus_Controller.cfg
+/usr/share/libretro/autoconfig/android/Google_Nexus_Remote.cfg
+/usr/share/libretro/autoconfig/android/HORI CO.,LTD. HORIPAD mini4.cfg
+/usr/share/libretro/autoconfig/android/HORIPAD S.cfg
+/usr/share/libretro/autoconfig/android/HuiJia.cfg
+/usr/share/libretro/autoconfig/android/Hyperkin_SmartBoy.cfg
+/usr/share/libretro/autoconfig/android/JXD_S5110B.cfg
+/usr/share/libretro/autoconfig/android/JXD_S5110B_Skelrom.cfg
+/usr/share/libretro/autoconfig/android/JXD_S7300B.cfg
+/usr/share/libretro/autoconfig/android/JXD_S7800B.cfg
+/usr/share/libretro/autoconfig/android/JXD_S7800B_1.cfg
+/usr/share/libretro/autoconfig/android/Logicool_RumblePad_2.cfg
+/usr/share/libretro/autoconfig/android/Logitech Unifying K400.cfg
+/usr/share/libretro/autoconfig/android/Logitech_Dual_Action.cfg
+/usr/share/libretro/autoconfig/android/Logitech_F310.cfg
+/usr/share/libretro/autoconfig/android/Logitech_Keyboard_K480.cfg
+/usr/share/libretro/autoconfig/android/Logitech_Precision.cfg
+/usr/share/libretro/autoconfig/android/Logitech_RumblePad_2.cfg
+/usr/share/libretro/autoconfig/android/MUCH_iReadyGo_i5.cfg
+/usr/share/libretro/autoconfig/android/MadCatz_PC_USB_Wired_Stick.cfg
+/usr/share/libretro/autoconfig/android/Mad_Catz_C.T.R.L.R_(Smart).cfg
+/usr/share/libretro/autoconfig/android/Mad_Catz_Micro_C.T.R.L.R.cfg
+/usr/share/libretro/autoconfig/android/Magicsee R1.cfg
+/usr/share/libretro/autoconfig/android/Mayflash-GameCube-to-USB-Adapter.cfg
+/usr/share/libretro/autoconfig/android/Mayflash-N64-to-USB-Adapter.cfg
+/usr/share/libretro/autoconfig/android/Mayflash-Sega-Saturn-to-USB-Adapter.cfg
+/usr/share/libretro/autoconfig/android/Mayflash_Wii_Classic.cfg
+/usr/share/libretro/autoconfig/android/Microsoft_Sidewinder_Classic.cfg
+/usr/share/libretro/autoconfig/android/Microsoft_Sidewinder_Dual_Strike.cfg
+/usr/share/libretro/autoconfig/android/Microsoft_XBOX_360_Controller_USB.cfg
+/usr/share/libretro/autoconfig/android/Moga_2_HID.cfg
+/usr/share/libretro/autoconfig/android/Moga_IME.cfg
+/usr/share/libretro/autoconfig/android/Moga_Pro_2_HID.cfg
+/usr/share/libretro/autoconfig/android/Mojo_Retro_Adapter_Mod.cfg
+/usr/share/libretro/autoconfig/android/NVIDIA_SHIELD_2019_Remote.cfg
+/usr/share/libretro/autoconfig/android/NVIDIA_SHIELD_Gamepad.cfg
+/usr/share/libretro/autoconfig/android/NVIDIA_SHIELD_Gamepad_2.cfg
+/usr/share/libretro/autoconfig/android/NVIDIA_SHIELD_Portable.cfg
+/usr/share/libretro/autoconfig/android/NVIDIA_SHIELD_Remote.cfg
+/usr/share/libretro/autoconfig/android/NVIDIA_SHIELD_Virtual.cfg
+/usr/share/libretro/autoconfig/android/Nyko_Playpad_Pro.cfg
+/usr/share/libretro/autoconfig/android/OUYA.cfg
+/usr/share/libretro/autoconfig/android/Onlive_Wireless_Controller.cfg
+/usr/share/libretro/autoconfig/android/PDP Fight Pad Pro.cfg
+/usr/share/libretro/autoconfig/android/PLAYSTATION(R)3 Controller.cfg
+/usr/share/libretro/autoconfig/android/PlayStation_Classic_Controller.cfg
+/usr/share/libretro/autoconfig/android/Pokken Controller.cfg
+/usr/share/libretro/autoconfig/android/Pro Controller.cfg
+/usr/share/libretro/autoconfig/android/Razer Kishi.cfg
+/usr/share/libretro/autoconfig/android/Retro-Bit_8Bitdo_RB8-64_BT.cfg
+/usr/share/libretro/autoconfig/android/Retro-Bit_8Bitdo_RB8-64_USB.cfg
+/usr/share/libretro/autoconfig/android/RetroKeyboard.cfg
+/usr/share/libretro/autoconfig/android/RetroUSB_RetroPad.cfg
+/usr/share/libretro/autoconfig/android/RetroUSB_SNES_RetroPort.cfg
+/usr/share/libretro/autoconfig/android/SHANWAN PC_PS3_Android Gamepad.cfg
+/usr/share/libretro/autoconfig/android/SLS-Sega-Saturn-USB-Gamepad.cfg
+/usr/share/libretro/autoconfig/android/STMicroelectronics Lenovo GamePad.cfg
+/usr/share/libretro/autoconfig/android/SZMy_Power_Dual_Box_Wii.cfg
+/usr/share/libretro/autoconfig/android/Saitake_STK-7003_BT.cfg
+/usr/share/libretro/autoconfig/android/Saitek_RumblePad_480.cfg
+/usr/share/libretro/autoconfig/android/Samsung_Gamepad_EI-GP20.cfg
+/usr/share/libretro/autoconfig/android/Sega_Virtua_Stick.cfg
+/usr/share/libretro/autoconfig/android/Sminiker_Gamepad.cfg
+/usr/share/libretro/autoconfig/android/Snakebyte_SB906701.cfg
+/usr/share/libretro/autoconfig/android/Sony_Bravia_TV_Remote.cfg
+/usr/share/libretro/autoconfig/android/Sony_DualShock_4_Controller.cfg
+/usr/share/libretro/autoconfig/android/Sony_DualShock_4_Controller_v2.cfg
+/usr/share/libretro/autoconfig/android/SteelSeries Stratus Duo.cfg
+/usr/share/libretro/autoconfig/android/SteelSeries Stratus XL.cfg
+/usr/share/libretro/autoconfig/android/Super_Smartjoy_2.cfg
+/usr/share/libretro/autoconfig/android/TOMMO_Neo-Geo_X.cfg
+/usr/share/libretro/autoconfig/android/TTT_THT_Arcade_Player1.cfg
+/usr/share/libretro/autoconfig/android/TTT_THT_Arcade_Player2.cfg
+/usr/share/libretro/autoconfig/android/Thrustmaster T.Flight Hotas PS3.cfg
+/usr/share/libretro/autoconfig/android/Thrustmaster_T_Mini.cfg
+/usr/share/libretro/autoconfig/android/Tomee_N64_USB_controller.cfg
+/usr/share/libretro/autoconfig/android/Tomee_NES_USB.cfg
+/usr/share/libretro/autoconfig/android/Toodles_2008_Chimp.cfg
+/usr/share/libretro/autoconfig/android/Trust_Predator.cfg
+/usr/share/libretro/autoconfig/android/Twin USB Joystick.cfg
+/usr/share/libretro/autoconfig/android/WikiPad.cfg
+/usr/share/libretro/autoconfig/android/Xbox 360 Wireless Adapter.cfg
+/usr/share/libretro/autoconfig/android/Xbox One S Wireless Controller.cfg
+/usr/share/libretro/autoconfig/android/Xbox One Wireless Controller.cfg
+/usr/share/libretro/autoconfig/android/Xiaomi Bluetooth Gamepad.cfg
+/usr/share/libretro/autoconfig/android/Xiaomi_MiBoxS_RC.cfg
+/usr/share/libretro/autoconfig/android/Xiaomi_Remote.cfg
+/usr/share/libretro/autoconfig/android/Xperia_Play_keypad.cfg
+/usr/share/libretro/autoconfig/android/Xperia_Play_zeus.cfg
+/usr/share/libretro/autoconfig/android/Xperia_Play_zeus2.cfg
+/usr/share/libretro/autoconfig/android/Zeemote SteelSeries Free.cfg
+/usr/share/libretro/autoconfig/android/Zeemote_Steelseries_free.cfg
+/usr/share/libretro/autoconfig/android/iBuffalo_BSGP801.cfg
+/usr/share/libretro/autoconfig/android/iControlPad_HID_Joystick_Profile.cfg
+/usr/share/libretro/autoconfig/android/iControlPad_SPP_Profile_Bluez.cfg
+/usr/share/libretro/autoconfig/android/iDroid_x360.cfg
+/usr/share/libretro/autoconfig/android/iPega_PG-9023.cfg
+/usr/share/libretro/autoconfig/android/iPega_PG-9028.cfg
+/usr/share/libretro/autoconfig/android/iPega_PG-9055_BT.cfg
+/usr/share/libretro/autoconfig/android/iPega_PG-9083S.cfg
+/usr/share/libretro/autoconfig/android/iPega_PG-9087.cfg
+/usr/share/libretro/autoconfig/android/idroid_con.cfg
+/usr/share/libretro/autoconfig/android/kadevice.com_KADE_-_Kick_Ass_Dynamic_Encoder.cfg
+/usr/share/libretro/autoconfig/android/nvec_keyboard.cfg
+/usr/share/libretro/autoconfig/android/raphnet.net_Sega_Saturn_to_USB_Adapter_2_0.cfg
+/usr/share/libretro/autoconfig/android/retronicdesign.com Sega Joypad Adapter v3.0.cfg
+/usr/share/libretro/autoconfig/android/sunxi-ir.cfg
+/usr/share/libretro/autoconfig/android/ultimarc_uhid.cfg
+/usr/share/libretro/autoconfig/dinput/
+/usr/share/libretro/autoconfig/dinput/2Axes 11Keys Game  Pad.cfg
+/usr/share/libretro/autoconfig/dinput/2In1_USB_Joystick.cfg
+/usr/share/libretro/autoconfig/dinput/8BitDo_Pro2_N30_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8BitDo_Pro2_N30_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8BitDo_SN30_Pro+_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8BitDo_SN30_Pro+_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8BitDo_Zero2_gamepad_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_24G_SF30_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_24G_SN30_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_Arcade_F30_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_Arcade_F30_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_Arcade_N30_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_Arcade_N30_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_F30_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_F30_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_GBros_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_M30_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_M30_Modkit_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_M30_Modkit_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_M30_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_N30_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_N30_Modkit_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_N30_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_Pro_F30_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_Pro_F30_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_Pro_N30_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_Pro_N30_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_Pro_SF30_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_Pro_SF30_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_Pro_SN30_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_Pro_SN30_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_SF30_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_SF30_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_SN30_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_SN30_GP_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_SN30_GP_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_SN30_Modkit_BT.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_SN30_USB.cfg
+/usr/share/libretro/autoconfig/dinput/8Bitdo_Zero_BT.cfg
+/usr/share/libretro/autoconfig/dinput/Arcade Joystick v1.1.cfg
+/usr/share/libretro/autoconfig/dinput/Arcade Pad (Mad Catz BrawlPad).cfg
+/usr/share/libretro/autoconfig/dinput/Arcade Pad (Mad Catz BrawlStick).cfg
+/usr/share/libretro/autoconfig/dinput/Arcade Stick (MadCatz FightStick TE).cfg
+/usr/share/libretro/autoconfig/dinput/BBC-GAME.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play ATARI Port 1.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play ATARI Port 2.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play ATARI Port 3.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play ATARI Port 4.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play GC Port 1.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play GC Port 2.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play GC Port 3.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play GC Port 4.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play GEN_3 Port 1.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play GEN_3 Port 2.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play GEN_3 Port 3.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play GEN_3 Port 4.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play GEN_6 Port 1.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play GEN_6 Port 2.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play GEN_6 Port 3.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play GEN_6 Port 4.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play N64 Port 1.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play N64 Port 2.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play N64 Port 3.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play NES Port 1.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play NES Port 2.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play NES Port 3.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play NES Port 4.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play PSX_DS2 Port 1.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play PSX_DS2 Port 2.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play PSX_DS2 Port 3.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play PSX_DS2 Port 4.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play SATURN_ANALOG.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play SATURN_DIGITAL Port 1.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play SATURN_DIGITAL Port 2.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play SATURN_DIGITAL Port 3.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play SATURN_DIGITAL Port 4.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play SNES Port 1.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play SNES Port 2.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play SNES Port 3.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play SNES Port 4.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play WII_CLASSIC Port 1.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play WII_CLASSIC Port 2.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play WII_CLASSIC Port 3.cfg
+/usr/share/libretro/autoconfig/dinput/Bliss-Box 4-Play WII_CLASSIC Port 4.cfg
+/usr/share/libretro/autoconfig/dinput/Boeder _Actionpad.cfg
+/usr/share/libretro/autoconfig/dinput/Controller (Xbox 360 Wireless Receiver for Windows).cfg
+/usr/share/libretro/autoconfig/dinput/Controller (Xbox One For Windows).cfg
+/usr/share/libretro/autoconfig/dinput/Core (Plus) Wired Controller.cfg
+/usr/share/libretro/autoconfig/dinput/DUALSHOCK_3.cfg
+/usr/share/libretro/autoconfig/dinput/DUALSHOCK_4.cfg
+/usr/share/libretro/autoconfig/dinput/DUALSHOCK_4_USB_Wireless_Adaptor.cfg
+/usr/share/libretro/autoconfig/dinput/Defender Game Racer Turbo GT.cfg
+/usr/share/libretro/autoconfig/dinput/DragonRise_Inc.___Generic___USB__Joystick__.cfg
+/usr/share/libretro/autoconfig/dinput/GENESIS_ATARI Controller USB.cfg
+/usr/share/libretro/autoconfig/dinput/Gamepad F310 (Controller).cfg
+/usr/share/libretro/autoconfig/dinput/Genius_G-08XU.cfg
+/usr/share/libretro/autoconfig/dinput/Genius_G-12U.cfg
+/usr/share/libretro/autoconfig/dinput/Gioteck PS3 Wired Controller.cfg
+/usr/share/libretro/autoconfig/dinput/HORIPAD S.cfg
+/usr/share/libretro/autoconfig/dinput/HORIPAD mini4.cfg
+/usr/share/libretro/autoconfig/dinput/HORI_Fighting_Commander_4.cfg
+/usr/share/libretro/autoconfig/dinput/JY-P62U Series ONLINE GRIP.cfg
+/usr/share/libretro/autoconfig/dinput/KADE - Kick Ass Dynamic Encoder.cfg
+/usr/share/libretro/autoconfig/dinput/Logitech Cordless RumblePad 2.cfg
+/usr/share/libretro/autoconfig/dinput/Logitech_Dual_Action.cfg
+/usr/share/libretro/autoconfig/dinput/Logitech_Gamepad_F310.cfg
+/usr/share/libretro/autoconfig/dinput/Logitech_RumblePad_2.cfg
+/usr/share/libretro/autoconfig/dinput/MAGIC-NS.cfg
+/usr/share/libretro/autoconfig/dinput/MAYFLASH_GameCube_Controller_Adapter.cfg
+/usr/share/libretro/autoconfig/dinput/Mad Catz FightStick TE2+ PS4.cfg
+/usr/share/libretro/autoconfig/dinput/Mayflash_MD_USB_Adapter.cfg
+/usr/share/libretro/autoconfig/dinput/Mayflash_N64_USB_Adapter_Rev1.cfg
+/usr/share/libretro/autoconfig/dinput/Mayflash_N64_USB_Adapter_Rev2.cfg
+/usr/share/libretro/autoconfig/dinput/Mayflash_USB_Adapter.cfg
+/usr/share/libretro/autoconfig/dinput/Microsoft_Sidewinder_Game_Pad_USB.cfg
+/usr/share/libretro/autoconfig/dinput/NES_Nintendo_Switch_Online.cfg
+/usr/share/libretro/autoconfig/dinput/NVIDIA Shield.cfg
+/usr/share/libretro/autoconfig/dinput/NVIDIA_GeForce_Experience_Virtual_Controller.cfg
+/usr/share/libretro/autoconfig/dinput/Nintendo Switch Joy-Con (L).cfg
+/usr/share/libretro/autoconfig/dinput/Nintendo Switch Pro Controller USB Steam User 1.cfg
+/usr/share/libretro/autoconfig/dinput/Nintendo Switch Pro Controller USB Steam User 2.cfg
+/usr/share/libretro/autoconfig/dinput/Nintendo Switch Pro Controller USB Steam User 3.cfg
+/usr/share/libretro/autoconfig/dinput/Nintendo Switch Pro Controller USB Steam User 4.cfg
+/usr/share/libretro/autoconfig/dinput/Nintendo_Switch_Pro_Controller.cfg
+/usr/share/libretro/autoconfig/dinput/PCEngine PAD.cfg
+/usr/share/libretro/autoconfig/dinput/PDP Fight Pad Pro.cfg
+/usr/share/libretro/autoconfig/dinput/PlaySega_Controller_USB.cfg
+/usr/share/libretro/autoconfig/dinput/PlayStation_Classic_Controller.cfg
+/usr/share/libretro/autoconfig/dinput/Pokken Controller.cfg
+/usr/share/libretro/autoconfig/dinput/Retro-Bit Saturn Bluetooth Controller DInput.cfg
+/usr/share/libretro/autoconfig/dinput/Retro-Bit_8Bitdo_RB8-64_BT.cfg
+/usr/share/libretro/autoconfig/dinput/Retro-Bit_8Bitdo_RB8-64_USB.cfg
+/usr/share/libretro/autoconfig/dinput/Retro-Bit_Genesis_Saturn_8_Button_Arcade_Pad.cfg
+/usr/share/libretro/autoconfig/dinput/RetroUSB_RetroPort_Genesis_6_Button.cfg
+/usr/share/libretro/autoconfig/dinput/RetroUSB_RetroPort_NES.cfg
+/usr/share/libretro/autoconfig/dinput/RetroUSB_RetroPort_SNES.cfg
+/usr/share/libretro/autoconfig/dinput/Retrode_2.cfg
+/usr/share/libretro/autoconfig/dinput/Retrolink_(S)NES_USB.cfg
+/usr/share/libretro/autoconfig/dinput/Retrolink_N64_USB.cfg
+/usr/share/libretro/autoconfig/dinput/Retronic_USB_Joystick_Adapter.cfg
+/usr/share/libretro/autoconfig/dinput/SEGA_MD_3B_Controller_USB.cfg
+/usr/share/libretro/autoconfig/dinput/SNES USB Gamepad.cfg
+/usr/share/libretro/autoconfig/dinput/SNES_Nintendo_Switch_Online.cfg
+/usr/share/libretro/autoconfig/dinput/SPEED-LINK Competition Pro .cfg
+/usr/share/libretro/autoconfig/dinput/SQONYY_gamepad.cfg
+/usr/share/libretro/autoconfig/dinput/Samsung_Game_Pad_EI-GP20.cfg
+/usr/share/libretro/autoconfig/dinput/Saturn to USB v3.0.cfg
+/usr/share/libretro/autoconfig/dinput/Spartan Gear Oplon Dinput.cfg
+/usr/share/libretro/autoconfig/dinput/Stadia_Controller.cfg
+/usr/share/libretro/autoconfig/dinput/Steam_Link_Virtual_Pad.cfg
+/usr/share/libretro/autoconfig/dinput/T.Flight Hotas PS3.cfg
+/usr/share/libretro/autoconfig/dinput/T.Flight Hotas X.cfg
+/usr/share/libretro/autoconfig/dinput/Tomee_N64_USB_controller.cfg
+/usr/share/libretro/autoconfig/dinput/Twin_USB_Joystick_(Analog).cfg
+/usr/share/libretro/autoconfig/dinput/USB GAME Controller .cfg
+/usr/share/libretro/autoconfig/dinput/WUP-028.cfg
+/usr/share/libretro/autoconfig/dinput/Wireless Controller.cfg
+/usr/share/libretro/autoconfig/dinput/XBOX_360.cfg
+/usr/share/libretro/autoconfig/dinput/Zeemote SteelSeries Free.cfg
+/usr/share/libretro/autoconfig/dinput/iBuffalo_BGCFC801.cfg
+/usr/share/libretro/autoconfig/dinput/iBuffalo_BSGP801.cfg
+/usr/share/libretro/autoconfig/dinput/raphnet-tech_1-player_WUSBMote_v2.1.cfg
+/usr/share/libretro/autoconfig/dinput/raphnet-tech_2-player_WUSBMote_v2.1.cfg
+/usr/share/libretro/autoconfig/dinput/raphnet-tech_Dual_SNES_to_USB_v2.2.cfg
+/usr/share/libretro/autoconfig/dinput/raphnet-tech_SNES_to_USB_v2.2.cfg
+/usr/share/libretro/autoconfig/hid/
+/usr/share/libretro/autoconfig/hid/8BitDo_SN30_Pro+_BT.cfg
+/usr/share/libretro/autoconfig/hid/8BitDo_SN30_Pro+_USB.cfg
+/usr/share/libretro/autoconfig/hid/8BitDo_Zero2_gamepad_BT.cfg
+/usr/share/libretro/autoconfig/hid/8Bitdo_NES30_Pro.cfg
+/usr/share/libretro/autoconfig/hid/8Bitdo_Pro_SF30_USB.cfg
+/usr/share/libretro/autoconfig/hid/8Bitdo_SN30_Pro.cfg
+/usr/share/libretro/autoconfig/hid/8Bitdo_SNES30_BT.cfg
+/usr/share/libretro/autoconfig/hid/8Bitdo_SNES30_USB.cfg
+/usr/share/libretro/autoconfig/hid/Buffalo_Classic_USB_Gamepad.cfg
+/usr/share/libretro/autoconfig/hid/DUALSHOCK_4_USB_Wireless_Adaptor.cfg
+/usr/share/libretro/autoconfig/hid/Generic_NES_USB_Controller.cfg
+/usr/share/libretro/autoconfig/hid/Generic_SNES_USB_Controller.cfg
+/usr/share/libretro/autoconfig/hid/HORIPAD S.cfg
+/usr/share/libretro/autoconfig/hid/HORI_mini_wired_ps4.cfg
+/usr/share/libretro/autoconfig/hid/Logitech_RumblePad_2_USB.cfg
+/usr/share/libretro/autoconfig/hid/MFi_Gamepad.cfg
+/usr/share/libretro/autoconfig/hid/MP-8866_Dual_USB_Joypad.cfg
+/usr/share/libretro/autoconfig/hid/Mayflash_Wii_Classic_Controller_Adapter.cfg
+/usr/share/libretro/autoconfig/hid/Microsoft(R)Sidewinder(R)_Game_Pad_USB.cfg
+/usr/share/libretro/autoconfig/hid/NVIDIA Controller v01.04.cfg
+/usr/share/libretro/autoconfig/hid/Nimbus.cfg
+/usr/share/libretro/autoconfig/hid/Nintendo_RVL_CNT_01.cfg
+/usr/share/libretro/autoconfig/hid/Nintendo_Wii_U_GCN_Controller_Adapter.cfg
+/usr/share/libretro/autoconfig/hid/PDP Fight Pad Pro.cfg
+/usr/share/libretro/autoconfig/hid/PS2-PSX_Controller_Adapter.cfg
+/usr/share/libretro/autoconfig/hid/PSX_to_PS3_Controller_Adapter.cfg
+/usr/share/libretro/autoconfig/hid/Pokken Controller.cfg
+/usr/share/libretro/autoconfig/hid/Pro Controller.cfg
+/usr/share/libretro/autoconfig/hid/RetroUSB_Genesis_Retroport.cfg
+/usr/share/libretro/autoconfig/hid/Retrolink_N64_USB_Controller.cfg
+/usr/share/libretro/autoconfig/hid/Sony_Computer_Entertainment_Wireless_Controller.cfg
+/usr/share/libretro/autoconfig/hid/Sony_PLAYSTATION(R)3_Controller.cfg
+/usr/share/libretro/autoconfig/hid/Stadia_Controller.cfg
+/usr/share/libretro/autoconfig/hid/T.Flight Hotas PS3.cfg
+/usr/share/libretro/autoconfig/hid/Xbox Wireless Controller.cfg
+/usr/share/libretro/autoconfig/hid/Xbox_360_Wireless_Receiver.cfg
+/usr/share/libretro/autoconfig/hid/Xbox_One_Wired_Controller.cfg
+/usr/share/libretro/autoconfig/linuxraw/
+/usr/share/libretro/autoconfig/linuxraw/Arduino LLC Arduino Leonardo.cfg
+/usr/share/libretro/autoconfig/linuxraw/Bliss_Box_4-Play.cfg
+/usr/share/libretro/autoconfig/linuxraw/CHA2.cfg
+/usr/share/libretro/autoconfig/linuxraw/Microsoft X-Box 360 pad.cfg
+/usr/share/libretro/autoconfig/linuxraw/Sony Interactive Entertainment Wireless Controller.cfg
+/usr/share/libretro/autoconfig/linuxraw/Steam_Controller.cfg
+/usr/share/libretro/autoconfig/linuxraw/Toodles 2008 Cthulhu Mult.cfg
+/usr/share/libretro/autoconfig/mfi/
+/usr/share/libretro/autoconfig/mfi/MFi_Controller.cfg
+/usr/share/libretro/autoconfig/parport/
+/usr/share/libretro/autoconfig/parport/Generic_Parallel_Port_device.cfg
+/usr/share/libretro/autoconfig/qnx/
+/usr/share/libretro/autoconfig/qnx/Blackberry_BT_Keyboard.cfg
+/usr/share/libretro/autoconfig/qnx/Blackberry_Q10_Keypad.cfg
+/usr/share/libretro/autoconfig/qnx/iPega_PG-9017.cfg
+/usr/share/libretro/autoconfig/sdl2/
+/usr/share/libretro/autoconfig/sdl2/8Bitdo NES30 Pro   8Bitdo NES30 Pro.cfg
+/usr/share/libretro/autoconfig/sdl2/Afterglow.cfg
+/usr/share/libretro/autoconfig/sdl2/Akishop Customs PS360+ v1.66.cfg
+/usr/share/libretro/autoconfig/sdl2/Arduino LLC Arduino Leonardo.cfg
+/usr/share/libretro/autoconfig/sdl2/Bliss-Box-4Play.cfg
+/usr/share/libretro/autoconfig/sdl2/CHA2.cfg
+/usr/share/libretro/autoconfig/sdl2/DragonRise Inc. Generic USB Joystick.cfg
+/usr/share/libretro/autoconfig/sdl2/Generic X-Box pad.cfg
+/usr/share/libretro/autoconfig/sdl2/HORIPAD S.cfg
+/usr/share/libretro/autoconfig/sdl2/HORI_HORIPAD_mini_PS4.cfg
+/usr/share/libretro/autoconfig/sdl2/Logitech F310 Gamepad (XInput).cfg
+/usr/share/libretro/autoconfig/sdl2/NVIDIA Corporation NVIDIA Controller v01.04.cfg
+/usr/share/libretro/autoconfig/sdl2/Nintendo GameCube Controller Adapter.cfg
+/usr/share/libretro/autoconfig/sdl2/Nintendo Switch Pro Controller.cfg
+/usr/share/libretro/autoconfig/sdl2/PDP Fight Pad Pro.cfg
+/usr/share/libretro/autoconfig/sdl2/PS3 Controller.cfg
+/usr/share/libretro/autoconfig/sdl2/PS4 Controller.cfg
+/usr/share/libretro/autoconfig/sdl2/Pokken Controller.cfg
+/usr/share/libretro/autoconfig/sdl2/Retrolink_N64_USB.cfg
+/usr/share/libretro/autoconfig/sdl2/STK-7004X.cfg
+/usr/share/libretro/autoconfig/sdl2/ShanWan Gioteck PS3 Wired Controller.cfg
+/usr/share/libretro/autoconfig/sdl2/Stadia Controller.cfg
+/usr/share/libretro/autoconfig/sdl2/Steam Controller.cfg
+/usr/share/libretro/autoconfig/sdl2/T.Flight Hotas PS3.cfg
+/usr/share/libretro/autoconfig/sdl2/T.Flight Hotas X.cfg
+/usr/share/libretro/autoconfig/sdl2/Toodles 2008 Cthulhu Mult.cfg
+/usr/share/libretro/autoconfig/sdl2/X360 Controller.cfg
+/usr/share/libretro/autoconfig/sdl2/X360 Wireless Controller.cfg
+/usr/share/libretro/autoconfig/sdl2/Xbox One Wireless Controller.cfg
+/usr/share/libretro/autoconfig/sdl2/iBuffalo SNES Controller.cfg
+/usr/share/libretro/autoconfig/udev/
+/usr/share/libretro/autoconfig/udev/2Axes11KeysGamePad.cfg
+/usr/share/libretro/autoconfig/udev/3H Dual Arcade.cfg
+/usr/share/libretro/autoconfig/udev/8BitDo_M30.cfg
+/usr/share/libretro/autoconfig/udev/8BitDo_M30_BT_B.cfg
+/usr/share/libretro/autoconfig/udev/8BitDo_M30_BT_X.cfg
+/usr/share/libretro/autoconfig/udev/8BitDo_Pro2_N30_BT.cfg
+/usr/share/libretro/autoconfig/udev/8BitDo_Pro2_N30_USB.cfg
+/usr/share/libretro/autoconfig/udev/8BitDo_SN30_Pro+_BT_B.cfg
+/usr/share/libretro/autoconfig/udev/8BitDo_SN30_Pro+_BT_X.cfg
+/usr/share/libretro/autoconfig/udev/8BitDo_SN30_Pro+_USB.cfg
+/usr/share/libretro/autoconfig/udev/8BitDo_Zero2_gamepad_BT.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_24G_SF30_USB.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_24G_SN30_USB.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_Arcade_F30_BT.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_Arcade_F30_USB.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_Arcade_N30_BT.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_Arcade_N30_USB.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_F30_P1_BT.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_F30_P2_BT.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_F30_USB.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_N30_BT.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_N30_USB.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_P30_Modkit_BT.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_Pro_F30_BT.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_Pro_F30_USB.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_Pro_N30_BT.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_Pro_N30_USB.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_Pro_SF30_BT_B.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_Pro_SF30_BT_X.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_Pro_SF30_USB.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_Pro_SN30_BT_B.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_Pro_SN30_BT_X.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_Pro_SN30_USB.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_S30_Modkit.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_SF30_BT.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_SF30_USB.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_SN30_BT.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_SN30_GP_BT.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_SN30_GP_USB.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_SN30_USB.cfg
+/usr/share/libretro/autoconfig/udev/8Bitdo_Zero_BT.cfg
+/usr/share/libretro/autoconfig/udev/ACRUX_QuanBa_Arcade_JoyStick_1008.cfg
+/usr/share/libretro/autoconfig/udev/ASUS Gamepad.cfg
+/usr/share/libretro/autoconfig/udev/Afterglow AX.1 Gamepad for Xbox 360.cfg
+/usr/share/libretro/autoconfig/udev/Afterglow Gamepad for Xbox 360.cfg
+/usr/share/libretro/autoconfig/udev/Afterglow controller for PS3.cfg
+/usr/share/libretro/autoconfig/udev/Akishop Customs PS360+ v1.66.cfg
+/usr/share/libretro/autoconfig/udev/Arcade Pad (Mad Catz BrawlPad).cfg
+/usr/share/libretro/autoconfig/udev/Arcade Pad (Mad Catz BrawlStick).cfg
+/usr/share/libretro/autoconfig/udev/Arcade Stick (MadCatz FightStick TE).cfg
+/usr/share/libretro/autoconfig/udev/Arduino LLC Arduino Leonardo.cfg
+/usr/share/libretro/autoconfig/udev/Austgame_PS_to_USB_convert_cable.cfg
+/usr/share/libretro/autoconfig/udev/BDA Pro Ex.cfg
+/usr/share/libretro/autoconfig/udev/BETOP_AX1_BFM.cfg
+/usr/share/libretro/autoconfig/udev/BUFFALO INC. BUFFALO BGC-FC801 USB Gamepad.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play ATARI Port 1.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play ATARI Port 2.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play ATARI Port 3.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play ATARI Port 4.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play GC Port 1.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play GC Port 2.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play GC Port 3.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play GC Port 4.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play GEN_3 Port 1.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play GEN_3 Port 2.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play GEN_3 Port 3.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play GEN_3 Port 4.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play GEN_6 Port 1.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play GEN_6 Port 2.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play GEN_6 Port 3.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play GEN_6 Port 4.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play N64 Port 1.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play N64 Port 2.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play N64 Port 3.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play N64 Port 4.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play NES Port 1.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play NES Port 2.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play NES Port 3.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play NES Port 4.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play PSX_DS2 Port 1.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play PSX_DS2 Port 2.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play PSX_DS2 Port 3.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play PSX_DS2 Port 4.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play SATURN_DIGITAL Port 1.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play SATURN_DIGITAL Port 2.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play SATURN_DIGITAL Port 3.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play SATURN_DIGITAL Port 4.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play SNES Port 1.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play SNES Port 2.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play SNES Port 3.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play SNES Port 4.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play WII_CLASSIC Port 1.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play WII_CLASSIC Port 2.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play WII_CLASSIC Port 3.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box 4-Play WII_CLASSIC Port 4.cfg
+/usr/share/libretro/autoconfig/udev/Bliss-Box-4play.cfg
+/usr/share/libretro/autoconfig/udev/CHA2.cfg
+/usr/share/libretro/autoconfig/udev/ControlBlockArcadeGamepad.cfg
+/usr/share/libretro/autoconfig/udev/ControlBlockSNESGamepad.cfg
+/usr/share/libretro/autoconfig/udev/DIALOG_GP-A11.cfg
+/usr/share/libretro/autoconfig/udev/Dashine_Arcade_Joystick.cfg
+/usr/share/libretro/autoconfig/udev/Dashine_Arcade_P2_Joystick.cfg
+/usr/share/libretro/autoconfig/udev/Defender_Game_Master_Gamepad.cfg
+/usr/share/libretro/autoconfig/udev/DragonRise Inc. Gamepad.cfg
+/usr/share/libretro/autoconfig/udev/DragonRise_Inc._PC_TWIN_SHOCK_Gamepad.cfg
+/usr/share/libretro/autoconfig/udev/DragonRise_Inc.___Generic___USB__Joystick__.cfg
+/usr/share/libretro/autoconfig/udev/DragonRise_N64.cfg
+/usr/share/libretro/autoconfig/udev/DragonRise_X-Box_Gamepad_with_Force_Feedback.cfg
+/usr/share/libretro/autoconfig/udev/EA_SPORTS_PS3_Football_Club_Wired_Controller_PL-6416.cfg
+/usr/share/libretro/autoconfig/udev/ELECOM JC-U4113S DirectInput Mode.cfg
+/usr/share/libretro/autoconfig/udev/ELECOM JC-U4113S XInput Mode.cfg
+/usr/share/libretro/autoconfig/udev/EXEQ_PROACTION.cfg
+/usr/share/libretro/autoconfig/udev/G27_Racing_Wheel.cfg
+/usr/share/libretro/autoconfig/udev/GEN GAME S3.cfg
+/usr/share/libretro/autoconfig/udev/GPD Win 2 X-Box Controller.cfg
+/usr/share/libretro/autoconfig/udev/GameStick Controller.cfg
+/usr/share/libretro/autoconfig/udev/Gamegirl.cfg
+/usr/share/libretro/autoconfig/udev/Gamester_Reflex_Arcade_Stick.cfg
+/usr/share/libretro/autoconfig/udev/Gametel.cfg
+/usr/share/libretro/autoconfig/udev/Gametel_Bluetooth_controller.cfg
+/usr/share/libretro/autoconfig/udev/Gamtec.,Ltd_SmartJoy_PLUS_Adapter.cfg
+/usr/share/libretro/autoconfig/udev/Gasia_PS_Gamepad_BT.cfg
+/usr/share/libretro/autoconfig/udev/Gasia_PS_Gamepad_USB.cfg
+/usr/share/libretro/autoconfig/udev/Generic   USB  Joystick  .cfg
+/usr/share/libretro/autoconfig/udev/Generic_X-Box_pad.cfg
+/usr/share/libretro/autoconfig/udev/Google LLC Stadia Controller rev. A.cfg
+/usr/share/libretro/autoconfig/udev/Gravis_Destroyer_Tiltpad.cfg
+/usr/share/libretro/autoconfig/udev/Gravis_GamePad_Pro_USB.cfg
+/usr/share/libretro/autoconfig/udev/GreenAsia_USB_Joystick_1.cfg
+/usr/share/libretro/autoconfig/udev/GreenAsia_USB_Joystick_2.cfg
+/usr/share/libretro/autoconfig/udev/HJZ Mayflash WiiU Pro Game Controller Adapter.cfg
+/usr/share/libretro/autoconfig/udev/HORIPAD S.cfg
+/usr/share/libretro/autoconfig/udev/HORI_Fighting_Commander_4.cfg
+/usr/share/libretro/autoconfig/udev/HORI_Fighting_Commander_PS4-044_3.cfg
+/usr/share/libretro/autoconfig/udev/HORI_Fighting_Commander_PS4-044_4.cfg
+/usr/share/libretro/autoconfig/udev/HORI_Fighting_Commander_PS4-044_PC.cfg
+/usr/share/libretro/autoconfig/udev/HORI_Fighting_Stick_EX2.cfg
+/usr/share/libretro/autoconfig/udev/HORI_Fighting_Stick_mini_4.cfg
+/usr/share/libretro/autoconfig/udev/HORI_Fighting_Stick_mini_Switch.cfg
+/usr/share/libretro/autoconfig/udev/HORI_HORIPAD_ONE.cfg
+/usr/share/libretro/autoconfig/udev/HORI_HORIPAD_mini_PS4.cfg
+/usr/share/libretro/autoconfig/udev/HORI_PAD_A.cfg
+/usr/share/libretro/autoconfig/udev/HORI_Real_Arcade_Pro_3.cfg
+/usr/share/libretro/autoconfig/udev/HORI_Real_Arcade_Pro_4.cfg
+/usr/share/libretro/autoconfig/udev/HORI_Real_Arcade_Pro_V.cfg
+/usr/share/libretro/autoconfig/udev/Harmonix Xbox 360 Controller.cfg
+/usr/share/libretro/autoconfig/udev/Honey Bee QuasiCON.cfg
+/usr/share/libretro/autoconfig/udev/HuiJia  JC-W01U.cfg
+/usr/share/libretro/autoconfig/udev/HuiJia  USB GamePad.cfg
+/usr/share/libretro/autoconfig/udev/Hyperkin_Genesis_6_Button.cfg
+/usr/share/libretro/autoconfig/udev/ION_iCade.cfg
+/usr/share/libretro/autoconfig/udev/Jess_Tech_Colour_Rumble_Pad.cfg
+/usr/share/libretro/autoconfig/udev/Jess_Tech_Dual_Analog_Rumble_Pad.cfg
+/usr/share/libretro/autoconfig/udev/Logic3 Controller.cfg
+/usr/share/libretro/autoconfig/udev/Logitech_Chillstream.cfg
+/usr/share/libretro/autoconfig/udev/Logitech_Chillstream_Controller.cfg
+/usr/share/libretro/autoconfig/udev/Logitech_Cordless_RumblePad_2.cfg
+/usr/share/libretro/autoconfig/udev/Logitech_Dual_Action.cfg
+/usr/share/libretro/autoconfig/udev/Logitech_Gamepad_F310.cfg
+/usr/share/libretro/autoconfig/udev/Logitech_Gamepad_F510.cfg
+/usr/share/libretro/autoconfig/udev/Logitech_Gamepad_F710.cfg
+/usr/share/libretro/autoconfig/udev/Logitech_Precision_Gamepad.cfg
+/usr/share/libretro/autoconfig/udev/Logitech_RumblePad_2_USB.cfg
+/usr/share/libretro/autoconfig/udev/Logitech_WingMan_Action_Pad.cfg
+/usr/share/libretro/autoconfig/udev/Logitech_WingMan_RumblePad.cfg
+/usr/share/libretro/autoconfig/udev/MAD CATZ ,Ltd. Mad Catz Game Controller.cfg
+/usr/share/libretro/autoconfig/udev/MAGIC-NS.cfg
+/usr/share/libretro/autoconfig/udev/MAYFLASH_GameCube_Controller_Adapter.cfg
+/usr/share/libretro/autoconfig/udev/MOSIC______SPEED-LINK_Competition_Pro_.cfg
+/usr/share/libretro/autoconfig/udev/MOSIC______USB_2A8K__GamePad__________.cfg
+/usr/share/libretro/autoconfig/udev/MP-8800_Quad_USB_Joypad.cfg
+/usr/share/libretro/autoconfig/udev/MP-8866_Dual_USB_Joypad.cfg
+/usr/share/libretro/autoconfig/udev/MY-POWER_CO__LTD__2In1_USB_Joystick.cfg
+/usr/share/libretro/autoconfig/udev/Mad Catz FightPad PRO PS3.cfg
+/usr/share/libretro/autoconfig/udev/Mad Catz FightPad PRO PS4.cfg
+/usr/share/libretro/autoconfig/udev/Mad Catz FightStick TE2+ PS3.cfg
+/usr/share/libretro/autoconfig/udev/Mad Catz FightStick TE2+ PS4.cfg
+/usr/share/libretro/autoconfig/udev/Mad Catz Wired Xbox 360 Controller (SFIV).cfg
+/usr/share/libretro/autoconfig/udev/Mad Catz Xbox 360 Controller.cfg
+/usr/share/libretro/autoconfig/udev/Magicsee_R1.cfg
+/usr/share/libretro/autoconfig/udev/Mayflash Ltd Mayflash MD USB Adapter.cfg
+/usr/share/libretro/autoconfig/udev/Mayflash_Arcade_Fightstick_F101_DINPUT.cfg
+/usr/share/libretro/autoconfig/udev/Mayflash_Arcade_Fightstick_F101_XINPUT.cfg
+/usr/share/libretro/autoconfig/udev/Mayflash_Arcade_Fightstick_F300_CONSOLE.cfg
+/usr/share/libretro/autoconfig/udev/Mayflash_Arcade_Fightstick_F300_DINPUT.cfg
+/usr/share/libretro/autoconfig/udev/Mayflash_GameCube_to_USB_Adapter.cfg
+/usr/share/libretro/autoconfig/udev/Mayflash_N64_to_USB_Adapter.cfg
+/usr/share/libretro/autoconfig/udev/Mayflash_Sega_Saturn_to_USB_Adapter.cfg
+/usr/share/libretro/autoconfig/udev/Mega_World_Thrustmaster_dual_analog_3.2.cfg
+/usr/share/libretro/autoconfig/udev/Mega_World_USB_2-Axis_8-Button_Gamepad.cfg
+/usr/share/libretro/autoconfig/udev/Mega_World_USB_Game_Controllers.cfg
+/usr/share/libretro/autoconfig/udev/Microntek              USB Joystick          .cfg
+/usr/share/libretro/autoconfig/udev/Microsoft X-Box 360 pad.cfg
+/usr/share/libretro/autoconfig/udev/Microsoft_SideWinder_Game_Pad_USB.cfg
+/usr/share/libretro/autoconfig/udev/Microsoft_SideWinder_Plug_Play_Game_Pad.cfg
+/usr/share/libretro/autoconfig/udev/Microsoft_Sidewinder_Dual_Strike_USB_version_1.cfg
+/usr/share/libretro/autoconfig/udev/Microsoft_X-Box_One_Elite_pad.cfg
+/usr/share/libretro/autoconfig/udev/Microsoft_X-Box_One_S_pad.cfg
+/usr/share/libretro/autoconfig/udev/Microsoft_X-Box_One_S_pad_v2.cfg
+/usr/share/libretro/autoconfig/udev/Microsoft_X-Box_One_pad.cfg
+/usr/share/libretro/autoconfig/udev/Microsoft_X-Box_One_pad_(Firmware_2015).cfg
+/usr/share/libretro/autoconfig/udev/Microsoft_X-Box_Series_XS_pad.cfg
+/usr/share/libretro/autoconfig/udev/Microsoft_X-Box_pad_Japan.cfg
+/usr/share/libretro/autoconfig/udev/Microsoft_X-Box_pad_v1_US.cfg
+/usr/share/libretro/autoconfig/udev/Microsoft_X-Box_pad_v2_US.cfg
+/usr/share/libretro/autoconfig/udev/Mocute_Bluetooth_Remote.cfg
+/usr/share/libretro/autoconfig/udev/Moga Pro HID.cfg
+/usr/share/libretro/autoconfig/udev/NVIDIA Corporation NVIDIA Controller v01.04.cfg
+/usr/share/libretro/autoconfig/udev/NVIDIA_Controller_v01_03.cfg
+/usr/share/libretro/autoconfig/udev/Nintendo - Switch Pro Controller (bare).cfg
+/usr/share/libretro/autoconfig/udev/Nintendo - Switch Pro Controller.cfg
+/usr/share/libretro/autoconfig/udev/Nintendo-Switch-Online_NES-Controller_Left.cfg
+/usr/share/libretro/autoconfig/udev/Nintendo-Switch-Online_NES-Controller_Right.cfg
+/usr/share/libretro/autoconfig/udev/Nintendo_Clovercon_-_controller1.cfg
+/usr/share/libretro/autoconfig/udev/Nintendo_Clovercon_-_controller2.cfg
+/usr/share/libretro/autoconfig/udev/Nintendo_Wii_Pro_Controller.cfg
+/usr/share/libretro/autoconfig/udev/Nintendo_Wii_Remote.cfg
+/usr/share/libretro/autoconfig/udev/Nintendo_Wii_Remote_Classic_Controller.cfg
+/usr/share/libretro/autoconfig/udev/OUYA Game Controller.cfg
+/usr/share/libretro/autoconfig/udev/PDP Fight Pad Pro.cfg
+/usr/share/libretro/autoconfig/udev/PDP Wired Controller for Xbox One - Camo Series.cfg
+/usr/share/libretro/autoconfig/udev/PLAYSTATION(R)3Conteroller-PANHAI.cfg
+/usr/share/libretro/autoconfig/udev/Padix_Co.,_Ltd_(Rockfire).cfg
+/usr/share/libretro/autoconfig/udev/PlayStation_Classic_Controller.cfg
+/usr/share/libretro/autoconfig/udev/Play_SEGA_USB_HL-F2412.cfg
+/usr/share/libretro/autoconfig/udev/Pokken Controller.cfg
+/usr/share/libretro/autoconfig/udev/PowerA_Wired_Switch_Controller_-_BoTW_Edition.cfg
+/usr/share/libretro/autoconfig/udev/QanBa_Q4RAF_Arcade_Stick.cfg
+/usr/share/libretro/autoconfig/udev/Qnix_SNES_Replica.cfg
+/usr/share/libretro/autoconfig/udev/Razer Serval.cfg
+/usr/share/libretro/autoconfig/udev/Retro-Bit_8Bitdo_RB8-64_BT.cfg
+/usr/share/libretro/autoconfig/udev/Retro-Bit_8Bitdo_RB8-64_USB.cfg
+/usr/share/libretro/autoconfig/udev/RetroFlag_Classic_USB_Controller-M.cfg
+/usr/share/libretro/autoconfig/udev/RetroUSB-RetroPad-NES.cfg
+/usr/share/libretro/autoconfig/udev/RetroUSB.com SNES RetroPort.cfg
+/usr/share/libretro/autoconfig/udev/Retrode Mega Drive _1.cfg
+/usr/share/libretro/autoconfig/udev/Retrode Mega Drive _2.cfg
+/usr/share/libretro/autoconfig/udev/Retrode SNES _ N64 _1.cfg
+/usr/share/libretro/autoconfig/udev/Retrode SNES _ N64 _2.cfg
+/usr/share/libretro/autoconfig/udev/Retrolink_N64_USB_controller.cfg
+/usr/share/libretro/autoconfig/udev/Retrolink_Sega_Saturn_USB_GamePad.cfg
+/usr/share/libretro/autoconfig/udev/Rock_Candy_Gamepad_for_PS3.cfg
+/usr/share/libretro/autoconfig/udev/SEGA Genesis Mini 3-button.cfg
+/usr/share/libretro/autoconfig/udev/SEGA_Mega_Drive_Mini_6B_Controller.cfg
+/usr/share/libretro/autoconfig/udev/SHANWAN PC_PS3_Android Gamepad.cfg
+/usr/share/libretro/autoconfig/udev/SHANWAN PS3 GamePad.cfg
+/usr/share/libretro/autoconfig/udev/SLS-Sega-Saturn-USB-Gamepad.cfg
+/usr/share/libretro/autoconfig/udev/SNES Controller.cfg
+/usr/share/libretro/autoconfig/udev/SNES PC Game Pad    SNES PC Game Pad   .cfg
+/usr/share/libretro/autoconfig/udev/SNES-to-GamepadDevice.cfg
+/usr/share/libretro/autoconfig/udev/STD AxisPad.cfg
+/usr/share/libretro/autoconfig/udev/SWITCH CO.,LTD. Controller (Dinput).cfg
+/usr/share/libretro/autoconfig/udev/SWITCH CO.,LTD. USB Gamepad .cfg
+/usr/share/libretro/autoconfig/udev/SZMy-power LTD CO.  Dual Box WII.cfg
+/usr/share/libretro/autoconfig/udev/Saitek Cyborg Rumble Pad.cfg
+/usr/share/libretro/autoconfig/udev/Saitek_P880.cfg
+/usr/share/libretro/autoconfig/udev/Saitek_P990.cfg
+/usr/share/libretro/autoconfig/udev/Saitek_PLC_P2600_Rumble_Force_Pad.cfg
+/usr/share/libretro/autoconfig/udev/Saitek_X52_Flight_Control_System.cfg
+/usr/share/libretro/autoconfig/udev/Samsung Game Pad EI-GP20.cfg
+/usr/share/libretro/autoconfig/udev/Sanmos JY-P62U Series ONLINE GRIP.cfg
+/usr/share/libretro/autoconfig/udev/ShanWan PC_PS3_Android.cfg
+/usr/share/libretro/autoconfig/udev/Smartjoy Family Super Smartjoy 2.cfg
+/usr/share/libretro/autoconfig/udev/Sony-PlayStation3-DualShock3-Controller-Bluetooth.cfg
+/usr/share/libretro/autoconfig/udev/Sony-PlayStation3-DualShock3-Controller-Bluez.cfg
+/usr/share/libretro/autoconfig/udev/Sony-PlayStation3-DualShock3-Controller-USB.cfg
+/usr/share/libretro/autoconfig/udev/Sony-PlayStation4-DualShock4-Controller-Bluetooth.cfg
+/usr/share/libretro/autoconfig/udev/Sony-PlayStation4-DualShock4-Controller.cfg
+/usr/share/libretro/autoconfig/udev/Sony-PlayStation4-DualShock4v2-Controller.cfg
+/usr/share/libretro/autoconfig/udev/Sony-PlayStation4-DualShock4v2-Wireless-Crystal-Controller.cfg
+/usr/share/libretro/autoconfig/udev/Sony_PlayStation4_Dualshock4_500-Million_Limited_Edition.cfg
+/usr/share/libretro/autoconfig/udev/Spartan Gear Oplon Dinput.cfg
+/usr/share/libretro/autoconfig/udev/Spartan Gear Oplon.cfg
+/usr/share/libretro/autoconfig/udev/Steam_Controller.cfg
+/usr/share/libretro/autoconfig/udev/Street Fighter IV FightPad.cfg
+/usr/share/libretro/autoconfig/udev/TOMMO_NEOGEOX_Arcade_Stick.cfg
+/usr/share/libretro/autoconfig/udev/Thrustmaster_Dual_Trigger_3-in-1.cfg
+/usr/share/libretro/autoconfig/udev/Thrustmaster_FireStorm_Dual_Analog_2.cfg
+/usr/share/libretro/autoconfig/udev/Thrustmaster_FireStorm_Dual_Power_2.cfg
+/usr/share/libretro/autoconfig/udev/Thrustmaster_T_Mini_2.cfg
+/usr/share/libretro/autoconfig/udev/Thrustmaster_T_Mini_Wireless.cfg
+/usr/share/libretro/autoconfig/udev/Thrustmaster_Top_Gun_Fox_2_Pro.cfg
+/usr/share/libretro/autoconfig/udev/Tomee_N64_USB_controller.cfg
+/usr/share/libretro/autoconfig/udev/Tomee_NES_to_USB_Adapter.cfg
+/usr/share/libretro/autoconfig/udev/Toodles 2008 ChImp PC_PS3 Controller.cfg
+/usr/share/libretro/autoconfig/udev/Toodles 2008 Cthulhu Mult.cfg
+/usr/share/libretro/autoconfig/udev/Twin_USB_Joystick.cfg
+/usr/share/libretro/autoconfig/udev/USB_2-axis_8-button_gamepad.cfg
+/usr/share/libretro/autoconfig/udev/USB_Gamepad_.cfg
+/usr/share/libretro/autoconfig/udev/USB_Joystick_.cfg
+/usr/share/libretro/autoconfig/udev/USB_Vibration_Joystick.cfg
+/usr/share/libretro/autoconfig/udev/USB_gamepad.cfg
+/usr/share/libretro/autoconfig/udev/Ultimarc_J-PAC.cfg
+/usr/share/libretro/autoconfig/udev/VenomLimitedPS3PS4ArcadeJoystick.cfg
+/usr/share/libretro/autoconfig/udev/WeTek_Gamepad.cfg
+/usr/share/libretro/autoconfig/udev/Wii U GameCube Adapter Port 1.cfg
+/usr/share/libretro/autoconfig/udev/Wii U GameCube Adapter Port 2.cfg
+/usr/share/libretro/autoconfig/udev/Wii U GameCube Adapter Port 3.cfg
+/usr/share/libretro/autoconfig/udev/Wii U GameCube Adapter Port 4.cfg
+/usr/share/libretro/autoconfig/udev/Wireless Steam Controller.cfg
+/usr/share/libretro/autoconfig/udev/XEOXPro.cfg
+/usr/share/libretro/autoconfig/udev/Xarcade-to-Gamepad-Device.cfg
+/usr/share/libretro/autoconfig/udev/XboxGamepad(userspacedriver).cfg
+/usr/share/libretro/autoconfig/udev/Xbox_360_Wireless_RF_Module_RF01.cfg
+/usr/share/libretro/autoconfig/udev/Xbox_360_Wireless_RF_Module_Rev_VA.cfg
+/usr/share/libretro/autoconfig/udev/Xbox_360_Wireless_Receiver.cfg
+/usr/share/libretro/autoconfig/udev/Xbox_360_Wireless_Receiver_Chinese01.cfg
+/usr/share/libretro/autoconfig/udev/XiaoMi_Bluetooth_Gamepad.cfg
+/usr/share/libretro/autoconfig/udev/Xin-Mo Xin-Mo Dual Arcade.cfg
+/usr/share/libretro/autoconfig/udev/Xtreme_Morpheus.cfg
+/usr/share/libretro/autoconfig/udev/YSTEK MICREAL USB Gamepad.cfg
+/usr/share/libretro/autoconfig/udev/Zeemote_SteelSeries_FREE.cfg
+/usr/share/libretro/autoconfig/udev/Zeroplus_PS_Vibration_Feedback_Converter_.cfg
+/usr/share/libretro/autoconfig/udev/_S_NES_Atari_USB.cfg
+/usr/share/libretro/autoconfig/udev/gioteck-vx2.cfg
+/usr/share/libretro/autoconfig/udev/gioteck-vx3.cfg
+/usr/share/libretro/autoconfig/udev/go_advance_gamepad.cfg
+/usr/share/libretro/autoconfig/udev/go_advance_gamepad_v11.cfg
+/usr/share/libretro/autoconfig/udev/go_super_gamepad.cfg
+/usr/share/libretro/autoconfig/udev/iBuffalo_BGCFC801.cfg
+/usr/share/libretro/autoconfig/udev/iBuffalo_BSGP1601.cfg
+/usr/share/libretro/autoconfig/udev/iBuffalo_BSGP801.cfg
+/usr/share/libretro/autoconfig/udev/iNNEXT SNES Gamepad.cfg
+/usr/share/libretro/autoconfig/udev/iPEGA_PG_9021_BT.cfg
+/usr/share/libretro/autoconfig/udev/iPEGA_PG_9068.cfg
+/usr/share/libretro/autoconfig/udev/iPEGA_PG_9083S.cfg
+/usr/share/libretro/autoconfig/udev/iPEGA_PG_9087.cfg
+/usr/share/libretro/autoconfig/udev/kadevice.com_KADE_-_Kick_Ass_Dynamic_Encoder.cfg
+/usr/share/libretro/autoconfig/udev/odroidgo2_joypad.cfg
+/usr/share/libretro/autoconfig/udev/odroidgo2_joypad_v11.cfg
+/usr/share/libretro/autoconfig/udev/odroidgo3_joypad.cfg
+/usr/share/libretro/autoconfig/udev/raphnet-tech_Dual_SNES_to_USB_v2.1.x.cfg
+/usr/share/libretro/autoconfig/udev/raphnet-tech_SNES_to_USB_v2.0.x.cfg
+/usr/share/libretro/autoconfig/udev/raphnet-tech_SNES_to_USB_v2.1.x.cfg
+/usr/share/libretro/autoconfig/udev/raphnet.net_4nes4snes.cfg
+/usr/share/libretro/autoconfig/udev/raphnet.net_GC_N64_to_USB_Adapter_2_3.cfg
+/usr/share/libretro/autoconfig/udev/raphnet.net_Sega_Saturn_to_USB_Adapter_2_0.cfg
+/usr/share/libretro/autoconfig/udev/retro-bit SEGA Genesis 6-Button.cfg
+/usr/share/libretro/autoconfig/udev/retronicdesign.com_Sega_Joypad_Adapter_v3.0.cfg
+/usr/share/libretro/autoconfig/udev/usb_gamepad___________(NES).cfg
+/usr/share/libretro/autoconfig/udev/usb_gamepad___________(PS1).cfg
+/usr/share/libretro/autoconfig/udev/usb_gamepad___________(SEGA).cfg
+/usr/share/libretro/autoconfig/udev/usb_gamepad___________(SNES).cfg
+/usr/share/libretro/autoconfig/udev/wisegroup_ltd_smartjoy_dual_plus_adapter.cfg
+/usr/share/libretro/autoconfig/udev/xiaoji_GameSir_G3s.cfg
+/usr/share/libretro/autoconfig/udev/xiaoji_GameSir_G3s_1_02.cfg
+/usr/share/libretro/autoconfig/udev/xiaoji_GameSir_G3v.cfg
+/usr/share/libretro/autoconfig/udev/xiaoji_GameSir_G3v_1_00.cfg
+/usr/share/libretro/autoconfig/x/
+/usr/share/libretro/autoconfig/x/8Bitdo NES30 Pro   8Bitdo NES30 Pro.cfg
+/usr/share/libretro/autoconfig/x/Microsoft X-Box 360 pad.cfg
+/usr/share/libretro/autoconfig/xinput/
+/usr/share/libretro/autoconfig/xinput/8Bitdo_N30_Modkit_BT.cfg
+/usr/share/libretro/autoconfig/xinput/Controller (ESM GAME FOR WINDOWS 1.02).cfg
+/usr/share/libretro/autoconfig/xinput/EasySMX_Wireless_Controller.cfg
+/usr/share/libretro/autoconfig/xinput/Retro-Bit Tribute64 - USB (D-Input).cfg
+/usr/share/libretro/autoconfig/xinput/SideWinder Dual Strike USB version 1.0.cfg
+/usr/share/libretro/autoconfig/xinput/Xbox 360 Wired Controller.cfg
+/usr/share/libretro/autoconfig/xinput/Xbox 360 Wireless Controller.cfg
+/usr/share/libretro/autoconfig/xinput/Xbox_One_Controller.cfg
+/usr/share/libretro/autoconfig/xinput/Xbox_One_Controller_Wireless_Adapter.cfg
+/usr/share/libretro/config/
+/usr/share/libretro/config/MAME 2003 (0.78)/
+/usr/share/libretro/config/MAME 2003 (0.78)/MAME 2003 (0.78).opt
+/usr/share/libretro/config/MAME 2003 (0.78)/libretro.cfg
+/usr/share/libretro/config/MAME 2003-Plus/
+/usr/share/libretro/config/MAME 2003-Plus/MAME 2003-Plus.opt
+/usr/share/libretro/config/MAME 2003-Plus/qix.glslp
+/usr/share/libretro/config/MAME 2003-Plus/zookeep.glslp
+/usr/share/libretro/config/global.glslp
+/usr/share/libretro/config/remaps/
+/usr/share/libretro/config/remaps/MAME 2003-Plus/
+/usr/share/libretro/config/remaps/MAME 2003-Plus/MAME 2003-Plus.rmp
+/usr/share/libretro/shaders/
+/usr/share/libretro/shaders/flip-horizontal.glsl
+/usr/share/libretro/shaders/flip-horizontal.glslp
+/usr/share/libretro/shaders/zfast-crt.glslp
+/usr/share/libretro/shaders/zfast_crt.glsl
+/usr/share/libretro/sitv.zip
+/usr/share/libretro/system/
+/usr/share/libretro/system/mame2003/
+/usr/share/libretro/system/mame2003-plus/
+/usr/share/libretro/system/mame2003-plus/artwork/
+/usr/share/libretro/system/mame2003-plus/artwork/blueshrk.zip
+/usr/share/libretro/system/mame2003-plus/artwork/frogs.zip
+/usr/share/libretro/system/mame2003-plus/artwork/omegrace.zip
+/usr/share/libretro/system/mame2003-plus/artwork/skydiver.zip
+/usr/share/libretro/system/mame2003-plus/artwork/solarq.zip
+/usr/share/libretro/system/mame2003-plus/artwork/warrior.zip
+/usr/share/libretro/system/mame2003-plus/catver.ini
+/usr/share/libretro/system/mame2003-plus/cheat.dat
+/usr/share/libretro/system/mame2003-plus/hiscore.dat
+/usr/share/libretro/system/mame2003-plus/history.dat
+/usr/share/libretro/system/mame2003-plus/mame2003-plus.xml
+/usr/share/libretro/system/mame2003-plus/samples/
+/usr/share/libretro/system/mame2003-plus/samples/invaders.zip
+/usr/share/libretro/system/mame2003/catver.ini
+/usr/share/libretro/system/mame2003/cheat.dat
+/usr/share/libretro/system/mame2003/hiscore.dat
+/usr/share/libretro/system/mame2003/mame2003.xml
+/usr/share/libretro/system/mame2003/samples
+/usr/share/locale/
+/usr/share/metainfo/
+/usr/share/metainfo/com.libretro.RetroArch.appdata.xml
+/usr/share/pixmaps/
+/usr/share/pixmaps/htop.png
+/usr/share/pixmaps/retroarch.svg
+/usr/share/terminfo/
+/usr/share/terminfo/a/
+/usr/share/terminfo/a/ansi
+/usr/share/terminfo/d/
+/usr/share/terminfo/d/dumb
+/usr/share/terminfo/l/
+/usr/share/terminfo/l/linux
+/usr/share/terminfo/p/
+/usr/share/terminfo/p/putty
+/usr/share/terminfo/p/putty-256color
+/usr/share/terminfo/p/putty-vt100
+/usr/share/terminfo/s/
+/usr/share/terminfo/s/screen
+/usr/share/terminfo/s/screen-256color
+/usr/share/terminfo/v/
+/usr/share/terminfo/v/vt100
+/usr/share/terminfo/v/vt100-putty
+/usr/share/terminfo/v/vt102
+/usr/share/terminfo/v/vt200
+/usr/share/terminfo/v/vt220
+/usr/share/terminfo/x/
+/usr/share/terminfo/x/xterm
+/usr/share/terminfo/x/xterm+256color
+/usr/share/terminfo/x/xterm-256color
+/usr/share/terminfo/x/xterm-color
+/usr/share/terminfo/x/xterm-xfree86
+/usr/share/udhcpc/
+/usr/share/udhcpc/default.script
+/usr/share/udhcpc/default.script.d/
+/usr/share/usbmount/
+/usr/share/usbmount/usbmount
+/usr/src/
+/usr/src/backfire/
+/usr/src/backfire/Makefile
+/usr/src/backfire/backfire.c
+/var/
+/var/cache
+/var/db/
+/var/empty/
+/var/lib/
+/var/lib/alsa/
+/var/lib/misc
+/var/lib/upower/
+/var/lock
+/var/log
+/var/run
+/var/spool
+/var/tmp
+/var/www/
