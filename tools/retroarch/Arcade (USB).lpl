@@ -1,0 +1,19 @@
+{
+  "version": "1.4",
+  "default_core_path": "/usr/lib/libretro/mame2003plus_libretro.so",
+  "default_core_name": "MAME 2003-Plus",
+  "label_display_mode": 0,
+  "right_thumbnail_mode": 0,
+  "left_thumbnail_mode": 0,
+  "sort_mode": 0,
+  "items": [
+    {
+      "path": "/media/usb0/roms/gridlee.zip",
+      "label": "Gridlee (Videa, 1982)",
+      "core_path": "/usr/lib/libretro/mame2003plus_libretro.so",
+      "core_name": "MAME 2003-Plus",
+      "crc32": "",
+      "db_name": "Arcade (USB).lpl"
+    }
+  ]
+}

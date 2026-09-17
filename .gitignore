@@ -1,0 +1,14 @@
+# Never commit romsets or firmware payloads
+*.rom
+*.img
+
+.DS_Store
+__pycache__/
+*.pyc
+
+# Verbatim vendor files extracted from firmware — NOT redistributable.
+# Regenerate with tools/unsquash_rkfw.py; see local/README.md
+local/
+
+# Session state, not documentation
+HANDOFF.md
