@@ -1,9 +1,9 @@
-# Customisation routes — the survey, with outcomes
+# Customisation routes
 
-The 2026-09-01 survey of what was possible, updated with what each route
-turned out to be worth once the hardware could be tested. The chosen route is
-implemented in docs/11 (ROM loading) and docs/13 (storage); dead ends are
-autopsied in docs/07.
+What is possible, by how invasive it is, and what each route turned out to be
+worth once the hardware could be tested. The chosen route is implemented in
+docs/11 (ROM loading), docs/13 (storage) and docs/14 (USB host mode); dead
+ends are in docs/07.
 
 ## Tier 0 — free, reversible, no tools
 

@@ -39,20 +39,22 @@ restore path, and document it so the knowledge outlives any one cabinet.
 ```
 docs/01..06                  hardware, firmware format, software stack, routes, sources, platform
 docs/07-dead-ends.md         approaches that did not work, and why
-docs/09-linux-host-session.md  root adb, recon, full flash dump, content-loading proof
-docs/10-restore-path-and-inputs.md  recovery ladder, 32 MiB loader-read limit, input map
-docs/11-standalone-rom-loading.md   content loading, config keys, front-USB findings
+docs/09-linux-host-session.md  working over adb from Linux: setup, quirks, what the cabinet reports, backup, RAM-only content test
+docs/10-restore-path-and-inputs.md  input map, recovery ladder, 32 MiB loader-read limit
+docs/11-standalone-rom-loading.md   content loading, config keys, controls and Start buttons, vertical viewports, front-USB findings
 docs/12-restore-runbook.md          recovery recipes, each mechanism exercised on the hardware
-docs/13-storage-expansion.md        repartition + slim rootfs: userdata 8 → 47.7 MiB
-docs/14-usb-host-mode.md            rear USB-C as a USB host: mechanism, what enumerated, open problems
+docs/13-storage-expansion.md        current partition layout, slim rootfs method, rebuild hazards, rescue image
+docs/14-usb-host-mode.md            rear USB-C as a USB host: mechanism, procedure, ssh, return to adb, pitfalls
 tools/unsquash_rkfw.py       stdlib-only squashfs reader for RKFW images
 tools/rkfw_probe.py          kernel / config / device-tree extraction from an RKFW image
 tools/adb-dump.sh            full read-only flash backup over adb (tmpfs-staged, hash-verified)
 tools/adb-recon.sh           read-only recon over adb
 tools/btnmap.py              labelled evdev event logger (runs on the cabinet)
 tools/linux-probe.sh         first-contact USB probe for a Linux host
-tools/otg-host-force.sh      timed host-mode experiment (runs detached on the cabinet)
-tools/retroarch/             core info file + USB playlist that make RetroArch launch romsets from a drive (docs/14)
+tools/otg-host-force.sh      switches the rear port to USB host mode (detached, timed; runs on the cabinet)
+tools/otg-restore.sh         returns the port to adb mode after a host session, no power-cycle (runs on the cabinet)
+tools/datcheck.py            checks romset zips against the core's DAT: present / wrong CRC / missing
+tools/retroarch/             core info file, playlist and override generators, remaps: RetroArch launching romsets from a drive with working Start buttons and correct viewports (docs/11, 14)
 tools/usbwatch.sh            USB identity watcher (macOS-era, historical)
 data/                        derived facts: rootfs path listing (no file contents)
 ```
@@ -75,8 +77,9 @@ other owners are welcome — the open items are listed at the end.
 
 Every technical claim in docs/01–06 is either verified on the running cabinet
 or explicitly attributed to Numskull's own published Space Invaders firmware
-image (the same platform build) where that is the source. docs/09–13 are the
-working session logs behind the results.
+image (the same platform build) where that is the source. docs/09–14 cover
+working with the cabinet: adb access, inputs and recovery, content loading,
+storage, and USB host mode.
 
 ## Status of the research
 

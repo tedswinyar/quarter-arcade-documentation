@@ -1,10 +1,8 @@
-# Standalone ROM loading: working, zero-flash, fully reversible
+# Standalone ROM loading: zero-flash, fully reversible
 
-2026-09-02, end of the Linux-host evening (docs/09, docs/10). The goal of the
-project — load additional MAME romsets, keep the cabinet restorable — is now
-**functionally achieved** without touching the read-only rootfs. Everything
-lives in `userdata` (the partition designed to be written) and reverses with
-two file deletions.
+Additional MAME romsets load through the stock RetroArch without touching the
+read-only rootfs. Everything lives in `userdata` (the partition designed to be
+written) and reverses with a few file deletions.
 
 ## How it works
 
@@ -13,11 +11,10 @@ menu (RGUI) → Load Content → pick a zip from `/userdata/roms/` → the game 
 on the mame2003-plus core. Power cycle always returns to TMNT (the launch
 command in the read-only `S22startup.sh` is untouched).
 
-Menu controls: stick navigates, **attack = confirm, jump = back**. Verified on
-the hardware: coins still register normally (5-frame hotkey block delay), the
-combo opens the menu, and a test romset loads and plays (*Gridlee* — Videa,
-1982, offered by MAMEdev for free non-commercial use under its stated terms;
-not included here).
+Menu controls: stick navigates, **attack = confirm, jump = back**. Coins still
+register normally (5-frame hotkey block delay). *Gridlee* (Videa, 1982; offered
+by MAMEdev for free non-commercial use under its stated terms, not included
+here) is in the core's DAT and makes a good test set.
 
 ## The persistent changes (all in `/userdata/.config/retroarch/retroarch.cfg`)
 
@@ -30,6 +27,8 @@ not included here).
 | `menu_linear_filter` | `false` | `true` | RGUI readability |
 | `menu_show_quit_retroarch` | `true` | `false` | quitting RA would strand a black screen until power cycle |
 | `menu_show_shutdown` / `menu_show_reboot` | `true` | `false` | cabinet users use the power switch |
+| `input_remapping_directory` | `/usr/share/libretro/config/remaps` | `~/.config/retroarch/config/remaps` | remaps on the writable partition (see "Starts and buttons" below) |
+| `rgui_config_directory` | `/usr/share/libretro/config` | `~/.config/retroarch/config` | per-game overrides on the writable partition (see "Vertical games" below) |
 
 Plus: `/userdata/roms/` created (first tenant: `gridlee.zip`, 25 KB, the
 MAMEdev free-use test romset), and a byte-exact stock copy of the config saved
@@ -68,12 +67,9 @@ behind plastic; **RGUI renders through the same viewport pipeline as game
 content** and fits the visible window exactly. Confirmed visually: green RGUI
 border fully on-glass with gray margin beyond it.
 
-## Front USB ports: functional by design — faulty on my unit
+## Front USB ports: functional by design, faulty on my unit
 
-The measurements and the verdict evolved in opposite directions; both are
-recorded because the measurements stay valid.
-
-**What my unit does** (tested exhaustively):
+**What my unit does:**
 
 1. All four ports × two sticks (one known good): zero kernel events, USB
    topology never leaves the three bare root hubs.
@@ -84,7 +80,7 @@ recorded because the measurements stay valid.
    isn't wired, so there is no hidden host mode on the USB-C either.
 4. SoC side: EHCI host port up, `vcc_host_5v` on (GPIO116 out-hi).
 
-**What the design does** (web research, 2026-09-02):
+**What the design does:**
 
 - Numskull's spec for the TMNT cabinets: *"4x front USB ports (hidden behind
   the coin doors) allow the use of USB gaming controllers (sold separately)."*
@@ -99,8 +95,8 @@ recorded because the measurements stay valid.
 
 **Verdict: per-unit hardware fault** — the front-port assembly (hub board or
 its harness, behind the coin doors) is disconnected or dead. This also
-re-explains the dead-keyboard result of 2026-09-01: no power, so input
-plumbing was never the issue. Two candidate architectures, undecided:
+explains why a keyboard in a front port never did anything: no power, so
+input plumbing was never the issue. Two candidate architectures, undecided:
 
 - ports → internal hub → EHCI (the waiting host port; `vcc_host_5v` may be
   its intended rail), or
@@ -115,7 +111,7 @@ enumeration ⇒ MCU theory.
 **Until repaired: ROM storage is `/userdata`** (grown to 47.7 MiB by
 docs/13). The rear USB-C can host mass storage from a self-powered dock (a FAT
 drive auto-mounts at `/media/usb0`), at the cost of the adb link while in host
-mode; mechanism, procedure and open problems in docs/14.
+mode; mechanism, procedure and pitfalls in docs/14.
 
 ## Adding / removing ROMs
 
@@ -129,6 +125,19 @@ compatibility list ships on the cabinet itself:
 expects. Pull it once (`adb pull`) and check candidates against it rather than
 guessing. Classics are tiny — 30–200 KB each; TMNT itself is 1.8 MB.
 
+`tools/datcheck.py` does that check: point it at the pulled DAT (default
+`local/cabinet-dat/mame2003-plus.xml`) and one or more zips, and it reports
+each expected ROM as present, wrong CRC, or missing, follows `merge=` into a
+sibling parent zip for split clone sets, flags BIOS sets and optional samples,
+and exits non-zero unless every zip is fully loadable. `--info <set>` prints
+what the DAT expects for a set name. `tools/retroarch/make-playlist.py` then
+builds the `Arcade (USB).lpl` playlist from the drive's `roms/` folder with
+titles from the same DAT, so the menu lists everything on the drive with the
+core already bound. Both need nothing beyond the Python standard library and
+never touch the cabinet. The playlist checked into `tools/retroarch/` is the
+one-entry Gridlee example; a real one describes a particular drive and stays
+on the cabinet.
+
 ```sh
 adb push <romset>.zip /userdata/roms/     # add
 adb shell rm /userdata/roms/<romset>.zip  # remove
@@ -141,12 +150,76 @@ games run silent unless the system dir is overridden; note
 (`~/.config/retroarch/system`), so samples zips can go to
 `/userdata/.config/retroarch/system/mame2003-plus/samples/`.
 
+## Starts and buttons for games that are not TMNT
+
+The cabinet has no start button: on TMNT coin is join. Every other game needs
+Start, and each stick only reaches two of MAME's buttons, so the two-player
+layout is rebuilt with RetroArch remaps. The vendor's remap directory is on the
+read-only rootfs; the cfg now points at `~/.config/retroarch/config/remaps`
+(`HOME` is `/userdata`), and `tools/retroarch/remaps/MAME 2003-Plus/` holds
+the files, copied there verbatim.
+
+Two mechanisms, both plain RetroArch 1.9.7 features. `input_remap_port_pN`
+("Mapped Port") sends user N's input to a chosen libretro port, and several
+users may share one port. Per-user button remaps rebind or disable (`-1`)
+individual RetroPad inputs. Hotkeys (the menu combo) read raw button indices
+and are unaffected.
+
+`MAME 2003-Plus.rmp`, the core remap, applies to every game that has no
+remap of its own:
+
+| Stick | Role |
+|---|---|
+| blue (user 1) | player 1: stick, attack = button 1, jump = button 2, coin |
+| yellow (user 2) | coin = 1P Start; attack = P1 button 3, jump = P1 button 4; stick off |
+| purple (user 3) | coin = 2P Start; attack = P2 button 3, jump = P2 button 4; stick off |
+| red (user 4) | player 2: stick, attack = button 1, jump = button 2, coin |
+
+The attack/jump swap is deliberate. The vendor profile binds jump to RetroPad B
+and attack to RetroPad A; the core reads B as MAME button 1 and A as button 2;
+TMNT's driver has jump on button 1, so TMNT came out right and nearly every
+other game (button 1 = attack by convention) came out reversed. The core
+remap swaps them; `tmnt.rmp` keeps the vendor layout. RetroPad Y is button 3
+and X is button 4, confirmed on a three-button game.
+
+Four-player games need all four sticks live, so each gets its own game
+remap: copy `four-player.rmp.example` to `<setname>.rmp` in the same folder
+(it is the four-stick layout with the attack/jump swap applied); `tmnt.rmp` is
+the stock mapping. RetroArch looks for `<core>/<content basename>.rmp` first,
+then the core file.
+
+Remaps load when content loads, so a change takes effect on the next game
+started from the menu; only the cfg edit needed a RetroArch restart. What
+this cannot fix: six-button fighters and the
+dial, trackball and rotary games, which play but badly.
+
+**Editing discipline for the cfg still applies** (kill -9 first). The copy
+taken before this change is `retroarch.cfg.2026-10-28` beside the live file.
+
+## Vertical games and the bezel
+
+The panel is 1024x600 behind a bezel that hides about 115 px on the left and
+95 on the right (docs/01), so the vendor draws everything in a fixed custom
+viewport of 814x600 at x=115. That box is 4:3; a vertical (3:4) game forced
+into it comes out squeezed to about 55 % of its proper height, which shows up
+as "the screen looks squished and up/down movement is slower than left/right".
+Letting RetroArch choose the aspect itself ("core provided") would centre on
+the panel rather than on the opening, so the fix keeps the vendor viewport and
+gives each vertical game an override with a 3:4 box inside the same opening at
+the same pixel aspect: 458x600 at x=293. Horizontal games and TMNT are
+untouched. `tools/retroarch/make-overrides.py` reads the DAT's screen
+orientation for every zip in a folder and writes `<set>.cfg` for the vertical
+ones; `tools/retroarch/overrides/MAME 2003-Plus/vertical.cfg.example` is the
+file it writes. The files go to `~/.config/retroarch/config/MAME 2003-Plus/`
+and apply when the game loads; moving `rgui_config_directory` there was the
+one cfg edit (kill -9 first, as always).
+
 ## Restore to factory
 
 ```sh
 adb shell "killall -9 retroarch
 cp /userdata/.config/retroarch/retroarch.cfg.stock /userdata/.config/retroarch/retroarch.cfg
-rm -rf /userdata/roms
+rm -rf /userdata/roms /userdata/.config/retroarch/config/remaps/MAME\ 2003-Plus/*.rmp /userdata/.config/retroarch/config/MAME\ 2003-Plus/*.cfg
 sync"
 adb reboot
 ```

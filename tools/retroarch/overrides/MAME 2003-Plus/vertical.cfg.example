@@ -1,0 +1,7 @@
+# Vertical (3:4) game inside the bezel opening (814x600 @ x=115, vendor pixel aspect).
+# Copy to <setname>.cfg, or let make-overrides.py generate one per vertical set.
+aspect_ratio_index = "23"
+custom_viewport_width = "458"
+custom_viewport_height = "600"
+custom_viewport_x = "293"
+custom_viewport_y = "0"

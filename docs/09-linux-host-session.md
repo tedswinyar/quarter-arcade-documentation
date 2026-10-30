@@ -1,60 +1,61 @@
-# Linux host session: adb works, flash dumped, test romset booted
+# Working with the cabinet over adb from a Linux host
 
-2026-09-02 evening. Cabinet connected by USB-C to a Linux host
-(Ubuntu 24.04 noble, aarch64, kernel 6.17), driven over ssh
-from the MBP. Three results, each one a milestone.
+The rear USB-C port runs an adb gadget with `adbd` as root and no
+authorisation, and a Linux host talks to it with nothing but the distribution's
+adb package. macOS cannot configure the gadget at all (docs/07); use Linux, in
+a VM if need be.
 
-## Result 5 — macOS was the problem. adb just works on Linux
+## Setup
 
-`lsusb -v` settled the macOS-era question (now summarised in docs/07): the descriptors are **fully
-healthy**. One configuration (`iConfiguration "adb"`), one interface, class
-`0xFF/0x42/0x01`, two bulk endpoints (EP2 OUT / EP1 IN, 512 B), gadget state
-`CONFIGURED`, `adbd` running as root and bound to functionfs. The "half-alive
-gadget / adbd unbound" theory from the macOS sessions was wrong — macOS simply refuses to
-configure a gadget that Linux accepts without complaint.
-
-Setup on the Linux host was nothing but `apt install adb`: Ubuntu's
-`android-sdk-platform-tools-common` ships udev rules that already cover vendor
-`0x2207`, so no root, no custom rules:
+`apt install adb` is the whole setup on Ubuntu: the platform-tools package
+ships udev rules that already cover Rockchip's vendor id `0x2207`, so no root
+and no custom rules.
 
 ```
 $ adb devices -l
-<serial redacted>       device usb:3-1 product:occam model:Nexus_4 device:mako
+<serial>       device usb:3-1 product:occam model:Nexus_4 device:mako
 ```
 
-(The Nexus 4 identity strings are leftovers in the vendor's adbd build.)
-**`adb shell` is a root shell** — `uid=0(root)`, no authorization prompt.
+The Nexus 4 identity strings are leftovers in the vendor's adbd build.
+`adb shell` lands in a root shell (`uid=0`), no prompt.
 
-Quirks: this adbd predates the `exec` service, so `adb exec-out` fails with
-`error: closed`; binary dumps must be staged through the cabinet's tmpfs `/tmp`
-and pulled (`tools/adb-dump.sh` does exactly this, verifying device-side vs
-host-side sha256 for every file).
+The gadget's descriptors are healthy: one configuration (`iConfiguration
+"adb"`), one interface of class `0xFF/0x42/0x01`, two 512-byte bulk endpoints,
+gadget state `CONFIGURED`. If a host fails to talk to it, suspect the host.
 
-## Recon corrections and confirmations (full log: `local/recon/2026-09-02-adb-recon.txt`)
+## Quirks
 
-Same platform as the SI image: RK3128 quad A7 @ 1.2 GHz, 224 MB RAM, Linux
-4.19.161 #140 (Jul 24 2023), Buildroot 2018.02-rc3, squashfs rootfs + ext2
-userdata. DT model: **`Rockchip RK3128 LBQ1293 board`**. Game: `game=tmnt`,
-`/usr/share/libretro/tmnt.zip` (1.8 MB), cores `mame2003` + `mame2003plus`.
+- This adbd predates the `exec` service, so `adb exec-out` fails with
+  `error: closed`. Stage binary output through the cabinet's tmpfs `/tmp` and
+  `adb pull` it; `tools/adb-dump.sh` does exactly that and checks a sha256 on
+  both sides for every file.
+- The adb server on the host sometimes needs `adb kill-server` after the
+  cabinet re-enumerates (power-cycle or a return from USB host mode) before the
+  device shows.
+- Detached scripts that must outlive the adb session need the subshell form
+  described in docs/14.
 
-Corrections to earlier docs:
+## What the cabinet reports
 
-- **The panel is 1024×600, not 800×480** (`fb0` virtual_size and mode both
-  `1024x600`), unrotated (`video_rotation = 0`).
-- **The control panel is not USB HID.** It is four `Dashine Arcade 1293
-  Joystick` input devices on `serial0-0` (a serial-attached MCU on
-  `/devices/platform/0.input`), plus a `Dashine Arcade Volume` ABS device and —
-  notably — an **`adc-bootmode`** input device (`adc-keys`, event5). So an ADC
-  boot-mode key *is* wired on this board after all; which physical button it is
-  remains unidentified, and it no longer matters: `adb reboot loader` is
-  available.
-- The earlier "panel occupies player ports 1–4 as USB HID" framing was wrong in
-  mechanism, right in effect: the four joystick devices still claim
-  js0–js3/event0–event3, and event0/event1 still gate the hidden boot menu.
+Platform: RK3128 quad Cortex-A7 at 1.2 GHz, 224 MB RAM, Linux 4.19.161
+(Buildroot 2018.02-rc3), squashfs rootfs plus ext2 `userdata`. Device-tree
+model `Rockchip RK3128 LBQ1293 board`. The startup script's `game=tmnt` points
+at `/usr/share/libretro/tmnt.zip` (1.8 MB); cores `mame2003` and
+`mame2003plus` are present.
 
-Also on board: sshd (`S50sshd`), dnsmasq, dhcpcd — a whole network stack with no
-usable NIC (`eth0` exists but `Cannot attach to PHY`). Storage is `rkflash0`,
-110,336 KiB (~107.75 MiB) with a GPT in the first 4 MiB gap:
+- Panel: `fb0` is 1024×600, unrotated (`video_rotation = 0`).
+- Controls: not USB HID. Four `Dashine Arcade 1293 Joystick` input devices on
+  `serial0-0` (a serial-attached MCU at `/devices/platform/0.input`), a
+  `Dashine Arcade Volume` ABS device, and an `adc-bootmode` ADC key device
+  (`adc-keys`, event5) whose physical button is unidentified and unneeded,
+  since `adb reboot loader` reaches loader mode on demand. The four joystick
+  devices are js0–js3 / event0–event3, and event0/event1 gate the hidden boot
+  menu (docs/03). Full input map in docs/10.
+- Network: sshd, dnsmasq and dhcpcd all start with no usable NIC (`eth0`
+  exists but `Cannot attach to PHY`). A USB Ethernet adapter in host mode
+  changes that (docs/14).
+- Storage: `rkflash0`, 110,336 KiB, GPT in the first 4 MiB gap. Stock table
+  (the current table differs; docs/13):
 
 | dev | name | sectors (512 B) | size |
 |---|---|---|---|
@@ -62,53 +63,45 @@ usable NIC (`eth0` exists but `Cannot attach to PHY`). Storage is `rkflash0`,
 | p1 | uboot | 8192 +8192 | 4 MiB |
 | p2 | trust | 16384 +4096 | 2 MiB |
 | p3 | boot | 20480 +18432 | 9 MiB (Android bootimg) |
-| p4 | rootfs | 38912 +165376 | 80.75 MiB (squashfs 4.0/xz, **100% full**) |
-| p5 | userdata | 204288 +16351 | 8 MiB ext2, **7.1 MiB free** |
+| p4 | rootfs | 38912 +165376 | 80.75 MiB (squashfs 4.0/xz, 100 % full) |
+| p5 | userdata | 204288 +16351 | 8 MiB ext2, 7.1 MiB free |
 | — | (tail gap) | 220639–220671 | 16.5 KiB |
 
-## Result 6 — full stock firmware backup, no loader mode needed
+`tools/adb-recon.sh` collects all of the above read-only.
 
-`tools/adb-dump.sh` dumped every partition **and both unpartitioned gaps**
-read-only over adb (staged via tmpfs, nothing written to flash), hash-verified
-each transfer, and the archive now lives on both the Linux host
-(`<backup-dir>/tmnt-stock/`) and a second machine (`local/firmware/tmnt-stock/`), with
-`SHA256SUMS`.
+## Full flash backup, read-only, from normal boot
 
-Whole-device vs parts cross-check: uboot, trust, boot, rootfs and both gaps are
-byte-stable across repeated reads. Only `userdata` drifts while the machine
-runs — exactly 10 bytes of ext2 superblock/metadata bookkeeping near offset
-37 KB, no file content. Treat `userdata.img` as a point-in-time snapshot;
-its contents are re-creatable defaults anyway (S22startup.sh regenerates
-`retroarch.cfg` from `/etc/retroarch.cfg` if missing).
+`tools/adb-dump.sh` dumps every partition and both unpartitioned gaps over adb,
+staged through tmpfs, writing nothing to flash, with a sha256 check on each
+transfer. Keep the result in two places with its `SHA256SUMS`. It is the only
+trusted full-range read path on this hardware: loader-mode reads return filler
+past 32 MiB (docs/10, docs/12).
 
-This satisfies the project's gating decision ("nothing gets flashed until its
-own firmware is dumped and archived") without ever leaving normal boot. Loader
-mode is now only needed for *restore*, and `adb reboot loader` reaches it
-deliberately whenever that day comes.
+Everything except `userdata` is byte-stable across repeated reads. `userdata`
+drifts by about ten bytes of ext2 superblock bookkeeping while the machine
+runs, no file content; treat `userdata.img` as a point-in-time snapshot whose
+contents are re-creatable defaults anyway (`S22startup.sh` regenerates
+`retroarch.cfg` from `/etc/retroarch.cfg` when it is missing).
 
-## Result 7 — additional content loads, RAM-only, fully reversible
+Take this backup before changing anything. Loader mode is then needed only for
+restore, and `adb reboot loader` reaches it deliberately.
 
-The end-to-end mechanism, demonstrated with zero flash writes and verified
-(2026-09-03) with *Gridlee* (Videa, 1982), which MAMEdev offers for free
-non-commercial use under its stated terms (not included here), and which is in
-this core's DAT:
+## Zero-risk content test, RAM only
 
-1. `adb push gridlee.zip /tmp/` — the cabinet's tmpfs, RAM only
-2. `killall retroarch`, then relaunch exactly as `S22startup.sh` does but with
-   the new zip:
+The quickest proof that a romset works on the core, with no flash writes and
+no residue after a power-cycle:
 
 ```sh
-HOME=/userdata nohup retroarch \
+adb push <set>.zip /tmp/              # tmpfs, RAM only
+adb shell 'killall retroarch; HOME=/userdata nohup retroarch \
     -c /userdata/.config/retroarch/retroarch.cfg \
     -L /usr/lib/libretro/mame2003plus_libretro.so \
-    /tmp/gridlee.zip >/tmp/ra.log 2>&1 &
+    /tmp/<set>.zip >/tmp/ra.log 2>&1 &'
 ```
 
-RetroArch came up clean (Mali GL initialised, no errors in the log). A power
-cycle restores TMNT with no residue — `/tmp` is RAM.
-
-Notes for the real mod: samples/artwork live under
-`/usr/share/libretro/system/mame2003-plus/` in the read-only rootfs, so
-sample-based games are silent-but-playable this way; persistent ROMs would go
-in `userdata` (7.1 MiB free — many 0.78-era romsets fit) with a startup hook,
-or into a rebuilt squashfs. That design decision is next.
+That is the vendor's own launch line with a different content path. *Gridlee*
+(Videa, 1982; offered by MAMEdev for free non-commercial use under its stated
+terms, not included here) is in this core's DAT and makes a good test set.
+Sample-based games are silent this way because samples live in the read-only
+rootfs; docs/11 has the persistent, menu-driven version of content loading and
+the samples path.

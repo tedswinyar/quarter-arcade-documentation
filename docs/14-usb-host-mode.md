@@ -1,14 +1,17 @@
 # USB host mode on the rear USB-C: working, reversible, and exclusive with adb
 
-The rear USB-C port can act as a USB host. Verified on my TMNT unit on
-2026-09-14 with a self-powered USB-C dock: the dock's hubs, its gigabit
-Ethernet adapter and two flash drives all enumerated on the cabinet, and the
-stock `usbmount` auto-mounted a FAT partition at `/media/usb0`. This
-supersedes the "peripheral only, cannot host" statements in docs/01, 06 and
-11, which were true of the port as shipped but not of the hardware.
+The rear USB-C port, which ships as an adb gadget only, can act as a USB host.
+With a self-powered USB-C dock on it the cabinet enumerates hubs, a gigabit
+Ethernet adapter and flash drives, the stock `usbmount` auto-mounts a FAT
+partition at `/media/usb0`, the stock `dhcpcd` takes a lease, and root ssh
+works. That supersedes the "peripheral only, cannot host" statements in
+docs/01, 06 and 11, which were true of the port as shipped but not of the
+hardware.
 
-Status at the bottom. The switch is reversible and the work so far has not
-touched the flash; everything below is RAM state that a power-cycle undoes.
+The switch is done from software at run time and touches nothing on the
+flash; a power-cycle undoes it, and a tested restore path returns the port to
+adb without one. Host mode and adb are exclusive, because the gadget and the
+host controller are the same port.
 
 ## Why the port behaves as peripheral-only
 
@@ -59,88 +62,116 @@ expects a laptop still works on the data pair. Bit-position provenance: the
 the live unit by the status bits at `0x14c` and the two detect-status bits
 already set at `0x17c` before any write.
 
-## What enumerated
+## What you need
 
-Dock: a USB-C laptop dock powered from its own PD input, upstream cable into
-the cabinet. Second run, 2026-09-14:
+- **A self-powered USB-C dock on a supply it can negotiate a proper PD
+  contract with.** The cabinet provides no power on the port. This is the
+  single most important item: see the first pitfall below.
+- **A USB Ethernet adapter the stock kernel drives.** Realtek `r8152`/`r8153`
+  is built in and is what has been used; nothing needs loading.
+- **A FAT-formatted drive, partitioned and formatted on a PC.** The cabinet
+  reads it fine; writing to it from the cabinet is very slow (see pitfalls).
+- **A Linux host with adb for the first switch each boot.** macOS cannot drive
+  the adb gadget (docs/07). Once ssh is up the Linux host is not needed.
 
-| Path | Device | Result |
-|---|---|---|
-| 1-1 | VIA Labs `2109:2817` USB 2.0 hub | enumerated |
-| 1-1.1 | VIA `2109:0102` billboard | enumerated |
-| 1-1.2 | Realtek `0bda:5411` 4-port hub | enumerated |
-| 1-1.2.1 | Realtek `0bda:8153` gigabit Ethernet | enumerated; `r8152` is built in |
-| 1-1.2.2 | PNY 126 GB flash drive | `sdc`, one partition, not FAT, not mounted |
-| 1-1.2.4 | SanDisk Cruzer 62 GB | `sdd`, `sdd1` vfat **auto-mounted at `/media/usb0`** |
-| 1-1.4 | Genesys `05e3:0749` card reader | enumerated, no media |
-
-`usbmount` is the stock one (`/media/usb0`..`usb7`, vfat/exfat/ntfs/ext,
-`FS_MOUNTOPTIONS` empty). Nothing had to be configured on the cabinet for the
-mount to happen.
+What enumerates, by class, on a typical laptop dock: the dock's USB 2.0 hubs,
+a USB-C billboard device, the Ethernet adapter (`eth1`), USB mass storage
+(`sdX`, FAT partitions auto-mounted at `/media/usb0`, `/media/usb1`, …) and a
+card reader. `usbmount` is the stock one (vfat/exfat/ntfs/ext,
+`FS_MOUNTOPTIONS` empty); nothing has to be configured for the mount.
 
 ## Procedure
 
-While the port is in host mode the adb link does not exist, because the adb
-gadget and the host controller are the same port. Until networking works
-(below) every experiment is therefore a timed, detached script:
+`tools/otg-host-force.sh` does the switch as a timed, detached script, because
+adb disappears the moment the port becomes a host:
 
 ```sh
 adb push tools/otg-host-force.sh /userdata/otg-host-force.sh
-adb shell '(setsid sh /userdata/otg-host-force.sh 90 240 </dev/null >/dev/null 2>&1 &)'
-#   within 90 s: unplug the Linux host, plug the powered dock in
-#   host mode is held 240 s and sampled every 5 s
-#   then the port is restored; plug the host back in and
-adb pull /userdata/otg-host-force.log
+adb shell '(setsid sh /userdata/otg-host-force.sh 120 600 </dev/null >/dev/null 2>&1 &); sleep 2; ps | grep [o]tg-host'
+#   within 120 s: unplug the Linux host, plug the powered dock in
+#   host mode is held 600 s and sampled every 5 s; the dock enumerates,
+#   eth1 gets a lease, and you ssh in (next section)
+#   touch /userdata/keep-host over ssh to stay in host mode indefinitely;
+#   otherwise the script restores the port to adb at the end of the window
 ```
 
-Three launch details that cost time: `adb shell 'setsid nohup … &'` does not
-survive the adb session ending; the subshell form above does. But when that
-subshell is the *only* command in the adb session, the script sometimes never
-starts (twice out of three tries here); following it with `sleep 2; ps` in the
-same session has worked every time. Check the first line of the log before
-swapping cables. And the cabinet's BusyBox `ip` has no `-br`.
+Pick the delay to suit how long the cable swap takes; the window only has to
+be long enough to ssh in and create `keep-host`. The script also bind-mounts
+`/userdata/root` on `/root` so sshd finds the authorised key, and brings up
+any new interface with `dhcpcd` (falling back to `udhcpc`).
 
-Do not unplug the dock while the port is in host mode (see status). Let the
-script restore first.
+Launch details that cost time: `adb shell 'setsid nohup … &'` does not survive
+the adb session ending; the subshell form above does. When that subshell is
+the *only* command in the adb session the script sometimes never starts;
+following it with `sleep 2; ps` in the same session has worked every time.
+Check the first line of `/userdata/otg-host-force.log` before swapping
+cables. The cabinet's BusyBox `ip` has no `-br`.
 
-## Networking, which ends the adb conflict
+## Networking and ssh
 
-Working on my unit as of 2026-09-15. The pieces were all in the stock image:
-`r8152` driver built in, `sshd` running with `PermitRootLogin yes`, `dhcpcd`
-running in master mode, `/sbin/ip` and `udhcpc` available. With an Ethernet
-cable in the dock, the adapter comes up as `eth1`, gets a carrier within a few
-seconds of enumeration, and the boot-time `dhcpcd` takes a lease on it by
-itself (the earlier run where nothing appeared was the under-powered dock, not
-DHCP). The lease request carries the hostname `rk3128`.
+The pieces are all in the stock image: `r8152` driver built in, `sshd`
+running with `PermitRootLogin yes`, `dhcpcd` running in master mode, `/sbin/ip`
+and `udhcpc` available. With an Ethernet cable in the dock the adapter comes
+up as `eth1`, gets a carrier within a few seconds of enumeration, and `dhcpcd`
+takes a lease by itself. The lease request carries the hostname `rk3128`.
 
 `/root` is on the read-only squashfs, so an authorised key has to live in
 `/userdata/root/.ssh/authorized_keys` (mode 600) with
-`mount --bind /userdata/root /root` done each boot; the script does that now,
-and sshd reads the key file at authentication time, so no restart is needed.
-Root ssh in with that key works while the port is a host. Finding the cabinet
-on the LAN: sweep for port 22 and match the ed25519 host key in
-`/etc/ssh/ssh_host_ed25519_key.pub` (its comment is `lzy@fedora`, a leftover
-from whoever built the image), or look for the dock adapter's MAC. It does not
-announce itself over mDNS.
+`mount --bind /userdata/root /root` done each boot; the script does that, and
+sshd reads the key file at authentication time, so no restart is needed.
 
-Once ssh is up, `touch /userdata/keep-host` and the script exits without
-restoring the port, leaving the cabinet a networked USB host until the next
-power-cycle. Everything below that point was done live over ssh.
+Finding the cabinet on the LAN: if the gateway's resolver learns DHCP
+hostnames, `dig +short rk3128` (or `rk3128.localdomain`) answers; it does not
+always. Otherwise match the ed25519 host key in
+`/etc/ssh/ssh_host_ed25519_key.pub` (its comment is a user@host string left by
+whoever built the image) or look for the Ethernet adapter's MAC in the
+gateway's client list. It does not announce itself over mDNS. Make one ssh
+attempt about 90 s after the switch rather than polling: gateways with
+intrusion protection can block a host that probes port 22 repeatedly, for
+minutes at a time, and the cabinet then looks down while it is up.
+
+Once in, `touch /userdata/keep-host`. The script consumes the flag at the end
+of its window and exits without restoring the port, leaving the cabinet a
+networked USB host until the next power-cycle or an explicit restore. Bulk
+transfers over this path are fine on a properly powered dock (a 20 MB file in
+a few seconds).
+
+## Returning to adb without a power-cycle
+
+Simply clearing the GRF override after a host session leaves the gadget bound
+but dead: `DISCONNECTED`, never re-enumerating, the host seeing a device that
+answers no descriptor reads. Rebinding the configfs UDC does not help; the
+residual state is in the controller. What works, validated after a full dock
+session: unmount the drives, unbind the `dwc2` platform driver
+(`/sys/bus/platform/drivers/dwc2/unbind`) while still in host mode so the HCD
+tears down in order, clear the override, bind the driver again so a fresh
+probe sees a B-device and starts the gadget. On this kernel the configfs
+gadget re-attaches itself when the UDC reappears, so the explicit UDC write
+reports `EBUSY`; that is harmless. No dwc2 register reads between unbind and
+bind: the driver gates the clocks on remove and an unclocked access can hang
+the SoC.
+
+`otg-host-force.sh` does this at the end of its window when `keep-host` is
+absent. `tools/otg-restore.sh` is the same sequence as a standalone step for
+ending a `keep-host` session over ssh; it refuses to run unless the port is in
+host mode and dwc2 is bound, and it kills the ssh session by design. Plug the
+Linux host back in afterwards; the restart of the adb server on that host
+(`adb kill-server`) is sometimes needed before the device shows.
 
 ## Loading content from the drive
 
 A FAT drive in the dock auto-mounts at `/media/usb0` and a romset copied there
-shows up in RGUI's file browser. On my unit the core picker that follows was
-empty, so nothing could be launched from the drive. Cause: RetroArch 1.9.7
+shows up in RGUI's file browser. The core picker that follows is empty on the
+stock image, so nothing can be launched from the drive. Cause: RetroArch 1.9.7
 matches content to cores through core info files, and this image ships none.
 `libretro_directory` and `libretro_info_path` both point at
 `~/.config/retroarch/cores` (RetroArch's `HOME` is `/userdata`), which exists
 and is empty; the one core is `/usr/lib/libretro/mame2003plus_libretro.so`.
-Symlinking the core into that directory was not enough on its own, and with
+Symlinking the core into that directory is not enough on its own, and with
 `core_info_cache_enable = "true"` a restart writes a `core_info.cache` that
 records the core with no info and locks the empty picker in.
 
-What worked, all under `/userdata` so it survives boots and needs no config
+What works, all under `/userdata` so it survives boots and needs no config
 edit:
 
 1. Symlink the core into `~/.config/retroarch/cores/`.
@@ -156,53 +187,52 @@ After that, Load Content on a zip from the drive starts it straight away with
 no picker, which is RetroArch's behaviour when exactly one core claims the
 extension. A playlist is friendlier still: `tools/retroarch/Arcade (USB).lpl`
 in `~/.config/retroarch/playlists/` lists the drive's romsets with the core
-already bound, and shows up in RGUI's main menu. Verified on the hardware with
-*Gridlee* from `/media/usb0/roms/`.
+already bound and shows up in RGUI's main menu;
+`tools/retroarch/make-playlist.py` generates it from the drive's `roms/`
+folder. Verified with *Gridlee* from `/media/usb0/roms/`. Controls, Start
+buttons and vertical-game viewports for content other than TMNT are in
+docs/11.
 
-## Status (2026-09-15)
+## Pitfalls
 
-Established:
+- **An under-powered dock supply is the failure to suspect first.** On a weak
+  USB-C adapter the dock's inner hub either reports no downstream devices at
+  all (drive LED lit, nothing enumerated) or, worse, enumerates and then flaps:
+  the Ethernet adapter logs `r8152 ... Rx status -71` (USB protocol errors),
+  the inner hub disconnects and re-enumerates every 2 to 20 seconds, and after
+  a few minutes the whole dock drops with `dwc2 ... Not connected` while the
+  game keeps running. The same dock, cable, drive and Ethernet on a 60 W
+  adapter ran with zero disconnects and zero protocol errors. Disabling USB
+  autosuspend changes nothing. Treat `Rx status -71` as a power symptom.
+- **Do not hot-unplug the dock while the port is a host.** In one session the
+  stack hung the moment the dock was pulled: sampling stopped, the restore
+  never ran, the gadget never came back. One occurrence, so treat it as a
+  hypothesis, but let the restore run first.
+- **Prepare drives on a PC.** Small writes to a flash drive through this path
+  run at tens of kilobytes per second; formatting a 64 GB stick on the cabinet
+  took about fifteen minutes. BusyBox `fdisk` also takes sector numbers in
+  cylinders unless given `-u`. The cabinet only needs to read the drive.
+- **Capture the whole kernel log when diagnosing.** The script's
+  `dmesg | tail -15` samples lose the first event of a failure. A loop that
+  dumps `dmesg` to `/userdata/dmesg-live.txt` whenever its hash changes, and a
+  gateway-ping log alongside it, survive a power-cycle and showed the real
+  shape of the power problem above.
+- **Probe once, not in a loop** (see Networking and ssh).
+- **Case-only renames on the FAT drive are silently ignored** from the
+  cabinet (`mv PacMan.zip pacman.zip` leaves the entry as it was, and a
+  case-insensitive `ls` then confirms the wrong name). Rename through a
+  temporary name and check with a case-sensitive match.
 
-- Host mode is reachable from software with the GRF override, on the stock
-  kernel, without flashing anything. Five runs, five clean switches.
-- A self-powered dock enumerates fully and a FAT drive auto-mounts within
-  seconds of the swap.
-- Ethernet through the dock works: DHCP lease from the stock `dhcpcd`, root
-  ssh in with a key. The adb link is no longer the only way in.
+## Open: persistence
 
-Open, in the order they need solving:
+Nothing on the read-only rootfs executes anything from `/userdata` at boot, so
+host mode is a per-boot command until an init script is added to the rootfs
+(docs/13 already ships a custom slim rootfs, so this is in reach) or the phy's
+`otg-port` is enabled in the device tree so the stock `otg_mode` attribute
+works. The pieces are in place: the cabinet boots normally with the dock
+already attached, the restore path above gives a boot-time script a safe
+fall-back to adb when no hub is present, and a flag file on `/userdata` makes
+it reversible without reflashing.
 
-1. **Switching back wedges the gadget after a real host session.** With
-   nothing attached during host mode the gadget returns cleanly. After the dock
-   had been enumerated, the return left the gadget `DISCONNECTED` and it never
-   re-enumerated (the host saw a device that would not answer descriptor
-   reads); a power-cycle fixed it. Run 4 added a configfs UDC unbind/rebind on
-   the way back and that made no difference: the gadget reported bound, the
-   host still got no descriptors. The residual state is in the controller, not
-   the gadget layer. The script now unbinds and rebinds the `dwc2` platform
-   driver itself around the ID flip, with the drives unmounted first, so the
-   controller is probed from scratch. Not yet validated. With ssh available
-   the switch-back matters less: a power-cycle restores adb anyway, and most
-   work can be done over the network instead.
-2. **Unplugging a device in host mode appears to hang the host stack.** In the
-   third run the script's sampling stopped at the moment the dock was pulled,
-   the game kept running, the restore never ran and the gadget never came
-   back. One occurrence; treat as a hypothesis, but do not hot-unplug until it
-   is understood.
-3. **Dock power matters.** On a different wall supply the inner 4-port hub
-   enumerated and reported no connections: the Ethernet adapter and the drive
-   were absent even though the drive's LED was lit. The same dock on the
-   original charger enumerated everything. Likely the dock disables its
-   downstream ports without a PD contract; untested.
-4. **Persistence.** Nothing on the read-only rootfs executes anything from
-   `/userdata` at boot, so host mode is a per-boot command until either an
-   init script is added to the rootfs (docs/13 already ships a custom slim
-   rootfs, so this is in reach) or the phy's `otg-port` is enabled in the
-   device tree so the stock `otg_mode` attribute works.
-5. **Slow small writes to a flash drive on this path.** Formatting a 64 GB
-   stick as FAT32 on the cabinet ran at tens of kilobytes per second, and
-   BusyBox `fdisk` takes sector numbers in cylinders unless given `-u`.
-   Partition and format drives on a PC; the cabinet only needs to read them.
-
-Run logs are kept locally (`local/recon/2026-09-1?-otg-host-*.log`) and are
-not published; they contain device serials and MAC addresses.
+Run logs are kept locally and are not published; they contain device serials
+and MAC addresses.

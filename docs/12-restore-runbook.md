@@ -1,8 +1,7 @@
 # Restore runbook
 
-The definitive recovery recipes, written after every mechanism in them was
-exercised on the hardware (2026-09-02/03). Read docs/10 for how these facts
-were established.
+The recovery recipes. Every mechanism in them has been exercised on the
+hardware; docs/10 has the recovery ladder and the evidence behind these facts.
 
 ## Proven facts this runbook rests on
 
