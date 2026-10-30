@@ -11,8 +11,8 @@ hardware.
 The switch is done from software at run time and touches nothing on the
 flash; a power-cycle undoes it, and a tested restore path returns the port to
 adb without one. A boot-time variant, an init script in the slim rootfs gated
-on a flag file, is under Persistence at the end. Host mode and adb are exclusive, because the gadget and the
-host controller are the same port.
+on a flag file, is under Persistence at the end. Host mode and adb are
+exclusive, because the gadget and the host controller are the same port.
 
 ## Why the port behaves as peripheral-only
 
@@ -248,7 +248,9 @@ The flag is persistent, not consumed: every boot is a host-mode boot until
 `rm /userdata/host-mode`, over ssh or over adb after a fallback. The fallback
 is also the way out of a host-mode boot whose network did not come up:
 power on with nothing on the port, and after the 45 s wait the cabinet is on
-adb, where the flag can be removed. The worker's
+adb, where the flag can be removed. That route depends on the fallback
+succeeding; if it ever does not, a powered dock still gives host mode and
+ssh, and reflashing the previous squashfs removes the script. The worker's
 `--dry-run` logs every step without touching a register, a mount or the
 driver, and `--dry-run --no-hub` walks the fallback branch the same way; both
 write to `hostmode-dryrun.log` instead.

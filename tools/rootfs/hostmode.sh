@@ -95,9 +95,9 @@ do_() {
 }
 
 # The dwc2 host controller's bus is the usbN directory under its platform device
-# (usb1 on every run so far, because the other two root hubs took 2 and 3 at
-# boot). Devices on that bus are N-<port>; N-0:1.0 is the root hub's own
-# interface and does not count.
+# (usb1 here, because the other two root hubs take 2 and 3 at boot; usb1 is
+# also the fallback if the directory is missing). Devices on that bus are
+# N-<port>; N-0:1.0 is the root hub's own interface and does not count.
 hcd_bus() {
 	for b in "/sys/bus/platform/devices/$DWC2_DEV"/usb*; do
 		[ -e "$b" ] && { basename "$b"; return 0; }
@@ -201,14 +201,15 @@ if [ "$DRY" != 1 ] && [ -f "$LOG" ]; then mv -f "$LOG" "$LOG.1"; fi
 log "hostmode start  kernel $(uname -r)  dry-run=$DRY no-hub=$NOHUB  flag=$([ -e "$FLAG" ] && echo present || echo absent)  settle=${SETTLE}s enum-wait=${ENUM_WAIT}s"
 sleep "$SETTLE"
 
-snap "regs at start" regs
-snap "usb tree at start" usb_tree
-snap "gadget at start" gadget
-snap "dwc2 platform device children" ls "/sys/bus/platform/devices/$DWC2_DEV"
+# No dwc2 register read before this check: an unbound driver means gated clocks.
 if [ ! -e "$DWC2_DRV/$DWC2_DEV" ]; then
 	log "dwc2 is not bound to $DWC2_DEV; cannot switch, leaving the port alone"
 	exit 1
 fi
+snap "regs at start" regs
+snap "usb tree at start" usb_tree
+snap "gadget at start" gadget
+snap "dwc2 platform device children" ls "/sys/bus/platform/devices/$DWC2_DEV"
 
 # sshd reads /root/.ssh/authorized_keys; /root is on the read-only squashfs, so
 # the persistent copy on /userdata is bind-mounted over it every boot.

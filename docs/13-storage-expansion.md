@@ -23,7 +23,7 @@ from the parameter block, so UUIDs must survive any re-tabling.
 The unused `mame2003` core, its 26 MB system directory, and artwork for six
 games not on this cabinet: 14 entries, 56.3 → 40.9 MiB. The boot-menu stack
 (python, SDL2, evdev) and everything the game needs are intact. The only
-additions since are the two host-mode files described in docs/14
+other additions are the two host-mode files described in docs/14
 (`/etc/init.d/S60hostmode`, `/etc/hostmode.sh`).
 
 ## Method

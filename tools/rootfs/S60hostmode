@@ -22,6 +22,8 @@ case "$1" in
   start)
 	[ -e "$FLAG" ] || exit 0
 	[ -x "$WORKER" ] || exit 0
+	# one worker at a time (a hand-run restart must not start a second one)
+	ps | grep -q "[/]etc/hostmode.sh" && exit 0
 	printf "Starting hostmode (flag %s present): " "$FLAG"
 	setsid "$WORKER" </dev/null >/dev/null 2>&1 &
 	echo "OK"
