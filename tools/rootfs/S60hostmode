@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+# S60hostmode — bring the rear USB-C port up as a USB host at boot.
+#
+# Does nothing unless /userdata/host-mode exists. With the flag present it
+# launches /etc/hostmode.sh detached and returns at once, so the rest of rcS
+# is not held up. The flag is persistent: every boot is a host-mode boot until
+# it is deleted (over ssh, or over adb after the worker's no-device fallback
+# has returned the port to the adb gadget).
+#
+# Ordering: S50usbdevice has set up the configfs adb gadget and S50sshd has
+# started sshd by the time this runs, so the worker only has to flip the port
+# and bring up the network. The worker does its own settling delay.
+#
+# Companion to tools/otg-host-force.sh (same register write) and
+# tools/otg-restore.sh (same fallback sequence). See docs/14 "Persistence".
+
+FLAG=/userdata/host-mode
+WORKER=/etc/hostmode.sh
+
+case "$1" in
+  start)
+	[ -e "$FLAG" ] || exit 0
+	[ -x "$WORKER" ] || exit 0
+	printf "Starting hostmode (flag %s present): " "$FLAG"
+	setsid "$WORKER" </dev/null >/dev/null 2>&1 &
+	echo "OK"
+	;;
+  stop)
+	# Nothing to undo here: a power-cycle returns the port to the adb gadget,
+	# and an explicit return without one is tools/otg-restore.sh.
+	;;
+  restart|reload)
+	"$0" stop
+	"$0" start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit 0

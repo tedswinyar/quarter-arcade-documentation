@@ -53,6 +53,7 @@ tools/btnmap.py              labelled evdev event logger (runs on the cabinet)
 tools/linux-probe.sh         first-contact USB probe for a Linux host
 tools/otg-host-force.sh      switches the rear port to USB host mode (detached, timed; runs on the cabinet)
 tools/otg-restore.sh         returns the port to adb mode after a host session, no power-cycle (runs on the cabinet)
+tools/rootfs/                S60hostmode + hostmode.sh: host mode at boot, gated on /userdata/host-mode, with a no-device fallback to adb; installed by the docs/13 rebuild (docs/14 Persistence)
 tools/datcheck.py            checks romset zips against the core's DAT: present / wrong CRC / missing
 tools/retroarch/             core info file, playlist and override generators, remaps: RetroArch launching romsets from a drive with working Start buttons and correct viewports (docs/11, 14)
 tools/usbwatch.sh            USB identity watcher (macOS-era, historical)

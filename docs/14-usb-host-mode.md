@@ -10,7 +10,8 @@ hardware.
 
 The switch is done from software at run time and touches nothing on the
 flash; a power-cycle undoes it, and a tested restore path returns the port to
-adb without one. Host mode and adb are exclusive, because the gadget and the
+adb without one. A boot-time variant, an init script in the slim rootfs gated
+on a flag file, is under Persistence at the end. Host mode and adb are exclusive, because the gadget and the
 host controller are the same port.
 
 ## Why the port behaves as peripheral-only
@@ -223,16 +224,42 @@ docs/11.
   case-insensitive `ls` then confirms the wrong name). Rename through a
   temporary name and check with a case-sensitive match.
 
-## Open: persistence
+## Persistence
 
-Nothing on the read-only rootfs executes anything from `/userdata` at boot, so
-host mode is a per-boot command until an init script is added to the rootfs
-(docs/13 already ships a custom slim rootfs, so this is in reach) or the phy's
-`otg-port` is enabled in the device tree so the stock `otg_mode` attribute
-works. The pieces are in place: the cabinet boots normally with the dock
-already attached, the restore path above gives a boot-time script a safe
-fall-back to adb when no hub is present, and a flag file on `/userdata` makes
-it reversible without reflashing.
+Host mode at boot is an init script in the slim rootfs (docs/13), gated on a
+flag file so the same image boots either way:
+
+- `/etc/init.d/S60hostmode` (`tools/rootfs/S60hostmode`) runs after the adb
+  gadget (`S50usbdevice`) and sshd (`S50sshd`) are up. It exits at once unless
+  `/userdata/host-mode` exists; with the flag present it launches the worker
+  detached and lets the rest of `rcS` continue.
+- `/etc/hostmode.sh` (`tools/rootfs/hostmode.sh`) waits ten seconds,
+  bind-mounts `/userdata/root` on `/root`, does the single GRF write above and
+  waits up to 45 s for a device to appear on the dwc2 root hub. If one does, it
+  brings up any new interface with `dhcpcd` and exits, leaving the port a host.
+  If nothing enumerates (no dock, or a dock without power) it runs the dwc2
+  unbind, clear-override, bind sequence from "Returning to adb" so the port is
+  the adb gadget again and an unattended cabinet should not be left
+  unreachable. It writes `/userdata/hostmode.log` with uptime seconds in the
+  first column (the cabinet has no clock) and keeps the previous boot's log as
+  `hostmode.log.1`.
+
+The flag is persistent, not consumed: every boot is a host-mode boot until
+`rm /userdata/host-mode`, over ssh or over adb after a fallback. The fallback
+is also the way out of a host-mode boot whose network did not come up:
+power on with nothing on the port, and after the 45 s wait the cabinet is on
+adb, where the flag can be removed. The worker's
+`--dry-run` logs every step without touching a register, a mount or the
+driver, and `--dry-run --no-hub` walks the fallback branch the same way; both
+write to `hostmode-dryrun.log` instead.
+
+Installing it is the docs/13 rebuild: unsquash the current rootfs, add the two
+files with mode 0755, rebuild with the two fidelity fixes, write the image to
+sector 38912 over ssh or adb with a read-back hash, then `touch
+/userdata/host-mode` and reboot with the dock attached and powered. The
+partition table does not change, and reverting is reflashing the previous
+squashfs. On my unit the image is built, checked against the extracted tree
+and staged on the cabinet; the first boot with the flag set has not run yet.
 
 Run logs are kept locally and are not published; they contain device serials
 and MAC addresses.
