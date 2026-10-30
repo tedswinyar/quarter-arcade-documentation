@@ -21,9 +21,10 @@ from the parameter block, so UUIDs must survive any re-tabling.
 ## What was removed from the rootfs
 
 The unused `mame2003` core, its 26 MB system directory, and artwork for six
-games not on this cabinet: 14 entries, 56.3 → 40.9 MiB. Nothing else changed;
-the boot-menu stack (python, SDL2, evdev) and everything the game needs are
-intact.
+games not on this cabinet: 14 entries, 56.3 → 40.9 MiB. The boot-menu stack
+(python, SDL2, evdev) and everything the game needs are intact. The only
+additions since are the two host-mode files described in docs/14
+(`/etc/init.d/S60hostmode`, `/etc/hostmode.sh`).
 
 ## Method
 
@@ -38,7 +39,9 @@ intact.
    compression matched to stock (xz, 128 KiB blocks).
 4. **Write over adb from the running system**, in this order: stop RetroArch,
    `dd` the squashfs to sector 38912, verify, `dd` the userdata image to its
-   new offset, verify, `dd` the GPT primary and backup, verify both, reboot.
+   new offset, verify, `dd` the GPT primary and backup, verify both, then
+   `reboot -f`: init's stop scripts would otherwise read from the replaced
+   image.
    The GPT is the commit point: until it is written the old table is valid and
    a bad write aborts cleanly.
 
@@ -48,7 +51,10 @@ whereas the kernel block path reads back the full range. Two details matter.
 Verification hashes the exact written byte ranges, not whole partition
 devices, which would false-fail on a live-drifting filesystem. And the page
 cache was pre-warmed rather than dropped, keeping busybox and adbd resident in
-RAM while the filesystem they run from was overwritten underneath them.
+RAM while the filesystem they run from was overwritten underneath them. The
+read-back only proves the write if the device cache is invalidated first;
+this BusyBox has no `blockdev`, but its python3 can issue the BLKFLSBUF
+ioctl.
 
 ## Rebuild fidelity hazards
 

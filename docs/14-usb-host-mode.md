@@ -258,8 +258,13 @@ files with mode 0755, rebuild with the two fidelity fixes, write the image to
 sector 38912 over ssh or adb with a read-back hash, then `touch
 /userdata/host-mode` and reboot with the dock attached and powered. The
 partition table does not change, and reverting is reflashing the previous
-squashfs. On my unit the image is built, checked against the extracted tree
-and staged on the cabinet; the first boot with the flag set has not run yet.
+squashfs. Verified on my unit from a cold power-up with the dock attached: the
+controller flipped within a second of the write at about 23 s of uptime, the
+dock enumerated at once and ssh answered inside a minute. A warm `reboot` is
+not a test of the write path, because the GRF override survives a soft reset
+and the kernel comes up as a host before the script runs. The lease can
+arrive after the worker's final network snapshot, so read the address from
+the gateway rather than the log.
 
 Run logs are kept locally and are not published; they contain device serials
 and MAC addresses.
